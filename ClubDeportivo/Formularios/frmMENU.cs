@@ -16,5 +16,20 @@ namespace ClubDeportivo.Formularios
         {
             InitializeComponent();
         }
+
+        private void frmMENU_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
