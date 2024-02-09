@@ -28,93 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.nuevoIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambiarDeCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarPadrónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nuevoIngresoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reIngresoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarDeCategoríaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarPadrónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sociosNuevoIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invitadoNuevoIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // menuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoIngresoToolStripMenuItem,
-            this.reIngresoToolStripMenuItem,
-            this.cambiarDeCategoríaToolStripMenuItem,
-            this.consultarPadrónToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(193, 92);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoIngresoToolStripMenuItem1,
+            this.reIngresoToolStripMenuItem1,
+            this.cambiarDeCategoríaToolStripMenuItem1,
+            this.consultarPadrónToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // nuevoIngresoToolStripMenuItem
+            // nuevoIngresoToolStripMenuItem1
             // 
-            this.nuevoIngresoToolStripMenuItem.Name = "nuevoIngresoToolStripMenuItem";
-            this.nuevoIngresoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.nuevoIngresoToolStripMenuItem.Text = " Nuevo Ingreso";
+            this.nuevoIngresoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sociosNuevoIngresoToolStripMenuItem,
+            this.invitadoNuevoIngresoToolStripMenuItem});
+            this.nuevoIngresoToolStripMenuItem1.Name = "nuevoIngresoToolStripMenuItem1";
+            this.nuevoIngresoToolStripMenuItem1.Size = new System.Drawing.Size(96, 20);
+            this.nuevoIngresoToolStripMenuItem1.Text = "Nuevo Ingreso";
             // 
-            // reIngresoToolStripMenuItem
+            // reIngresoToolStripMenuItem1
             // 
-            this.reIngresoToolStripMenuItem.Name = "reIngresoToolStripMenuItem";
-            this.reIngresoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.reIngresoToolStripMenuItem.Text = "ReIngreso";
+            this.reIngresoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem});
+            this.reIngresoToolStripMenuItem1.Name = "reIngresoToolStripMenuItem1";
+            this.reIngresoToolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
+            this.reIngresoToolStripMenuItem1.Text = "ReIngreso";
             // 
-            // cambiarDeCategoríaToolStripMenuItem
+            // cambiarDeCategoríaToolStripMenuItem1
             // 
-            this.cambiarDeCategoríaToolStripMenuItem.Name = "cambiarDeCategoríaToolStripMenuItem";
-            this.cambiarDeCategoríaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.cambiarDeCategoríaToolStripMenuItem.Text = " Cambiar de Categoría";
+            this.cambiarDeCategoríaToolStripMenuItem1.Name = "cambiarDeCategoríaToolStripMenuItem1";
+            this.cambiarDeCategoríaToolStripMenuItem1.Size = new System.Drawing.Size(137, 20);
+            this.cambiarDeCategoríaToolStripMenuItem1.Text = " Cambiar de Categoría";
             // 
-            // consultarPadrónToolStripMenuItem
+            // consultarPadrónToolStripMenuItem1
             // 
-            this.consultarPadrónToolStripMenuItem.Name = "consultarPadrónToolStripMenuItem";
-            this.consultarPadrónToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.consultarPadrónToolStripMenuItem.Text = "Consultar Padrón";
+            this.consultarPadrónToolStripMenuItem1.Name = "consultarPadrónToolStripMenuItem1";
+            this.consultarPadrónToolStripMenuItem1.Size = new System.Drawing.Size(111, 20);
+            this.consultarPadrónToolStripMenuItem1.Text = "Consultar Padrón";
             // 
-            // button1
+            // sociosNuevoIngresoToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(220, 342);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sociosNuevoIngresoToolStripMenuItem.Name = "sociosNuevoIngresoToolStripMenuItem";
+            this.sociosNuevoIngresoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.sociosNuevoIngresoToolStripMenuItem.Text = "Socios Nuevo Ingreso";
             // 
-            // button2
+            // invitadoNuevoIngresoToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(467, 342);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cerrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.invitadoNuevoIngresoToolStripMenuItem.Name = "invitadoNuevoIngresoToolStripMenuItem";
+            this.invitadoNuevoIngresoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.invitadoNuevoIngresoToolStripMenuItem.Text = "Invitado Nuevo Ingreso";
+            // 
+            // sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem
+            // 
+            this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Name = "sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem";
+            this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Size = new System.Drawing.Size(311, 22);
+            this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Text = "Socios de ReIngreso o Invitados de ReIngreso";
             // 
             // frmSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Socio del Club";
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem nuevoIngresoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reIngresoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cambiarDeCategoríaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarPadrónToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nuevoIngresoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sociosNuevoIngresoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem invitadoNuevoIngresoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reIngresoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cambiarDeCategoríaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarPadrónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem;
     }
 }
