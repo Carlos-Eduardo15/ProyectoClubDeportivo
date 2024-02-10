@@ -83,6 +83,7 @@ namespace ClubDeportivo.Formularios
 
             toolStripStatusLabel3.Text = DateTime.Now.ToString("HH:mm:ss");
 
+            toolStripStatusLabel1.Text = "WELCOME";
         }
     }
 }
