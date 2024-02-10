@@ -17,6 +17,13 @@ namespace ClubDeportivo
         public frmLogin()
         {
             InitializeComponent();
+
+            txtUsuario.KeyPress += new KeyPressEventHandler(ValidarNumeros);
+
+            // TextBox para contraseña
+            txtPassword.PasswordChar = '*'; // Carácter para ocultar la contraseña
+            txtPassword.UseSystemPasswordChar = true; // Utiliza el carácter de contraseña del sistema
+
         }
         private const string cadenaConexion = "Data Source=DerekGA;Initial Catalog=ClubDeportivo;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"; 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -46,6 +53,14 @@ namespace ClubDeportivo
             Application.Exit();
         }
 
+        private void ValidarNumeros(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         private bool VerificarCredenciales(string idUsuario, string password)
         {
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
@@ -73,6 +88,8 @@ namespace ClubDeportivo
             }
         }
     }
+
+
 
         }
 
