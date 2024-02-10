@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubDeportivo.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace ClubDeportivo
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            frmMENU frmMenu = new frmMENU();
+            frmMenu.Show();
+            this.Hide();
         }
     }
 }
