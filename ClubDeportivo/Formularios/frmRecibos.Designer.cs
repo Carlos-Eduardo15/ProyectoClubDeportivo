@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.SuspendLayout();
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // frmRecibos
             // 
@@ -36,11 +43,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "frmRecibos";
-            this.Text = "frmRecibos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Expedición de Recibos de Pago";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }
