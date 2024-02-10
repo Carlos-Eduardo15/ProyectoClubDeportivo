@@ -47,6 +47,7 @@ namespace ClubDeportivo.Formularios
         {
             frmSocios frmSocios = new frmSocios();
             frmSocios.Show();
+           
         }
 
         private void recibosToolStripMenuItem_Click(object sender, EventArgs e)
