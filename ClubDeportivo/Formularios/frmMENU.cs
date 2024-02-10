@@ -12,7 +12,6 @@ namespace ClubDeportivo.Formularios
 {
     public partial class frmMENU : Form
     {
-        private Timer timer;
 
         public frmMENU()
         {
@@ -45,6 +44,7 @@ namespace ClubDeportivo.Formularios
 
         private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Mostrar frmSocios
             frmSocios frmSocios = new frmSocios();
             frmSocios.Show();
            
@@ -52,18 +52,21 @@ namespace ClubDeportivo.Formularios
 
         private void recibosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Mostrar frmRecibos
             frmRecibos frmRecibos = new frmRecibos();
             frmRecibos.Show();
         }
 
         private void defunciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Mostrar frmDefunciones
             frmDefunciones frmDefunciones = new frmDefunciones();
             frmDefunciones.Show();
         }
 
         private void tarifasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Mostrar frmTarifas
             frmTarifas frmTarifas = new frmTarifas();
             frmTarifas.Show();
         }
@@ -75,11 +78,13 @@ namespace ClubDeportivo.Formularios
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Cerrar aplicacion
             Application.Exit();            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //Actualizar labels con los datos correspondientes
             toolStripStatusLabel2.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             toolStripStatusLabel3.Text = DateTime.Now.ToString("HH:mm:ss");
