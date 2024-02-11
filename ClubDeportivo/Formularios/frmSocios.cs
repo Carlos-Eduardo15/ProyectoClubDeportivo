@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClubDeportivo.Formularios.SociosForms;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,23 @@ namespace ClubDeportivo.Formularios
         {
             InitializeComponent();
         }
+
+        private void sociosNuevoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SocioNI frm = new SocioNI();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+        }
+
+        private void invitadoNuevoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InvitadoNI frm = new InvitadoNI();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+        }
     }
+
 }
