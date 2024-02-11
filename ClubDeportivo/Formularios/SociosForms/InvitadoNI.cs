@@ -12,17 +12,6 @@ namespace ClubDeportivo.Formularios.SociosForms
 {
     public partial class InvitadoNI : Form
     {
-        private static InvitadoNI instancia = null;
-        public static InvitadoNI ventana_unica1()
-        {
-            if(instancia == null)
-            {
-                instancia = new InvitadoNI();
-                return instancia;
-            }
-            return instancia;
-        }
-
         public InvitadoNI()
         {
             InitializeComponent();
