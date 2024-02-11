@@ -71,6 +71,15 @@ namespace ClubDeportivo.Formularios
             frm.Show();
             frm.BringToFront();
         }
+
+        private void consultarPadrónToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaPadron frm = new ConsultaPadron();
+            frm.MdiParent = this;
+            frm.Size = this.ClientSize;
+            frm.Show();
+            frm.BringToFront();
+        }
     }
 
     }
