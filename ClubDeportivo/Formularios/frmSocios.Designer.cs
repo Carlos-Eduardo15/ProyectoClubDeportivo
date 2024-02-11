@@ -89,6 +89,7 @@
             this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Name = "sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem";
             this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Size = new System.Drawing.Size(311, 22);
             this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Text = "Socios de ReIngreso o Invitados de ReIngreso";
+            this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem.Click += new System.EventHandler(this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem_Click);
             // 
             // cambiarDeCategoríaToolStripMenuItem1
             // 

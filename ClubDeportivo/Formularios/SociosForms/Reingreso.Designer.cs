@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Reingreso
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.MinimizeBox = false;
+            this.Name = "Reingreso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Reingreso";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

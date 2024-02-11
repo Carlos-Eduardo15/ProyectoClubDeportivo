@@ -49,6 +49,17 @@ namespace ClubDeportivo.Formularios
             frm.Show();
             frm.BringToFront();
         }
+
+        private void sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+
+            Reingreso frm = new Reingreso();
+            frm.MdiParent = this;
+            frm.Size = this.ClientSize;
+            frm.Show();
+            frm.BringToFront();
+        }
     }
 
     }
