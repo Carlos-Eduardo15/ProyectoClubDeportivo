@@ -60,6 +60,17 @@ namespace ClubDeportivo.Formularios
             frm.Show();
             frm.BringToFront();
         }
+
+        private void cambiarDeCategoríaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+
+            CambiarCategoria frm = new CambiarCategoria();
+            frm.MdiParent = this;
+            frm.Size = this.ClientSize;
+            frm.Show();
+            frm.BringToFront();
+        }
     }
 
     }

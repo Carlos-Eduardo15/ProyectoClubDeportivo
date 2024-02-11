@@ -96,6 +96,7 @@
             this.cambiarDeCategoríaToolStripMenuItem1.Name = "cambiarDeCategoríaToolStripMenuItem1";
             this.cambiarDeCategoríaToolStripMenuItem1.Size = new System.Drawing.Size(137, 20);
             this.cambiarDeCategoríaToolStripMenuItem1.Text = " Cambiar de Categoría";
+            this.cambiarDeCategoríaToolStripMenuItem1.Click += new System.EventHandler(this.cambiarDeCategoríaToolStripMenuItem1_Click);
             // 
             // consultarPadrónToolStripMenuItem1
             // 
