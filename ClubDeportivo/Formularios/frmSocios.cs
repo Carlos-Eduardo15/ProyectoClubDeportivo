@@ -19,22 +19,36 @@ namespace ClubDeportivo.Formularios
             InitializeComponent();
         }
 
+        private void CerrarFormulariosHijos()
+        {
+            foreach (Form frmAbierto in this.MdiChildren)
+            {
+                frmAbierto.Close();
+            }
+        }
+
         private void sociosNuevoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CerrarFormulariosHijos();
+
+            // Abre una nueva instancia de SocioNI
             SocioNI frm = new SocioNI();
             frm.MdiParent = this;
             frm.Show();
+            frm.Size = this.ClientSize;
             frm.BringToFront();
-
         }
 
         private void invitadoNuevoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CerrarFormulariosHijos();
+
             InvitadoNI frm = new InvitadoNI();
             frm.MdiParent = this;
+            frm.Size = this.ClientSize;
             frm.Show();
             frm.BringToFront();
         }
     }
 
-}
+    }
