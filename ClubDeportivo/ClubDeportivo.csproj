@@ -83,11 +83,29 @@
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\SociosForms\CambiarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\CambiarCategoria.Designer.cs">
+      <DependentUpon>CambiarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\ConsultaPadron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\ConsultaPadron.Designer.cs">
+      <DependentUpon>ConsultaPadron.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\SociosForms\InvitadoNI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\SociosForms\InvitadoNI.Designer.cs">
       <DependentUpon>InvitadoNI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\Reingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\Reingreso.Designer.cs">
+      <DependentUpon>Reingreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\SociosForms\SocioNI.cs">
       <SubType>Form</SubType>
