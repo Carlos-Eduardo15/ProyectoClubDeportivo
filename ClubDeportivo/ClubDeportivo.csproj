@@ -133,8 +133,17 @@
     <EmbeddedResource Include="Formularios\frmTarifas.resx">
       <DependentUpon>frmTarifas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\CambiarCategoria.resx">
+      <DependentUpon>CambiarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\ConsultaPadron.resx">
+      <DependentUpon>ConsultaPadron.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\SociosForms\InvitadoNI.resx">
       <DependentUpon>InvitadoNI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\Reingreso.resx">
+      <DependentUpon>Reingreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\SociosForms\SocioNI.resx">
       <DependentUpon>SocioNI.cs</DependentUpon>
