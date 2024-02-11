@@ -12,16 +12,6 @@ namespace ClubDeportivo.Formularios.SociosForms
 {
     public partial class SocioNI : Form
     {
-        private static SocioNI instancia = null;
-        public static SocioNI ventana_unica2()
-        {
-            if (instancia == null)
-            {
-                instancia = new SocioNI();
-                return instancia;
-            }
-            return instancia;
-        }
 
         public SocioNI()
         {
