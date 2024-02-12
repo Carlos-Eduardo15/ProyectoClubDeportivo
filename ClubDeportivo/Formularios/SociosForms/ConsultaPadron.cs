@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClubDeportivo.Formularios
+namespace ClubDeportivo.Formularios.SociosForms
 {
-    public partial class frmRecibos : Form
+    public partial class ConsultaPadron : Form
     {
-        public frmRecibos()
+        public ConsultaPadron()
         {
             InitializeComponent();
-        }
-
-        private void frmRecibos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
