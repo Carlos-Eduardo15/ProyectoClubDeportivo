@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\sql.cs" />
     <Compile Include="ClubDeportivoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +119,7 @@
     <Compile Include="Formularios\SociosForms\SocioNI.Designer.cs">
       <DependentUpon>SocioNI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funciones\VGlobal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmDefunciones.resx">
@@ -187,9 +189,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clases\" />
     <Folder Include="Conectividad\" />
-    <Folder Include="Funciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

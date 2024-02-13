@@ -104,13 +104,7 @@
             this.consultarPadrónToolStripMenuItem1.Size = new System.Drawing.Size(111, 20);
             this.consultarPadrónToolStripMenuItem1.Text = "Consultar Padrón";
             this.consultarPadrónToolStripMenuItem1.Click += new System.EventHandler(this.consultarPadrónToolStripMenuItem1_Click);
-            this.button2.Location = new System.Drawing.Point(467, 342);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cerrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+           
             // 
             // frmSocios
             // 

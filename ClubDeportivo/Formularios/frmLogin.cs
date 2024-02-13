@@ -27,7 +27,7 @@ namespace ClubDeportivo
 
         }
         //Cadena de conexion 
-        private const string cadenaConexion = "Data Source=DerekGA;Initial Catalog=ClubDeportivo;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"; 
+        private  string cnx = VGlobal.getSetConexion;
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //TXT para las variables y verificar el login
@@ -73,7 +73,7 @@ namespace ClubDeportivo
         private bool VerificarCredenciales(string idUsuario, string password)
         {
             //Utilizar las cadenas de conexion que anteriormente se le dio 
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            using (SqlConnection conexion = new SqlConnection(cnx))
             {
                 try
                 {
@@ -99,6 +99,13 @@ namespace ClubDeportivo
                 }
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            MySQL my = new MySQL();  
+        }
+
+
     }
 
 
