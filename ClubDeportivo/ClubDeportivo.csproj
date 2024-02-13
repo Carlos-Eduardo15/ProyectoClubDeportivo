@@ -47,11 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Defuncion.cs" />
-    <Compile Include="Clases\Pago.cs" />
-    <Compile Include="Clases\Tarifa.cs" />
-    <Compile Include="Clases\Usuario.cs" />
-    <Compile Include="Clases\Socio.cs" />
     <Compile Include="Formularios\frmTarifas.cs">
       <SubType>Form</SubType>
     </Compile>
