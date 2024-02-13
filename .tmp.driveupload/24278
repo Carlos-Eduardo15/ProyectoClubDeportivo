@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 6a1344bbfaf11f63a861a472f9a891f79be91a9e RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707494440 -0600	branch: Created from 6a1344bbfaf11f63a861a472f9a891f79be91a9e
+6a1344bbfaf11f63a861a472f9a891f79be91a9e db2ffbaa71a8ce6f10e2737e5672f8cc61326d7d RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707693756 -0600	pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+db2ffbaa71a8ce6f10e2737e5672f8cc61326d7d 1912f93aed1e4027f065cbdced8e585975d567c9 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707751644 -0600	commit: Cambios en diseño de frmTarifas
+1912f93aed1e4027f065cbdced8e585975d567c9 4a8e080f8150ee1e2a25ca6bf572a63b0522c348 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707788215 -0600	commit: Se dio un pco de diseño a frmTarifas
+4a8e080f8150ee1e2a25ca6bf572a63b0522c348 d67d12778c3ea6978ff64d550cbbe8bfe130b228 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707788249 -0600	pull --progress --no-edit --no-stat --recurse-submodules=no origin: Merge made by the 'ort' strategy.
