@@ -172,11 +172,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Clases\" />
     <Folder Include="Conectividad\" />
     <Folder Include="Funciones\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Media\img\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
