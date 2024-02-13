@@ -51,6 +51,7 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -245,11 +246,21 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.gob.mx/curp/";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(47, 277);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(117, 23);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "Generar PDF";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // SocioNI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
@@ -307,5 +318,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button3;
     }
 }
