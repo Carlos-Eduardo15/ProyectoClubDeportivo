@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 60fab012e45652bfdef4af1ae715fc1b3617925e RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707268217 -0600	clone: from https://github.com/Carlos-Eduardo15/ProyectoClubDeportivo
+60fab012e45652bfdef4af1ae715fc1b3617925e afd4db3a3e5b2a61c9a5c7fdcabb9c68e22e137f RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707268421 -0600	commit: Cambio en el nombre del form1 a frmLogin
+afd4db3a3e5b2a61c9a5c7fdcabb9c68e22e137f 7389c8dcd66b0241d92007c5fa060ae3daa960eb RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707268776 -0600	commit: Se crearon las carpetas como se establece en el documento
+7389c8dcd66b0241d92007c5fa060ae3daa960eb af369967f076c0bcdba9a5064f708b17e2272348 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707276986 -0600	commit: Se colocaron los elementos solicitados en frmLogin y se creó el frmMenu
+af369967f076c0bcdba9a5064f708b17e2272348 af369967f076c0bcdba9a5064f708b17e2272348 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707320475 -0600	checkout: moving from main to Ronaldo
+af369967f076c0bcdba9a5064f708b17e2272348 af369967f076c0bcdba9a5064f708b17e2272348 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707452399 -0600	checkout: moving from Ronaldo to main
+af369967f076c0bcdba9a5064f708b17e2272348 23bc91728ac0ad4d071ee4c98b89fb46943f81b0 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707452412 -0600	pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+23bc91728ac0ad4d071ee4c98b89fb46943f81b0 a646ec7d0d05ddb04845d98572d460a11761d012 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707488128 -0600	checkout: moving from main to dev
+a646ec7d0d05ddb04845d98572d460a11761d012 a646ec7d0d05ddb04845d98572d460a11761d012 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707488239 -0600	checkout: moving from dev to devClaseSocios
+a646ec7d0d05ddb04845d98572d460a11761d012 a646ec7d0d05ddb04845d98572d460a11761d012 RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707494458 -0600	reset: moving to HEAD
+a646ec7d0d05ddb04845d98572d460a11761d012 6a1344bbfaf11f63a861a472f9a891f79be91a9e RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707494459 -0600	checkout: moving from devClaseSocios to componentes
+6a1344bbfaf11f63a861a472f9a891f79be91a9e db2ffbaa71a8ce6f10e2737e5672f8cc61326d7d RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707693756 -0600	pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+db2ffbaa71a8ce6f10e2737e5672f8cc61326d7d db2ffbaa71a8ce6f10e2737e5672f8cc61326d7d RonaldoCarlos <ronaldocarlos2208@outlook.com> 1707751259 -0600	checkout: moving from componentes to componentes
