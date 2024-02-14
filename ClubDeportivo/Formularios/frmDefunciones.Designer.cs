@@ -193,6 +193,7 @@
             this.Name = "frmDefunciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Defunción";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDefunciones_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

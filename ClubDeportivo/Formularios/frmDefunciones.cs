@@ -29,7 +29,13 @@ namespace ClubDeportivo.Formularios
 
         private void label10_Click(object sender, EventArgs e)
         {
-v
+
+        }
+
+        private void frmDefunciones_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMENU frmMENU = new frmMENU();    
+            frmMENU.Show();
         }
     }
 }

@@ -168,6 +168,7 @@
             this.Name = "frmRecibos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expedición de Recibos de Pago";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRecibos_FormClosing);
             this.Load += new System.EventHandler(this.frmRecibos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -160,7 +160,7 @@
             this.button1.Text = "Guardar datos";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.textBox4);
@@ -273,6 +273,7 @@
             this.Name = "frmTarifas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tarifas de Pago";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTarifas_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

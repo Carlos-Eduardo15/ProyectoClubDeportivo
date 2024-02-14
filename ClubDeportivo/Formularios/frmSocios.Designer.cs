@@ -116,6 +116,7 @@
             this.Name = "frmSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Socio del Club";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSocios_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

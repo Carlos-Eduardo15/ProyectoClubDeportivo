@@ -44,6 +44,8 @@ namespace ClubDeportivo.Formularios
 
         private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             //Mostrar frmSocios
             frmSocios frmSocios = new frmSocios();
             frmSocios.Show();
@@ -52,6 +54,8 @@ namespace ClubDeportivo.Formularios
 
         private void recibosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             //Mostrar frmRecibos
             frmRecibos frmRecibos = new frmRecibos();
             frmRecibos.Show();
@@ -59,6 +63,8 @@ namespace ClubDeportivo.Formularios
 
         private void defunciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             //Mostrar frmDefunciones
             frmDefunciones frmDefunciones = new frmDefunciones();
             frmDefunciones.Show();
@@ -66,6 +72,7 @@ namespace ClubDeportivo.Formularios
 
         private void tarifasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             //Mostrar frmTarifas
             frmTarifas frmTarifas = new frmTarifas();
             frmTarifas.Show();
@@ -78,6 +85,7 @@ namespace ClubDeportivo.Formularios
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             //Cerrar aplicacion
             Application.Exit();            
         }
