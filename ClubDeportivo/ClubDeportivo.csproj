@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conectividad\MySQL.cs" />
     <Compile Include="Formularios\frmTarifas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,8 +173,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clases\" />
-    <Folder Include="Conectividad\" />
     <Folder Include="Funciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

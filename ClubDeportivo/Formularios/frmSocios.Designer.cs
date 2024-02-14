@@ -116,6 +116,7 @@
             this.Name = "frmSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Socio del Club";
+            this.Load += new System.EventHandler(this.frmSocios_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

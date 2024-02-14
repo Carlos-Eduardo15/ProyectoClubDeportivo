@@ -80,6 +80,11 @@ namespace ClubDeportivo.Formularios
             frm.Show();
             frm.BringToFront();
         }
+
+        private void frmSocios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
