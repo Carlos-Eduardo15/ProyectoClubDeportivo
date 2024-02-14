@@ -34,7 +34,6 @@ namespace ClubDeportivo.Formularios
             this.sociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defunciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.defunciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tarifasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +52,6 @@ namespace ClubDeportivo.Formularios
             this.sociosToolStripMenuItem,
             this.recibosToolStripMenuItem,
             this.defunciónToolStripMenuItem,
-            this.defunciónToolStripMenuItem1,
             this.tarifasToolStripMenuItem,
             this.acercaDeToolStripMenuItem,
             this.salirToolStripMenuItem});
@@ -68,42 +66,42 @@ namespace ClubDeportivo.Formularios
             this.sociosToolStripMenuItem.Name = "sociosToolStripMenuItem";
             this.sociosToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.sociosToolStripMenuItem.Text = "Socios";
+            this.sociosToolStripMenuItem.Click += new System.EventHandler(this.sociosToolStripMenuItem_Click);
             // 
             // recibosToolStripMenuItem
             // 
             this.recibosToolStripMenuItem.Name = "recibosToolStripMenuItem";
             this.recibosToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.recibosToolStripMenuItem.Text = "Recibos";
+            this.recibosToolStripMenuItem.Click += new System.EventHandler(this.recibosToolStripMenuItem_Click);
             // 
             // defunciónToolStripMenuItem
             // 
             this.defunciónToolStripMenuItem.Name = "defunciónToolStripMenuItem";
             this.defunciónToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.defunciónToolStripMenuItem.Text = "Defunción";
-            // 
-            // defunciónToolStripMenuItem1
-            // 
-            this.defunciónToolStripMenuItem1.Name = "defunciónToolStripMenuItem1";
-            this.defunciónToolStripMenuItem1.Size = new System.Drawing.Size(74, 20);
-            this.defunciónToolStripMenuItem1.Text = "Defunción";
+            this.defunciónToolStripMenuItem.Click += new System.EventHandler(this.defunciónToolStripMenuItem_Click);
             // 
             // tarifasToolStripMenuItem
             // 
             this.tarifasToolStripMenuItem.Name = "tarifasToolStripMenuItem";
             this.tarifasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.tarifasToolStripMenuItem.Text = "Tarifas";
+            this.tarifasToolStripMenuItem.Click += new System.EventHandler(this.tarifasToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -138,17 +136,20 @@ namespace ClubDeportivo.Formularios
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMENU";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
             this.Load += new System.EventHandler(this.frmMENU_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -166,7 +167,6 @@ namespace ClubDeportivo.Formularios
         private System.Windows.Forms.ToolStripMenuItem sociosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recibosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defunciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem defunciónToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tarifasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
