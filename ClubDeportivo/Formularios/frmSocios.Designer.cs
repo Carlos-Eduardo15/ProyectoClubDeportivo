@@ -104,7 +104,6 @@
             this.consultarPadrónToolStripMenuItem1.Size = new System.Drawing.Size(111, 20);
             this.consultarPadrónToolStripMenuItem1.Text = "Consultar Padrón";
             this.consultarPadrónToolStripMenuItem1.Click += new System.EventHandler(this.consultarPadrónToolStripMenuItem1_Click);
-           
             // 
             // frmSocios
             // 
