@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +83,36 @@
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\SociosForms\CambiarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\CambiarCategoria.Designer.cs">
+      <DependentUpon>CambiarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\ConsultaPadron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\ConsultaPadron.Designer.cs">
+      <DependentUpon>ConsultaPadron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\InvitadoNI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\InvitadoNI.Designer.cs">
+      <DependentUpon>InvitadoNI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\Reingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\Reingreso.Designer.cs">
+      <DependentUpon>Reingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\SocioNI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SociosForms\SocioNI.Designer.cs">
+      <DependentUpon>SocioNI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmDefunciones.resx">
@@ -102,6 +133,21 @@
     <EmbeddedResource Include="Formularios\frmTarifas.resx">
       <DependentUpon>frmTarifas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\CambiarCategoria.resx">
+      <DependentUpon>CambiarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\ConsultaPadron.resx">
+      <DependentUpon>ConsultaPadron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\InvitadoNI.resx">
+      <DependentUpon>InvitadoNI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\Reingreso.resx">
+      <DependentUpon>Reingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SociosForms\SocioNI.resx">
+      <DependentUpon>SocioNI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
