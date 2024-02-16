@@ -26,5 +26,13 @@ namespace ClubDeportivo.Formularios
         {
 
         }
+
+        private void frmRecibos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMENU frmMenu = new frmMENU();
+            frmMenu.Show();
+        }
+        
+        }
     }
-}
+

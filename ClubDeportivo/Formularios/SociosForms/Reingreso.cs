@@ -15,6 +15,7 @@ namespace ClubDeportivo.Formularios.SociosForms
         public Reingreso()
         {
             InitializeComponent();
+            label12.Text=DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

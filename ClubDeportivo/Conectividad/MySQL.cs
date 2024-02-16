@@ -17,7 +17,7 @@ namespace ClubDeportivo.Conectividad
         //Método Constructor que establece la conexión con el origen de datos
         public MySQL()
         {
-            cnx = new OdbcConnection("DRIVER={MySQL ODBC 8.0 Driver}; SERVER=127.0.0.1;  DATABASE=clubdeportivo; UID=root; PWD=its2020");
+            cnx = new OdbcConnection("DRIVER={MySQL ODBC 8.0 Unicode Driver};SERVER=127.0.0.1; DATABASE=clubdeportivo; UID=root; PWD=ronits2024$$$");
 
             if (cnx.State == ConnectionState.Closed)
             {

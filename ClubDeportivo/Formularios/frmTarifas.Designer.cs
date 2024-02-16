@@ -273,7 +273,7 @@
             this.Name = "frmTarifas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tarifas de Pago";
-            this.Load += new System.EventHandler(this.frmTarifas_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTarifas_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

@@ -45,9 +45,10 @@ namespace ClubDeportivo.Formularios
 
         }
 
-        private void frmTarifas_Load(object sender, EventArgs e)
+        private void frmTarifas_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            frmMENU frmMENU = new frmMENU();
+            frmMENU.Show();
         }
     }
 }
