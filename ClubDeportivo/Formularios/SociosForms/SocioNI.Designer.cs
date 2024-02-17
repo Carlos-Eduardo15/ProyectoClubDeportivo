@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,19 +38,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBox_curp = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
+            this.dateTimeNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.textBoxA_Paterno = new System.Windows.Forms.TextBox();
+            this.textBoxA_Materno = new System.Windows.Forms.TextBox();
+            this.linkLabelCurp = new System.Windows.Forms.LinkLabel();
             this.button3 = new System.Windows.Forms.Button();
+            this.labelEdad = new System.Windows.Forms.Label();
+            this.labelIdSocio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -62,14 +62,6 @@
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Número de socio";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(24, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -88,7 +80,6 @@
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "CURP";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -134,6 +125,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -153,55 +145,48 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Telefono";
             // 
-            // textBox2
+            // textBoxNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(261, 20);
-            this.textBox2.TabIndex = 11;
+            this.textBoxNombre.Location = new System.Drawing.Point(151, 55);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(261, 20);
+            this.textBoxNombre.TabIndex = 11;
             // 
-            // textBox3
+            // textBox_curp
             // 
-            this.textBox3.Location = new System.Drawing.Point(24, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 20);
-            this.textBox3.TabIndex = 12;
+            this.textBox_curp.Location = new System.Drawing.Point(24, 143);
+            this.textBox_curp.Name = "textBox_curp";
+            this.textBox_curp.Size = new System.Drawing.Size(128, 20);
+            this.textBox_curp.TabIndex = 12;
             // 
-            // textBox4
+            // textBoxTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(438, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(94, 20);
-            this.textBox4.TabIndex = 13;
+            this.textBoxTelefono.Location = new System.Drawing.Point(579, 131);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(125, 20);
+            this.textBoxTelefono.TabIndex = 14;
             // 
-            // textBox5
+            // textBoxCorreo
             // 
-            this.textBox5.Location = new System.Drawing.Point(579, 131);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 20);
-            this.textBox5.TabIndex = 14;
+            this.textBoxCorreo.Location = new System.Drawing.Point(19, 229);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.Size = new System.Drawing.Size(285, 20);
+            this.textBoxCorreo.TabIndex = 15;
             // 
-            // textBox6
+            // textBoxDireccion
             // 
-            this.textBox6.Location = new System.Drawing.Point(19, 229);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(285, 20);
-            this.textBox6.TabIndex = 15;
+            this.textBoxDireccion.Location = new System.Drawing.Point(328, 220);
+            this.textBoxDireccion.Multiline = true;
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(376, 56);
+            this.textBoxDireccion.TabIndex = 16;
             // 
-            // textBox7
+            // dateTimeNacimiento
             // 
-            this.textBox7.Location = new System.Drawing.Point(328, 220);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(376, 56);
-            this.textBox7.TabIndex = 16;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(184, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 20);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimeNacimiento.Location = new System.Drawing.Point(184, 140);
+            this.dateTimeNacimiento.Name = "dateTimeNacimiento";
+            this.dateTimeNacimiento.Size = new System.Drawing.Size(219, 20);
+            this.dateTimeNacimiento.TabIndex = 17;
             // 
             // label9
             // 
@@ -211,7 +196,6 @@
             this.label9.Size = new System.Drawing.Size(83, 13);
             this.label9.TabIndex = 18;
             this.label9.Text = "Apellido paterno";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -222,29 +206,29 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Apellido materno";
             // 
-            // textBox8
+            // textBoxA_Paterno
             // 
-            this.textBox8.Location = new System.Drawing.Point(432, 55);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(126, 20);
-            this.textBox8.TabIndex = 20;
+            this.textBoxA_Paterno.Location = new System.Drawing.Point(432, 55);
+            this.textBoxA_Paterno.Name = "textBoxA_Paterno";
+            this.textBoxA_Paterno.Size = new System.Drawing.Size(126, 20);
+            this.textBoxA_Paterno.TabIndex = 20;
             // 
-            // textBox9
+            // textBoxA_Materno
             // 
-            this.textBox9.Location = new System.Drawing.Point(586, 55);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(136, 20);
-            this.textBox9.TabIndex = 21;
+            this.textBoxA_Materno.Location = new System.Drawing.Point(586, 55);
+            this.textBoxA_Materno.Name = "textBoxA_Materno";
+            this.textBoxA_Materno.Size = new System.Drawing.Size(136, 20);
+            this.textBoxA_Materno.TabIndex = 21;
             // 
-            // linkLabel1
+            // linkLabelCurp
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(29, 174);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(135, 13);
-            this.linkLabel1.TabIndex = 22;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.gob.mx/curp/";
+            this.linkLabelCurp.AutoSize = true;
+            this.linkLabelCurp.Location = new System.Drawing.Point(29, 174);
+            this.linkLabelCurp.Name = "linkLabelCurp";
+            this.linkLabelCurp.Size = new System.Drawing.Size(135, 13);
+            this.linkLabelCurp.TabIndex = 22;
+            this.linkLabelCurp.TabStop = true;
+            this.linkLabelCurp.Text = "https://www.gob.mx/curp/";
             // 
             // button3
             // 
@@ -255,24 +239,43 @@
             this.button3.Text = "Generar PDF";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // labelEdad
+            // 
+            this.labelEdad.AutoSize = true;
+            this.labelEdad.Location = new System.Drawing.Point(444, 147);
+            this.labelEdad.Name = "labelEdad";
+            this.labelEdad.Size = new System.Drawing.Size(32, 13);
+            this.labelEdad.TabIndex = 48;
+            this.labelEdad.Text = "Edad";
+            // 
+            // labelIdSocio
+            // 
+            this.labelIdSocio.AutoSize = true;
+            this.labelIdSocio.Location = new System.Drawing.Point(29, 58);
+            this.labelIdSocio.Name = "labelIdSocio";
+            this.labelIdSocio.Size = new System.Drawing.Size(18, 13);
+            this.labelIdSocio.TabIndex = 49;
+            this.labelIdSocio.Text = "ID";
+            // 
             // SocioNI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelIdSocio);
+            this.Controls.Add(this.labelEdad);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.linkLabelCurp);
+            this.Controls.Add(this.textBoxA_Materno);
+            this.Controls.Add(this.textBoxA_Paterno);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dateTimeNacimiento);
+            this.Controls.Add(this.textBoxDireccion);
+            this.Controls.Add(this.textBoxCorreo);
+            this.Controls.Add(this.textBoxTelefono);
+            this.Controls.Add(this.textBox_curp);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -282,12 +285,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.MinimizeBox = false;
             this.Name = "SocioNI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registros de Socios";
+            this.Load += new System.EventHandler(this.SocioNI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +299,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -306,18 +308,19 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBox_curp;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.TextBox textBoxCorreo;
+        private System.Windows.Forms.TextBox textBoxDireccion;
+        private System.Windows.Forms.DateTimePicker dateTimeNacimiento;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox textBoxA_Paterno;
+        private System.Windows.Forms.TextBox textBoxA_Materno;
+        private System.Windows.Forms.LinkLabel linkLabelCurp;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label labelEdad;
+        private System.Windows.Forms.Label labelIdSocio;
     }
 }

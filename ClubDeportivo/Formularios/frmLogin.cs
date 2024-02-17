@@ -93,7 +93,7 @@ namespace ClubDeportivo
                         return resultado > 0;
                     }
                 }
-                catch (Exception ex)
+                catch 
                 {
                     return false;
                 }
