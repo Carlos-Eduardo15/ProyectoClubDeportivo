@@ -73,7 +73,7 @@ namespace ClubDeportivo
         private bool VerificarCredenciales(string idUsuario, string password)
         {
             //Utilizar las cadenas de conexion que anteriormente se le dio 
-            using (SqlConnection conexion = new SqlConnection(cnx))
+            using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
             {
                 try
                 {
