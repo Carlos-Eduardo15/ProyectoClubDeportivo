@@ -1,4 +1,5 @@
 ﻿using ClubDeportivo.Formularios;
+using ClubDeportivo.Formularios.SociosForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;

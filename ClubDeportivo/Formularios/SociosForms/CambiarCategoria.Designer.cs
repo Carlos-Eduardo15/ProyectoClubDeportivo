@@ -52,8 +52,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.checkBoxSocio = new System.Windows.Forms.CheckBox();
+            this.checkBoxInvitado = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -254,32 +254,33 @@
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxSocio
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(532, 33);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 17);
-            this.checkBox1.TabIndex = 48;
-            this.checkBox1.Text = "Modo Socio";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSocio.AutoSize = true;
+            this.checkBoxSocio.Location = new System.Drawing.Point(606, 27);
+            this.checkBoxSocio.Name = "checkBoxSocio";
+            this.checkBoxSocio.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxSocio.TabIndex = 48;
+            this.checkBoxSocio.Text = "Modo Socio";
+            this.checkBoxSocio.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // checkBoxInvitado
             // 
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(621, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 46);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "En caso de no estar seleccionado, sera considerado invitado automaticamente";
+            this.checkBoxInvitado.AutoSize = true;
+            this.checkBoxInvitado.Location = new System.Drawing.Point(499, 28);
+            this.checkBoxInvitado.Name = "checkBoxInvitado";
+            this.checkBoxInvitado.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxInvitado.TabIndex = 50;
+            this.checkBoxInvitado.Text = "Modo Invitado";
+            this.checkBoxInvitado.UseVisualStyleBackColor = true;
             // 
             // CambiarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxInvitado);
+            this.Controls.Add(this.checkBoxSocio);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.textBox9);
@@ -339,7 +340,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBoxSocio;
+        private System.Windows.Forms.CheckBox checkBoxInvitado;
     }
 }

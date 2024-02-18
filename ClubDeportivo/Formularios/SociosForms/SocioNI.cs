@@ -85,12 +85,13 @@ namespace ClubDeportivo.Formularios.SociosForms
                     comandos.getApellidoPaterno = textBoxA_Paterno.Text.Trim();
                     comandos.getApellidoMaterno = textBoxA_Materno.Text.Trim();
                     comandos.getCurp = textBox_curp.Text.Trim();
-                    comandos.getFechaNacimiento = dateTimeNacimiento.Value;
+                    comandos.getFechaNacimiento = dateTimeNacimiento.Value.Date;
                     comandos.getEdad = edadFinal;
                     comandos.getTelefono = textBoxTelefono.Text.Trim();
                     comandos.getCorreo = textBoxCorreo.Text.Trim();
                     comandos.getDireccion = textBoxDireccion.Text.Trim();
                     comandos.getFechaIngreso = DateTime.Now;
+
                 if (VerificarCampos()==true) 
                 {
                     comandos.insertarSocio();

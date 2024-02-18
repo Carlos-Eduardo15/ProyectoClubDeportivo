@@ -17,11 +17,12 @@ namespace ClubDeportivo.Clases
         private string apellidoPaternoSocios;
         private string apellidoMaternoSocios;
         private string curpSocios;
-        private DateTime? fechaNacimientoSocios;
+        private DateTime fechaNacimientoSocios;
         private string telefonoSocios;
         private string correoSocios;
         private string direccionSocios;
         private DateTime? fechaIngresoSocios;
+        private DateTime? fechaReigresoSocios;
         private int edadSocios;
         private int idSocios;
 
@@ -33,16 +34,17 @@ namespace ClubDeportivo.Clases
             apellidoPaternoSocios = null;
             apellidoMaternoSocios = null;
             curpSocios = null;
-            fechaNacimientoSocios = null;
+            fechaNacimientoSocios = DateTime.MinValue;
             telefonoSocios = null;
             correoSocios = null;
             direccionSocios = null;
             fechaIngresoSocios = null;
             edadSocios = 0;
             idSocios = 0;
+            fechaReigresoSocios = null;
 
         }
-        public SQLSocios(string numero, string nombre, string apellidoPaterno, string apellidoMaterno, string curp,DateTime? fechaNacimiento, string telefono, string correo, string direccion, DateTime? fechaIngreso, int edad, int id)
+        public SQLSocios(string numero, string nombre, string apellidoPaterno, string apellidoMaterno, string curp,DateTime fechaNacimiento, string telefono, string correo, string direccion, DateTime? fechaIngreso, int edad, int id,DateTime? fechaReingreso)
         {
             this.numeroSocios = numero;
             this.nombreSocios = nombre;
@@ -56,6 +58,7 @@ namespace ClubDeportivo.Clases
             this.fechaIngresoSocios = fechaIngreso;
             this.edadSocios = edad;
             this.idSocios = id;
+            this.fechaReigresoSocios = fechaReingreso;
         }
         public string getNombre
         {
@@ -83,7 +86,7 @@ namespace ClubDeportivo.Clases
             get { return curpSocios; }
             set { curpSocios = value; }
         }
-        public DateTime? getFechaNacimiento
+        public DateTime getFechaNacimiento
         {
             get { return fechaNacimientoSocios; }
             set { fechaNacimientoSocios = value; }
@@ -120,6 +123,12 @@ namespace ClubDeportivo.Clases
         {
             get { return idSocios; }
             set {  idSocios = value; }
+        }
+
+        public DateTime? getFechaReingreso
+        { 
+            get { return fechaReigresoSocios; }
+            set { fechaReigresoSocios= value; }
         }
 
         public int ObtenerNuevoIdSocio()
@@ -212,35 +221,22 @@ namespace ClubDeportivo.Clases
             }
         }
 
-
-
-
-        public void ActualizarSocio()
+        public void insertarInvitado()
         {
             using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
             {
-                string queryUpdate = "UPDATE Socio SET " +
-                    "nombre = @nombre, " +
-                    "ap_paterno = @apellidoPaterno, " +
-                    "ap_materno = @apellidoMaterno, " +
-                    "curp = @curp, " +
-                    "fecha_nacimiento = @fechaNacimiento, " +
-                    "edad = @edad, " +
-                    "direccion = @direccion, " +
-                    "correo = @correo, " +
-                    "telefono = @telefono, " +
-                    "fecha_ingreso = @fechaIngreso " +
-                    "WHERE id_socio = @idSocios";
+                string queryInsert = "INSERT INTO Socios" +
+                    "(nombre, ap_paterno, ap_materno, curp, fecha_nacimiento,edad, direccion, correo, telefono, fecha_ingreso, tipo_socio)" +
+                    "VALUES(@nombre, @apellidoPaterno, @apellidoMaterno, @curp, @fechaNacimiento,@edad, @direccion, @correo, @telefono, @fechaIngreso, 'I')";
 
                 try
                 {
                     conexion.Open();
 
-                    if (idSocios != 0)
-                    {
-                        using (SqlCommand cmd = new SqlCommand(queryUpdate, conexion))
+
+                        using (SqlCommand cmd = new SqlCommand(queryInsert, conexion))
                         {
-                            cmd.Parameters.AddWithValue("@nombre",getNombre);
+                            cmd.Parameters.AddWithValue("@nombre", getNombre);
                             cmd.Parameters.AddWithValue("@apellidoPaterno", getApellidoPaterno);
                             cmd.Parameters.AddWithValue("@apellidoMaterno", getApellidoMaterno);
                             cmd.Parameters.AddWithValue("@curp", getCurp);
@@ -250,15 +246,57 @@ namespace ClubDeportivo.Clases
                             cmd.Parameters.AddWithValue("@correo", getCorreo);
                             cmd.Parameters.AddWithValue("@telefono", getTelefono);
                             cmd.Parameters.AddWithValue("@fechaIngreso", getFechaIngreso);
-                            cmd.Parameters.AddWithValue("@idSocios", getID);
 
                             cmd.ExecuteNonQuery();
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese número de socio");
-                    }
+                    
+
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show("Error SQL al insertar socio: " + sqlEx.Message, "Error SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al insertar socio: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public void actualizarSocio()
+        {
+            using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
+            {
+                string queryUpdate = "UPDATE Socios SET " +          
+                    "curp = @curp, " +
+                    "fecha_nacimiento = @fechaNacimiento, " +
+                    "edad = @edad, " +
+                    "direccion = @direccion, " +
+                    "correo = @correo, " +
+                    "telefono = @telefono, " +
+                    "fecha_reingreso= @fechaReingreso "+
+                    "WHERE id_socio = @idSocios";
+
+                try
+                {
+                    conexion.Open();
+
+                   
+                        using (SqlCommand cmd = new SqlCommand(queryUpdate, conexion))
+                        {
+                            cmd.Parameters.AddWithValue("@idSocios", getID);
+                            cmd.Parameters.AddWithValue("@curp", getCurp);
+                            cmd.Parameters.AddWithValue("@fechaNacimiento", getFechaNacimiento);
+                            cmd.Parameters.AddWithValue("@edad", getEdad);
+                            cmd.Parameters.AddWithValue("@direccion", getDireccion);
+                            cmd.Parameters.AddWithValue("@correo", getCorreo);
+                            cmd.Parameters.AddWithValue("@telefono", getTelefono);
+                            cmd.Parameters.AddWithValue("@fechaReingreso", getFechaReingreso);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    
+                  
                 }
                 catch (Exception ex)
                 {
@@ -298,12 +336,12 @@ namespace ClubDeportivo.Clases
             }
         }
 
-        public void ConsultarSocio()
+        public void ConsultarSocio(out string nombre, out string apellidoPaterno, out string apellidoMaterno, out string curp, out DateTime fechaNacimiento, out int edad, out string direccion, out string correo, out string telefono, out DateTime fechaIngreso)
         {
             using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
             {
                 string querySelect = "SELECT nombre, ap_paterno, ap_materno, curp, fecha_nacimiento, edad, direccion, correo, telefono, fecha_ingreso " +
-                    "FROM Socio " +
+                    "FROM Socios " +
                     "WHERE id_socio = @idSocios";
 
                 try
@@ -316,18 +354,36 @@ namespace ClubDeportivo.Clases
                         {
                             cmd.Parameters.AddWithValue("@idSocios", idSocios);
 
-                            // Usa un lector de datos para recuperar resultados
                             using (SqlDataReader reader = cmd.ExecuteReader())
                             {
                                 if (reader.Read())
                                 {
-                                    string nombre = reader["nombre"].ToString();
-                                    string apellidoPaterno = reader["ap_paterno"].ToString();
-                                
+                                    // Obtén los valores de la consulta y asígnales a las variables
+                                    nombre = reader["nombre"].ToString();
+                                    apellidoPaterno = reader["ap_paterno"].ToString();
+                                    apellidoMaterno = reader["ap_materno"].ToString();
+                                    curp = reader["curp"].ToString();
+                                    fechaNacimiento = reader.IsDBNull(reader.GetOrdinal("fecha_nacimiento")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("fecha_nacimiento"));
+                                    edad = Convert.ToInt32(reader["edad"]);
+                                    direccion = reader["direccion"].ToString();
+                                    correo = reader["correo"].ToString();
+                                    telefono = reader["telefono"].ToString();
+                                    fechaIngreso = Convert.ToDateTime(reader["fecha_ingreso"]);
                                 }
                                 else
                                 {
                                     MessageBox.Show("Socio no encontrado");
+                                    // Asigna valores por defecto o marca un indicador de que no se encontró el socio
+                                    nombre = string.Empty;
+                                    apellidoPaterno = string.Empty;
+                                    apellidoMaterno = string.Empty;
+                                    curp = string.Empty;
+                                    fechaNacimiento = DateTime.MinValue;
+                                    edad = 0;
+                                    direccion = string.Empty;  // Asigna un valor a direccion
+                                    correo = string.Empty;
+                                    telefono = string.Empty;
+                                    fechaIngreso = DateTime.MinValue;
                                 }
                             }
                         }
@@ -335,15 +391,36 @@ namespace ClubDeportivo.Clases
                     else
                     {
                         MessageBox.Show("Error al consultar, ingrese datos válidos");
+                        // Asigna valores por defecto en caso de error
+                        nombre = string.Empty;
+                        apellidoPaterno = string.Empty;
+                        apellidoMaterno = string.Empty;
+                        curp = string.Empty;
+                        fechaNacimiento = DateTime.MinValue;
+                        edad = 0;
+                        direccion = string.Empty;
+                        correo = string.Empty;
+                        telefono = string.Empty;
+                        fechaIngreso = DateTime.MinValue;
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al consultar socio: " + ex.Message);
+                    // Asigna valores por defecto en caso de excepción
+                    nombre = string.Empty;
+                    apellidoPaterno = string.Empty;
+                    apellidoMaterno = string.Empty;
+                    curp = string.Empty;
+                    fechaNacimiento = DateTime.MinValue;
+                    edad = 0;
+                    direccion = string.Empty;
+                    correo = string.Empty;
+                    telefono = string.Empty;
+                    fechaIngreso = DateTime.MinValue;
                 }
             }
         }
-
 
 
 
