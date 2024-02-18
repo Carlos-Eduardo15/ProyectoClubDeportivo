@@ -21,10 +21,11 @@ namespace ClubDeportivo.Clases
         private string telefonoSocios;
         private string correoSocios;
         private string direccionSocios;
-        private DateTime? fechaIngresoSocios;
-        private DateTime? fechaReigresoSocios;
+        private DateTime fechaIngresoSocios;
+        private DateTime fechaReigresoSocios;
         private int edadSocios;
         private int idSocios;
+        private char tipoSocios;
 
 
         public SQLSocios()
@@ -38,13 +39,14 @@ namespace ClubDeportivo.Clases
             telefonoSocios = null;
             correoSocios = null;
             direccionSocios = null;
-            fechaIngresoSocios = null;
+            fechaIngresoSocios = DateTime.MinValue;
             edadSocios = 0;
             idSocios = 0;
-            fechaReigresoSocios = null;
+            fechaReigresoSocios = DateTime.MinValue;
+            tipoSocios = 'N';
 
         }
-        public SQLSocios(string numero, string nombre, string apellidoPaterno, string apellidoMaterno, string curp,DateTime fechaNacimiento, string telefono, string correo, string direccion, DateTime? fechaIngreso, int edad, int id,DateTime? fechaReingreso)
+        public SQLSocios(string numero, string nombre, string apellidoPaterno, string apellidoMaterno, string curp,DateTime fechaNacimiento, string telefono, string correo, string direccion, DateTime fechaIngreso, int edad, int id,DateTime fechaReingreso,char tipo)
         {
             this.numeroSocios = numero;
             this.nombreSocios = nombre;
@@ -59,6 +61,7 @@ namespace ClubDeportivo.Clases
             this.edadSocios = edad;
             this.idSocios = id;
             this.fechaReigresoSocios = fechaReingreso;
+            this.tipoSocios = tipo;
         }
         public string getNombre
         {
@@ -107,7 +110,7 @@ namespace ClubDeportivo.Clases
             set { direccionSocios = value; }
         }
 
-        public DateTime? getFechaIngreso
+        public DateTime getFechaIngreso
         {
             get { return fechaIngresoSocios; }
             set { fechaIngresoSocios = value; }
@@ -125,10 +128,16 @@ namespace ClubDeportivo.Clases
             set {  idSocios = value; }
         }
 
-        public DateTime? getFechaReingreso
+        public DateTime getFechaReingreso
         { 
             get { return fechaReigresoSocios; }
             set { fechaReigresoSocios= value; }
+        }
+
+        public char getTipo
+        { 
+            get { return tipoSocios; }
+            set { tipoSocios = value;}
         }
 
         public int ObtenerNuevoIdSocio()
@@ -336,17 +345,20 @@ namespace ClubDeportivo.Clases
             }
         }
 
-        public void ConsultarSocio(out string nombre, out string apellidoPaterno, out string apellidoMaterno, out string curp, out DateTime fechaNacimiento, out int edad, out string direccion, out string correo, out string telefono, out DateTime fechaIngreso)
+        public void ConsultarSocio(out string nombre, out string apellidoPaterno, out string apellidoMaterno, out string curp, out DateTime fechaNacimiento, out int edad, out string direccion, out string correo, out string telefono, out DateTime fechaIngreso,out char tipo)
         {
+            tipo = 'S';
+
             using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
             {
-                string querySelect = "SELECT nombre, ap_paterno, ap_materno, curp, fecha_nacimiento, edad, direccion, correo, telefono, fecha_ingreso " +
+                conexion.Open();
+
+                string querySelect = "SELECT nombre, ap_paterno, ap_materno, curp, fecha_nacimiento, edad, direccion, correo, telefono, fecha_ingreso ,tipo_socio " +
                     "FROM Socios " +
                     "WHERE id_socio = @idSocios";
 
                 try
                 {
-                    conexion.Open();
 
                     if (idSocios != 0)
                     {
@@ -369,6 +381,7 @@ namespace ClubDeportivo.Clases
                                     correo = reader["correo"].ToString();
                                     telefono = reader["telefono"].ToString();
                                     fechaIngreso = Convert.ToDateTime(reader["fecha_ingreso"]);
+                                    tipo = reader["tipo_socio"].ToString()[0];
                                 }
                                 else
                                 {
@@ -384,6 +397,7 @@ namespace ClubDeportivo.Clases
                                     correo = string.Empty;
                                     telefono = string.Empty;
                                     fechaIngreso = DateTime.MinValue;
+                                    
                                 }
                             }
                         }
@@ -422,7 +436,35 @@ namespace ClubDeportivo.Clases
             }
         }
 
+        public void actualizarTipo()
+        {
+            using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
+            {
+                string queryUpdate = "UPDATE Socios SET " +
+                    "tipo_socio = @tipo " +                 
+                    "WHERE id_socio = @idSocios";
 
+                try
+                {
+                    conexion.Open();
+
+
+                    using (SqlCommand cmd = new SqlCommand(queryUpdate, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@idSocios", getID);
+                        cmd.Parameters.AddWithValue("@tipo", getTipo);
+                        
+                        cmd.ExecuteNonQuery();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar tipo de socio" + ex.Message);
+                }
+            }
+        }
 
 
 

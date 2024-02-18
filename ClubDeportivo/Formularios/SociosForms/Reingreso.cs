@@ -26,6 +26,7 @@ namespace ClubDeportivo.Formularios.SociosForms
         DateTime fechaIngreso;
         DateTime fechaNacimiento;
         int edad;
+        char tipo;
 
         private void DateTimeNacimiento_ValueChanged(object sender, EventArgs e)
         {
@@ -93,7 +94,7 @@ namespace ClubDeportivo.Formularios.SociosForms
            
 
             // Llama al método ConsultarSocio para obtener los datos
-            comandos.ConsultarSocio(out nombre, out apellidoPaterno, out apellidoMaterno, out curp, out  fechaNacimiento, out edad, out direccion, out correo, out telefono, out fechaIngreso);
+            comandos.ConsultarSocio(out nombre, out apellidoPaterno, out apellidoMaterno, out curp, out  fechaNacimiento, out edad, out direccion, out correo, out telefono, out fechaIngreso,out tipo);
 
           
             labelNombre.Text = nombre;
@@ -129,7 +130,7 @@ namespace ClubDeportivo.Formularios.SociosForms
                     MessageBox.Show("Socio Actualizado: " + labelNombre.Text, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
-                catch (Exception ex)
+                catch 
                 {
                     MessageBox.Show("Error al insertar datos.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
