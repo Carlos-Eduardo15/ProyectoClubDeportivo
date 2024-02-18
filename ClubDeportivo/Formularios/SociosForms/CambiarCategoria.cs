@@ -16,6 +16,8 @@ namespace ClubDeportivo.Formularios.SociosForms
         public CambiarCategoria()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+
         }
         SQLSocios comandos = new SQLSocios();
         string nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, telefono;
@@ -50,6 +52,11 @@ namespace ClubDeportivo.Formularios.SociosForms
             }
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void checkBoxSocio_CheckedChanged_1(object sender, EventArgs e)

@@ -18,6 +18,8 @@ namespace ClubDeportivo.Formularios.SociosForms
         public ConsultaPadron()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+
         }
 
 

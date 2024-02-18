@@ -52,6 +52,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // nuevoIngresoToolStripMenuItem1
             // 
@@ -113,10 +114,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "frmSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Socio del Club";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSocios_FormClosing);
+            this.Load += new System.EventHandler(this.frmSocios_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

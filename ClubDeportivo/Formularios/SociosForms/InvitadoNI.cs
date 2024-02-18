@@ -17,6 +17,7 @@ namespace ClubDeportivo.Formularios.SociosForms
         {
             InitializeComponent();
             dateTimeNacimiento.ValueChanged += DateTimePickerNacimiento_ValueChanged;
+            this.FormBorderStyle = FormBorderStyle.None;
 
         }
         int edadFinal;
@@ -112,6 +113,9 @@ namespace ClubDeportivo.Formularios.SociosForms
 
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

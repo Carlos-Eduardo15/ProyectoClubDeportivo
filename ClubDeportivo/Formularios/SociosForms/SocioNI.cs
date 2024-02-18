@@ -19,6 +19,15 @@ namespace ClubDeportivo.Formularios.SociosForms
         {
             InitializeComponent();
             dateTimeNacimiento.ValueChanged += DateTimePickerNacimiento_ValueChanged;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
+            this.TopLevel = false;
+            // Desactivar las barras de desplazamiento automático en el formulario
+            this.AutoScroll = false;
+
+            // Desactivar las barras de desplazamiento horizontal y vertical en el formulario
+            this.HorizontalScroll.Enabled = false;
+            this.VerticalScroll.Enabled = false;
 
         }
         int edadFinal;
@@ -111,6 +120,11 @@ namespace ClubDeportivo.Formularios.SociosForms
         private void SocioNI_Load(object sender, EventArgs e)
         {
             ObtenerNuevoIdSocio();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

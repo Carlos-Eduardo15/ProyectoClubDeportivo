@@ -18,7 +18,7 @@ namespace ClubDeportivo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConsultaPadron());
+            Application.Run(new frmMENU());
         }
     }
 }

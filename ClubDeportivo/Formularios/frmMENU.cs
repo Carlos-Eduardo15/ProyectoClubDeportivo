@@ -24,7 +24,13 @@ namespace ClubDeportivo.Formularios
 
             // Inicia el temporizador
             timer1.Start();
-        
+            // Desactivar las barras de desplazamiento automático en el formulario
+            this.AutoScroll = false;
+
+            // Desactivar las barras de desplazamiento horizontal y vertical en el formulario
+            this.HorizontalScroll.Enabled = false;
+            this.VerticalScroll.Enabled = false;
+
         }
 
         private void frmMENU_Load(object sender, EventArgs e)
@@ -98,6 +104,10 @@ namespace ClubDeportivo.Formularios
             toolStripStatusLabel3.Text = DateTime.Now.ToString("HH:mm:ss");
 
             toolStripStatusLabel1.Text = "WELCOME";
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
         }
     }
 }

@@ -18,6 +18,8 @@ namespace ClubDeportivo.Formularios.SociosForms
             InitializeComponent();
             labelFechaReIngreso.Text=DateTime.Now.ToString("yyyy-MM-dd");
             dateTimeNacimiento.ValueChanged += DateTimeNacimiento_ValueChanged;
+            this.FormBorderStyle = FormBorderStyle.None;
+
         }
         int edadFinal;
         SQLSocios comandos = new SQLSocios();
@@ -35,6 +37,12 @@ namespace ClubDeportivo.Formularios.SociosForms
 
 
         }
+
+        private void button_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void CalcularEdad()
         {
             DateTime fechaNacimiento = dateTimeNacimiento.Value;
