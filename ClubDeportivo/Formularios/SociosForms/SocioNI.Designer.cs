@@ -244,18 +244,16 @@
             this.labelEdad.AutoSize = true;
             this.labelEdad.Location = new System.Drawing.Point(444, 147);
             this.labelEdad.Name = "labelEdad";
-            this.labelEdad.Size = new System.Drawing.Size(32, 13);
+            this.labelEdad.Size = new System.Drawing.Size(0, 13);
             this.labelEdad.TabIndex = 48;
-            this.labelEdad.Text = "Edad";
             // 
             // labelIdSocio
             // 
             this.labelIdSocio.AutoSize = true;
             this.labelIdSocio.Location = new System.Drawing.Point(29, 58);
             this.labelIdSocio.Name = "labelIdSocio";
-            this.labelIdSocio.Size = new System.Drawing.Size(18, 13);
+            this.labelIdSocio.Size = new System.Drawing.Size(0, 13);
             this.labelIdSocio.TabIndex = 49;
-            this.labelIdSocio.Text = "ID";
             // 
             // SocioNI
             // 

@@ -246,18 +246,16 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.labelEdad.AutoSize = true;
             this.labelEdad.Location = new System.Drawing.Point(445, 147);
             this.labelEdad.Name = "labelEdad";
-            this.labelEdad.Size = new System.Drawing.Size(64, 13);
+            this.labelEdad.Size = new System.Drawing.Size(0, 13);
             this.labelEdad.TabIndex = 47;
-            this.labelEdad.Text = "Edad actual";
             // 
             // labelIdInvitado
             // 
             this.labelIdInvitado.AutoSize = true;
             this.labelIdInvitado.Location = new System.Drawing.Point(31, 62);
             this.labelIdInvitado.Name = "labelIdInvitado";
-            this.labelIdInvitado.Size = new System.Drawing.Size(99, 13);
+            this.labelIdInvitado.Size = new System.Drawing.Size(0, 13);
             this.labelIdInvitado.TabIndex = 48;
-            this.labelIdInvitado.Text = "Número de invitado";
             // 
             // InvitadoNI
             // 
