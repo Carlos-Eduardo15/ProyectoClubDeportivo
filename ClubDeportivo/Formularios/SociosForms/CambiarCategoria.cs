@@ -39,6 +39,8 @@ namespace ClubDeportivo.Formularios.SociosForms
                 if (VerificarCampos() == true)
                 {
                     comandos.actualizarTipo();
+                    MessageBox.Show("Usuario: "+labelNombre+" Actualizado a: " + tipo, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
 
             }
