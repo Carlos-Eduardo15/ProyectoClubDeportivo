@@ -93,5 +93,10 @@ namespace ClubDeportivo.Formularios.SociosForms
         {
             // Puedes agregar lógica de inicialización aquí si es necesario
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
