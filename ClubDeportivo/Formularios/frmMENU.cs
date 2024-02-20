@@ -12,34 +12,43 @@ namespace ClubDeportivo.Formularios
 {
     public partial class frmMENU : Form
     {
+       
 
         public frmMENU()
         {
             InitializeComponent();
 
-
+          
             // Configura el temporizador
             timer1 = new Timer();
             timer1.Interval = 1000; // Actualiza cada 1000 milisegundos (1 segundo)
 
             // Inicia el temporizador
             timer1.Start();
-        
-        }
+            // Desactivar las barras de desplazamiento automático en el formulario
+            this.AutoScroll = false;
 
+            // Desactivar las barras de desplazamiento horizontal y vertical en el formulario
+            this.HorizontalScroll.Enabled = false;
+            this.VerticalScroll.Enabled = false;
+
+
+            
+        }
+        string  NombreUsuarioMenu;
+            string NombreUsuario;
+        private static string  nombreEstatico;
+        public  string nombre
+        {
+            get { return NombreUsuario; }
+            set { NombreUsuario = value; }
+        }
         private void frmMENU_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
-        {
-
+            NombreUsuarioMenu=nombre;
+           // Console.WriteLine(NombreUsuarioMenu);
+           nombreEstatico=NombreUsuarioMenu;
         }
 
         private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,11 +87,6 @@ namespace ClubDeportivo.Formularios
             frmTarifas.Show();
         }
 
-        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -97,7 +101,10 @@ namespace ClubDeportivo.Formularios
 
             toolStripStatusLabel3.Text = DateTime.Now.ToString("HH:mm:ss");
 
-            toolStripStatusLabel1.Text = "WELCOME";
+            toolStripStatusLabelUsuario.Text = nombreEstatico;
+            //Console.WriteLine(NombreUsuario);
         }
+
+       
     }
 }

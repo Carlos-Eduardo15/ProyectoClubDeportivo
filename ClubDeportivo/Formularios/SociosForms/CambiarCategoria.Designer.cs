@@ -29,17 +29,8 @@
         private void InitializeComponent()
         {
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,11 +40,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.checkBoxSocio = new System.Windows.Forms.CheckBox();
+            this.checkBoxInvitado = new System.Windows.Forms.CheckBox();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelA_Paterno = new System.Windows.Forms.Label();
+            this.labelA_Materno = new System.Windows.Forms.Label();
+            this.labelCurp = new System.Windows.Forms.Label();
+            this.labelEdad = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.labelDireccion = new System.Windows.Forms.Label();
+            this.labelCorreo = new System.Windows.Forms.Label();
+            this.textBoxIdSocio = new System.Windows.Forms.TextBox();
+            this.labelFechaNacimiento = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -65,20 +65,6 @@
             this.linkLabel1.TabIndex = 45;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.gob.mx/curp/";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(479, 119);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(136, 20);
-            this.textBox9.TabIndex = 44;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(325, 119);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(126, 20);
-            this.textBox8.TabIndex = 43;
             // 
             // label10
             // 
@@ -98,56 +84,6 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Apellido paterno";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(204, 191);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 20);
-            this.dateTimePicker1.TabIndex = 40;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(352, 244);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(376, 56);
-            this.textBox7.TabIndex = 39;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(39, 280);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(285, 20);
-            this.textBox6.TabIndex = 38;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(599, 182);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 20);
-            this.textBox5.TabIndex = 37;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(458, 191);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(94, 20);
-            this.textBox4.TabIndex = 36;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(44, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 20);
-            this.textBox3.TabIndex = 35;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(44, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(261, 20);
-            this.textBox2.TabIndex = 34;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -165,6 +101,7 @@
             this.button2.TabIndex = 32;
             this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -174,6 +111,7 @@
             this.button1.TabIndex = 31;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -229,13 +167,6 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Nombre completo";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(237, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 24;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -253,46 +184,130 @@
             this.button3.TabIndex = 46;
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // checkBox1
+            // checkBoxSocio
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(532, 33);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 17);
-            this.checkBox1.TabIndex = 48;
-            this.checkBox1.Text = "Modo Socio";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSocio.AutoSize = true;
+            this.checkBoxSocio.Location = new System.Drawing.Point(606, 27);
+            this.checkBoxSocio.Name = "checkBoxSocio";
+            this.checkBoxSocio.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxSocio.TabIndex = 48;
+            this.checkBoxSocio.Text = "Modo Socio";
+            this.checkBoxSocio.UseVisualStyleBackColor = true;
+            this.checkBoxSocio.CheckedChanged += new System.EventHandler(this.checkBoxSocio_CheckedChanged_1);
             // 
-            // label11
+            // checkBoxInvitado
             // 
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(621, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 46);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "En caso de no estar seleccionado, sera considerado invitado automaticamente";
+            this.checkBoxInvitado.AutoSize = true;
+            this.checkBoxInvitado.Location = new System.Drawing.Point(499, 28);
+            this.checkBoxInvitado.Name = "checkBoxInvitado";
+            this.checkBoxInvitado.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxInvitado.TabIndex = 50;
+            this.checkBoxInvitado.Text = "Modo Invitado";
+            this.checkBoxInvitado.UseVisualStyleBackColor = true;
+            this.checkBoxInvitado.CheckedChanged += new System.EventHandler(this.checkBoxInvitado_CheckedChanged);
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Location = new System.Drawing.Point(49, 124);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(0, 13);
+            this.labelNombre.TabIndex = 52;
+            // 
+            // labelA_Paterno
+            // 
+            this.labelA_Paterno.AutoSize = true;
+            this.labelA_Paterno.Location = new System.Drawing.Point(327, 124);
+            this.labelA_Paterno.Name = "labelA_Paterno";
+            this.labelA_Paterno.Size = new System.Drawing.Size(0, 13);
+            this.labelA_Paterno.TabIndex = 53;
+            // 
+            // labelA_Materno
+            // 
+            this.labelA_Materno.AutoSize = true;
+            this.labelA_Materno.Location = new System.Drawing.Point(483, 124);
+            this.labelA_Materno.Name = "labelA_Materno";
+            this.labelA_Materno.Size = new System.Drawing.Size(0, 13);
+            this.labelA_Materno.TabIndex = 54;
+            // 
+            // labelCurp
+            // 
+            this.labelCurp.AutoSize = true;
+            this.labelCurp.Location = new System.Drawing.Point(47, 197);
+            this.labelCurp.Name = "labelCurp";
+            this.labelCurp.Size = new System.Drawing.Size(0, 13);
+            this.labelCurp.TabIndex = 55;
+            // 
+            // labelEdad
+            // 
+            this.labelEdad.AutoSize = true;
+            this.labelEdad.Location = new System.Drawing.Point(464, 191);
+            this.labelEdad.Name = "labelEdad";
+            this.labelEdad.Size = new System.Drawing.Size(0, 13);
+            this.labelEdad.TabIndex = 56;
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.Location = new System.Drawing.Point(602, 191);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(0, 13);
+            this.labelTelefono.TabIndex = 57;
+            // 
+            // labelDireccion
+            // 
+            this.labelDireccion.AutoSize = true;
+            this.labelDireccion.Location = new System.Drawing.Point(358, 255);
+            this.labelDireccion.Name = "labelDireccion";
+            this.labelDireccion.Size = new System.Drawing.Size(0, 13);
+            this.labelDireccion.TabIndex = 58;
+            // 
+            // labelCorreo
+            // 
+            this.labelCorreo.AutoSize = true;
+            this.labelCorreo.Location = new System.Drawing.Point(41, 282);
+            this.labelCorreo.Name = "labelCorreo";
+            this.labelCorreo.Size = new System.Drawing.Size(0, 13);
+            this.labelCorreo.TabIndex = 59;
+            // 
+            // textBoxIdSocio
+            // 
+            this.textBoxIdSocio.Location = new System.Drawing.Point(221, 29);
+            this.textBoxIdSocio.Name = "textBoxIdSocio";
+            this.textBoxIdSocio.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIdSocio.TabIndex = 60;
+            // 
+            // labelFechaNacimiento
+            // 
+            this.labelFechaNacimiento.AutoSize = true;
+            this.labelFechaNacimiento.Location = new System.Drawing.Point(201, 197);
+            this.labelFechaNacimiento.Name = "labelFechaNacimiento";
+            this.labelFechaNacimiento.Size = new System.Drawing.Size(0, 13);
+            this.labelFechaNacimiento.TabIndex = 61;
             // 
             // CambiarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.labelFechaNacimiento);
+            this.Controls.Add(this.textBoxIdSocio);
+            this.Controls.Add(this.labelCorreo);
+            this.Controls.Add(this.labelDireccion);
+            this.Controls.Add(this.labelTelefono);
+            this.Controls.Add(this.labelEdad);
+            this.Controls.Add(this.labelCurp);
+            this.Controls.Add(this.labelA_Materno);
+            this.Controls.Add(this.labelA_Paterno);
+            this.Controls.Add(this.labelNombre);
+            this.Controls.Add(this.checkBoxInvitado);
+            this.Controls.Add(this.checkBoxSocio);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -302,12 +317,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.MinimizeBox = false;
             this.Name = "CambiarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cambiar de Categoría";
+            this.Load += new System.EventHandler(this.CambiarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,17 +331,8 @@
         #endregion
 
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -336,10 +342,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBoxSocio;
+        private System.Windows.Forms.CheckBox checkBoxInvitado;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelA_Paterno;
+        private System.Windows.Forms.Label labelA_Materno;
+        private System.Windows.Forms.Label labelCurp;
+        private System.Windows.Forms.Label labelEdad;
+        private System.Windows.Forms.Label labelTelefono;
+        private System.Windows.Forms.Label labelDireccion;
+        private System.Windows.Forms.Label labelCorreo;
+        private System.Windows.Forms.TextBox textBoxIdSocio;
+        private System.Windows.Forms.Label labelFechaNacimiento;
     }
 }

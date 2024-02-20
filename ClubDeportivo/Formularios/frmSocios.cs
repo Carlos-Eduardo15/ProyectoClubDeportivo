@@ -17,6 +17,12 @@ namespace ClubDeportivo.Formularios
         public frmSocios()
         {
             InitializeComponent();
+            // Desactivar las barras de desplazamiento automático
+            this.AutoScroll = false;
+
+            // Desactivar las barras de desplazamiento horizontal y vertical
+            this.HorizontalScroll.Enabled = false;
+            this.VerticalScroll.Enabled = false;
         }
 
         private void CerrarFormulariosHijos()
@@ -24,6 +30,7 @@ namespace ClubDeportivo.Formularios
             foreach (Form frmAbierto in this.MdiChildren)
             {
                 frmAbierto.Close();
+                
             }
         }
 
@@ -85,6 +92,21 @@ namespace ClubDeportivo.Formularios
         {
             frmMENU frm = new frmMENU();
             frm.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void frmSocios_Load(object sender, EventArgs e)
+        {
+            // Desactivar las barras de desplazamiento automático en el formulario
+            this.AutoScroll = false;
+
+            // Desactivar las barras de desplazamiento horizontal y vertical en el formulario
+            this.HorizontalScroll.Enabled = false;
+            this.VerticalScroll.Enabled = false;
         }
     }
 

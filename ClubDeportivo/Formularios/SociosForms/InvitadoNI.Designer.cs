@@ -31,17 +31,16 @@ namespace ClubDeportivo.Formularios.SociosForms
         private void InitializeComponent()
         {
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxA_Materno = new System.Windows.Forms.TextBox();
+            this.textBoxA_Paterno = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimeNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.textBoxCurp = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,9 +50,10 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.labelEdad = new System.Windows.Forms.Label();
+            this.labelIdInvitado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -66,19 +66,19 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.gob.mx/curp/";
             // 
-            // textBox9
+            // textBoxA_Materno
             // 
-            this.textBox9.Location = new System.Drawing.Point(588, 59);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(136, 20);
-            this.textBox9.TabIndex = 44;
+            this.textBoxA_Materno.Location = new System.Drawing.Point(588, 59);
+            this.textBoxA_Materno.Name = "textBoxA_Materno";
+            this.textBoxA_Materno.Size = new System.Drawing.Size(136, 20);
+            this.textBoxA_Materno.TabIndex = 44;
             // 
-            // textBox8
+            // textBoxA_Paterno
             // 
-            this.textBox8.Location = new System.Drawing.Point(434, 59);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(126, 20);
-            this.textBox8.TabIndex = 43;
+            this.textBoxA_Paterno.Location = new System.Drawing.Point(434, 59);
+            this.textBoxA_Paterno.Name = "textBoxA_Paterno";
+            this.textBoxA_Paterno.Size = new System.Drawing.Size(126, 20);
+            this.textBoxA_Paterno.TabIndex = 43;
             // 
             // label10
             // 
@@ -98,55 +98,48 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.label9.TabIndex = 41;
             this.label9.Text = "Apellido paterno";
             // 
-            // dateTimePicker1
+            // dateTimeNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(186, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 20);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dateTimeNacimiento.Location = new System.Drawing.Point(186, 144);
+            this.dateTimeNacimiento.Name = "dateTimeNacimiento";
+            this.dateTimeNacimiento.Size = new System.Drawing.Size(219, 20);
+            this.dateTimeNacimiento.TabIndex = 40;
             // 
-            // textBox7
+            // textBoxDireccion
             // 
-            this.textBox7.Location = new System.Drawing.Point(330, 224);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(376, 56);
-            this.textBox7.TabIndex = 39;
+            this.textBoxDireccion.Location = new System.Drawing.Point(330, 224);
+            this.textBoxDireccion.Multiline = true;
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(376, 56);
+            this.textBoxDireccion.TabIndex = 39;
             // 
-            // textBox6
+            // textBoxCorreo
             // 
-            this.textBox6.Location = new System.Drawing.Point(21, 233);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(285, 20);
-            this.textBox6.TabIndex = 38;
+            this.textBoxCorreo.Location = new System.Drawing.Point(21, 233);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.Size = new System.Drawing.Size(285, 20);
+            this.textBoxCorreo.TabIndex = 38;
             // 
-            // textBox5
+            // textBoxTelefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(581, 135);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 20);
-            this.textBox5.TabIndex = 37;
+            this.textBoxTelefono.Location = new System.Drawing.Point(581, 135);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(125, 20);
+            this.textBoxTelefono.TabIndex = 37;
             // 
-            // textBox4
+            // textBoxCurp
             // 
-            this.textBox4.Location = new System.Drawing.Point(440, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(94, 20);
-            this.textBox4.TabIndex = 36;
+            this.textBoxCurp.Location = new System.Drawing.Point(26, 147);
+            this.textBoxCurp.Name = "textBoxCurp";
+            this.textBoxCurp.Size = new System.Drawing.Size(128, 20);
+            this.textBoxCurp.TabIndex = 35;
             // 
-            // textBox3
+            // textBoxNombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(26, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 20);
-            this.textBox3.TabIndex = 35;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(153, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(261, 20);
-            this.textBox2.TabIndex = 34;
+            this.textBoxNombre.Location = new System.Drawing.Point(153, 59);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(261, 20);
+            this.textBoxNombre.TabIndex = 34;
             // 
             // label8
             // 
@@ -165,6 +158,7 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.button2.TabIndex = 32;
             this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -174,6 +168,7 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.button1.TabIndex = 31;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label7
             // 
@@ -229,13 +224,6 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.label2.TabIndex = 25;
             this.label2.Text = "Nombre completo";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(26, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 24;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -254,24 +242,41 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.button3.Text = "Generar PDF";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // labelEdad
+            // 
+            this.labelEdad.AutoSize = true;
+            this.labelEdad.Location = new System.Drawing.Point(445, 147);
+            this.labelEdad.Name = "labelEdad";
+            this.labelEdad.Size = new System.Drawing.Size(0, 13);
+            this.labelEdad.TabIndex = 47;
+            // 
+            // labelIdInvitado
+            // 
+            this.labelIdInvitado.AutoSize = true;
+            this.labelIdInvitado.Location = new System.Drawing.Point(31, 62);
+            this.labelIdInvitado.Name = "labelIdInvitado";
+            this.labelIdInvitado.Size = new System.Drawing.Size(0, 13);
+            this.labelIdInvitado.TabIndex = 48;
+            // 
             // InvitadoNI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelIdInvitado);
+            this.Controls.Add(this.labelEdad);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxA_Materno);
+            this.Controls.Add(this.textBoxA_Paterno);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dateTimeNacimiento);
+            this.Controls.Add(this.textBoxDireccion);
+            this.Controls.Add(this.textBoxCorreo);
+            this.Controls.Add(this.textBoxTelefono);
+            this.Controls.Add(this.textBoxCurp);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -281,12 +286,12 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.MinimizeBox = false;
             this.Name = "InvitadoNI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registros de invitados";
+            this.Load += new System.EventHandler(this.InvitadoNI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,17 +300,16 @@ namespace ClubDeportivo.Formularios.SociosForms
         #endregion
 
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxA_Materno;
+        private System.Windows.Forms.TextBox textBoxA_Paterno;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimeNacimiento;
+        private System.Windows.Forms.TextBox textBoxDireccion;
+        private System.Windows.Forms.TextBox textBoxCorreo;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.TextBox textBoxCurp;
+        private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -315,8 +319,9 @@ namespace ClubDeportivo.Formularios.SociosForms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label labelEdad;
+        private System.Windows.Forms.Label labelIdInvitado;
     }
 }

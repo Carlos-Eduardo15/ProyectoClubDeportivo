@@ -26,14 +26,18 @@ namespace ClubDeportivo
             txtPassword.UseSystemPasswordChar = true; // Utiliza el carácter de contraseña del sistema
 
         }
+        public string NombreUsuario;
+
+        // Propiedad para la variable
+        
         //Cadena de conexion 
-        private  string cnx = VGlobal.getSetConexion;
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //TXT para las variables y verificar el login
             string idUsuario = txtUsuario.Text;
             string password = txtPassword.Text;
-
+            
             // Verifica el login en la base de datos
             if (VerificarCredenciales(idUsuario, password))
             {
@@ -42,10 +46,12 @@ namespace ClubDeportivo
 
                 //Mostrar el frmMENU 
                 frmMENU frmMenu = new frmMENU();
+                frmMenu.nombre = NombreUsuario;
                 frmMenu.Show();
 
                 //Ocultar el frmLogin
                 this.Hide();
+
             }
             else
             {
@@ -73,7 +79,7 @@ namespace ClubDeportivo
         private bool VerificarCredenciales(string idUsuario, string password)
         {
             //Utilizar las cadenas de conexion que anteriormente se le dio 
-            using (SqlConnection conexion = new SqlConnection(cnx))
+            using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
             {
                 try
                 {
@@ -82,26 +88,52 @@ namespace ClubDeportivo
 
                     // Verifica las credenciales en la base de datos con una consulta general en la base de datos
                     string consulta = "SELECT COUNT(*) FROM Usuarios WHERE id_usuario = @idUsuario AND Contrasena = @password";
+                    string obtenerNombre = "SELECT nombre FROM Usuarios WHERE id_usuario = @idUsuario AND Contrasena = @password";
                     using (SqlCommand cmd = new SqlCommand(consulta, conexion))
                     {
-                        //Mandar parametros a la consulta para verificar 
+                        // Mandar parámetros a la consulta para verificar
                         cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
                         cmd.Parameters.AddWithValue("@password", password);
 
-                        //Regresar el resultado para entrar al sistema
+                        // Regresar el resultado para entrar al sistema
                         int resultado = (int)cmd.ExecuteScalar();
-                        return resultado > 0;
+
+                        // Si las credenciales son correctas, obtener el nombre
+                        if (resultado > 0)
+                        {
+                            using (SqlCommand cmdNombre = new SqlCommand(obtenerNombre, conexion))
+                            {
+                                // Mandar parámetros a la consulta para obtener el nombre
+                                cmdNombre.Parameters.AddWithValue("@idUsuario", idUsuario);
+                                cmdNombre.Parameters.AddWithValue("@password", password);
+
+                                // Obtener el nombre
+                                NombreUsuario = cmdNombre.ExecuteScalar() as string;
+
+                                Console.WriteLine(NombreUsuario);
+                                // Aquí puedes usar la variable 'nombreUsuario' como necesites
+                            }
+
+                            // Devolver true si las credenciales son correctas
+                            return true;
+                        }
+
+                        // Devolver false si las credenciales son incorrectas
+                        return false;
                     }
                 }
-                catch (Exception ex)
+                catch 
                 {
                     return false;
                 }
             }
         }
 
+
+       
         private void frmLogin_Load(object sender, EventArgs e)
         {
+
         }
 
 
