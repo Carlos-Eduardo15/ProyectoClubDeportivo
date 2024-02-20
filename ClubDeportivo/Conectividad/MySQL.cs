@@ -28,7 +28,7 @@ namespace ClubDeportivo.Conectividad
                 catch (Exception ex)
                 {
                     cnx.Close();
-                    MessageBox.Show("Falló Conexión a Base de Datos MySQL!! \n" + ex.Message.ToString());
+                    MessageBox.Show("Falló Conexión a Base de Datos MySQL!! \n\n" + ex.Message.ToString());
                 }
             }
         }
@@ -71,11 +71,6 @@ namespace ClubDeportivo.Conectividad
             {
                 throw new Exception("MySQL:ObjetoDataReader " + ex.Message);
             }
-            finally
-            {
-                cmd.Dispose();
-                resultadoSQL.Dispose();
-            }
         }
 
         //Método para efectuar consultas a base de datos
@@ -94,12 +89,13 @@ namespace ClubDeportivo.Conectividad
             {
                 throw new Exception("MySQL:ObjetoDataAdapter " + ex.Message);
             }
-            finally
+            /*finally
             {
                 DA = null;
                 DT = null;
-            }
+            }*/
         }
+
 
 
         //Método que ejecuta una función de grupo a la base de datos
