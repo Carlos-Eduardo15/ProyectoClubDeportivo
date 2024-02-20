@@ -49,7 +49,6 @@
             this.textBoxA_Paterno = new System.Windows.Forms.TextBox();
             this.textBoxA_Materno = new System.Windows.Forms.TextBox();
             this.linkLabelCurp = new System.Windows.Forms.LinkLabel();
-            this.button3 = new System.Windows.Forms.Button();
             this.labelEdad = new System.Windows.Forms.Label();
             this.labelIdSocio = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -231,15 +230,6 @@
             this.linkLabelCurp.TabStop = true;
             this.linkLabelCurp.Text = "https://www.gob.mx/curp/";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(47, 277);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 23);
-            this.button3.TabIndex = 47;
-            this.button3.Text = "Generar PDF";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // labelEdad
             // 
             this.labelEdad.AutoSize = true;
@@ -263,7 +253,6 @@
             this.ClientSize = new System.Drawing.Size(742, 366);
             this.Controls.Add(this.labelIdSocio);
             this.Controls.Add(this.labelEdad);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabelCurp);
             this.Controls.Add(this.textBoxA_Materno);
             this.Controls.Add(this.textBoxA_Paterno);
@@ -318,7 +307,6 @@
         private System.Windows.Forms.TextBox textBoxA_Paterno;
         private System.Windows.Forms.TextBox textBoxA_Materno;
         private System.Windows.Forms.LinkLabel linkLabelCurp;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label labelEdad;
         private System.Windows.Forms.Label labelIdSocio;
     }

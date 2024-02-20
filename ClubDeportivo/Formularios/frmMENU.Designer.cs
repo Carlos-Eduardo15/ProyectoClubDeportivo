@@ -38,7 +38,7 @@ namespace ClubDeportivo.Formularios
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -60,7 +60,6 @@ namespace ClubDeportivo.Formularios
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // sociosToolStripMenuItem
             // 
@@ -95,7 +94,6 @@ namespace ClubDeportivo.Formularios
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -107,7 +105,7 @@ namespace ClubDeportivo.Formularios
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
+            this.toolStripStatusLabelUsuario,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
@@ -116,11 +114,11 @@ namespace ClubDeportivo.Formularios
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabelUsuario
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(100, 17);
-            this.toolStripStatusLabel1.Text = "Mostrar mensajes";
+            this.toolStripStatusLabelUsuario.Name = "toolStripStatusLabelUsuario";
+            this.toolStripStatusLabelUsuario.Size = new System.Drawing.Size(100, 17);
+            this.toolStripStatusLabelUsuario.Text = "Mostrar mensajes";
             // 
             // toolStripStatusLabel2
             // 
@@ -173,9 +171,9 @@ namespace ClubDeportivo.Formularios
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelUsuario;
     }
 }
