@@ -17,7 +17,7 @@ namespace ClubDeportivo.Conectividad
         //Método Constructor que establece la conexión con el origen de datos
         public MySQL()
         {
-            cnx = new OdbcConnection("DRIVER={MySQL ODBC 5.1 Driver}; SERVER= 127.0.0.1;DATABASE= clubdeportivo; UID= root; PWD= its2023");
+            cnx = new OdbcConnection("DRIVER={MySQL ODBC 8.0 Unicode Driver};SERVER=127.0.0.1; DATABASE=clubdeportivo; UID=root; PWD=ronits2024$$$");
 
             if (cnx.State == ConnectionState.Closed)
             {
@@ -28,7 +28,7 @@ namespace ClubDeportivo.Conectividad
                 catch (Exception ex)
                 {
                     cnx.Close();
-                    MessageBox.Show("Falló Conexión a Base de Datos MySQL!! " + ex.Message.ToString());
+                    MessageBox.Show("Falló Conexión a Base de Datos MySQL!! \n\n" + ex.Message.ToString());
                 }
             }
         }
@@ -71,11 +71,6 @@ namespace ClubDeportivo.Conectividad
             {
                 throw new Exception("MySQL:ObjetoDataReader " + ex.Message);
             }
-            finally
-            {
-                cmd.Dispose();
-                resultadoSQL.Dispose();
-            }
         }
 
         //Método para efectuar consultas a base de datos
@@ -94,12 +89,13 @@ namespace ClubDeportivo.Conectividad
             {
                 throw new Exception("MySQL:ObjetoDataAdapter " + ex.Message);
             }
-            finally
+            /*finally
             {
                 DA = null;
                 DT = null;
-            }
+            }*/
         }
+
 
 
         //Método que ejecuta una función de grupo a la base de datos

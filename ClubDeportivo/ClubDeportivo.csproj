@@ -135,6 +135,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClubDeportivoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Conectividad\MySQL.cs" />
     <Compile Include="Formularios\frmTarifas.cs">
       <SubType>Form</SubType>
     </Compile>
