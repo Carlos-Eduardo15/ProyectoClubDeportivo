@@ -246,6 +246,18 @@ namespace ClubDeportivo.Formularios
 
         }
 
+        //boton de guardar
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //boton de salir
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void frmRecibos_FormClosing(object sender, FormClosingEventArgs e)
         {
             frmMENU frmMenu = new frmMENU();
