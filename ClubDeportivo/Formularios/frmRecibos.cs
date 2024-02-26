@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubDeportivo.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,54 @@ namespace ClubDeportivo.Formularios
         public frmRecibos()
         {
             InitializeComponent();
+            pestañaSocio.Enabled = false; // Deshabilitar pestaña del socio
+            pestañaInvitado.Enabled = false; // Deshabilitar pestaña del invitado
+
+        }
+        SQLSocios comandos = new SQLSocios();
+        string  nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, telefono;
+        DateTime fechaIngreso;
+        DateTime fechaNacimiento;
+        int edad;
+        char tipo;
+
+
+        private void ObtenerDatosSocio()
+        {
+
+
+            // Llama al método ConsultarSocio para obtener los datos
+            comandos.ConsultarSocio(out nombre, out apellidoPaterno, out apellidoMaterno, out curp, out fechaNacimiento, out edad, out direccion, out correo, out telefono, out fechaIngreso, out tipo);
+
+            //imprime en los labels especificos información especifica
+            labelNombre.Text = nombre;
+            labelA_Paterno.Text = apellidoPaterno;
+            labelA_Materno.Text = apellidoMaterno;
+            labelCurp.Text = curp;
+            labelFechaNacimiento.Text = fechaNacimiento.ToString();
+            labelEdad.Text = edad.ToString();
+            labelDireccion.Text = direccion;
+            labelCorreo.Text = correo;
+            labelTelefono.Text = telefono;
+
+
+            if (tipo == 'S') // Si es socio
+            {
+                pestañaSocio.Enabled = true; // Habilitar pestaña del socio
+                pestañaInvitado.Enabled = true; // Habilitar pestaña del invitado
+            }
+            else if (tipo == 'I') // Si es invitado
+            {
+                pestañaSocio.Enabled = true; // Habilitar pestaña del socio
+                pestañaInvitado.Enabled = false; // Deshabilitar pestaña del invitado
+            }
+            else // Si no es ni socio ni invitado
+            {
+                pestañaSocio.Enabled = false; // Deshabilitar pestaña del socio
+                pestañaInvitado.Enabled = false; // Deshabilitar pestaña del invitado
+            }
+
+
         }
 
         private void frmRecibos_Load(object sender, EventArgs e)
@@ -37,127 +86,32 @@ namespace ClubDeportivo.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
 
+
+            if (VerificarCampos())
+            {
+                comandos.getID = int.TryParse(textBoxIdSocio.Text.Trim(), out int idSocio) ? idSocio : 0;
+                if (VerificarCampos() == true)
+                {
+                    labelNum.Text = idSocio.ToString();
+                    ObtenerDatosSocio();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Ingresa un id de trabajador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
 
-        //NUMERO DE SOCIO
-        // etiqueta
-        private void label1_Click(object sender, EventArgs e)
+
+        private bool VerificarCampos()
         {
-
-        }
-        //num socio
-        private void label14_Click(object sender, EventArgs e)
-        {
-
+            string id = textBoxIdSocio.Text;
+            return !string.IsNullOrEmpty(id);
         }
 
-        //NOMBRE
-        //etiqueta
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        //nombre
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //APELLIDO PATERNO
-        //etiqueta
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-        //apellido paterno
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //APELLIDO MATERNO
-        //etiqueta
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-        //apellido materno
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //FECHA DE NACIMIENTO
-        //etiqueta
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-        //fecha nacimiento
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //EDAD ACTUAL
-        //etiqueta
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-        //edad actual
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //TELEFONO
-        //etiqueta
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-        //telefono
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //CORREO ELECTRONICO
-        //etiqueta
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-        //correo electronico
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //CURP
-        //etiqueta
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-        //curp
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //DIRECCION
-        //etiqueta
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //CASA CLUB
         private void tabPage1_Click(object sender, EventArgs e)
@@ -174,6 +128,8 @@ namespace ClubDeportivo.Formularios
         {
 
         }
+
+
         //etiqueta coperacion terrenos
         private void label27_Click(object sender, EventArgs e)
         {
@@ -181,11 +137,6 @@ namespace ClubDeportivo.Formularios
         }
         //etiqueta membresia
         private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta defuncion
-        private void label29_Click(object sender, EventArgs e)
         {
 
         }
@@ -255,7 +206,7 @@ namespace ClubDeportivo.Formularios
         //boton de salir
         private void button5_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void frmRecibos_FormClosing(object sender, FormClosingEventArgs e)
