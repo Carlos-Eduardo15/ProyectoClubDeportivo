@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using ClubDeportivo.Clases;
 using ClubDeportivo.Conectividad;
 
-
 namespace ClubDeportivo.Formularios
 {
     public partial class frmTarifas : Form
