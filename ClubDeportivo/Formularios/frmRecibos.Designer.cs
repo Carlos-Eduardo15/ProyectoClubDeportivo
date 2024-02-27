@@ -400,6 +400,7 @@
             this.checkedListBoxCC.Name = "checkedListBoxCC";
             this.checkedListBoxCC.Size = new System.Drawing.Size(120, 64);
             this.checkedListBoxCC.TabIndex = 28;
+            this.checkedListBoxCC.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxCC_ItemCheck);
             // 
             // pestañaInvitado
             // 

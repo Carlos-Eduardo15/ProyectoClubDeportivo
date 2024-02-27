@@ -26,6 +26,10 @@ namespace ClubDeportivo.Formularios
         DateTime fechaNacimiento;
         int edad;
         char tipo;
+        int precio1 = 1600;
+        int precio2 = 1500;
+        int precio3 = 1700;
+        int precio4 = 2000;
 
         // Variables para almacenar los valores de las listas de los checkbox
         int totalCasaClub = 0;
@@ -122,17 +126,7 @@ namespace ClubDeportivo.Formularios
 
         }
         //lista de checkbox
-        private void checkedListBoxCC_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-
-            totalCasaClub = checkedListBoxCC.SelectedIndex;
-
-            
-
-
-            // Actualizar la etiqueta del total
-            labelTotalCC.Text = totalCasaClub.ToString();
-        }
+       
 
         //total
         private void labelTotalCC_Click(object sender, EventArgs e)
@@ -151,6 +145,49 @@ namespace ClubDeportivo.Formularios
         {
 
         }
+
+
+
+        private int sumatoria = 0;
+
+        private void checkedListBoxCC_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            int indice = e.Index;
+            bool estadoNuevo = e.NewValue == CheckState.Checked;
+
+            switch (indice)
+            {
+                case 0:
+                    // Manejar la lógica para el caso 0 (índice 0)
+                    sumatoria += estadoNuevo ? precio1 : -precio1;
+                    break;
+
+                case 1:
+                    // Manejar la lógica para el caso 1 (índice 1)
+                    sumatoria += estadoNuevo ? precio2 : -precio2;
+                    break;
+
+                case 2:
+                    // Manejar la lógica para el caso 2 (índice 2)
+                    sumatoria += estadoNuevo ? precio3 : -precio3;
+                    break;
+
+                case 3:
+                    // Manejar la lógica para el caso 3 (índice 3)
+                    sumatoria += estadoNuevo ? precio4 : -precio4;
+                    break;
+
+                default:
+                    Console.WriteLine("ERROR EN LA SUMATORIA");
+                    break;
+            }
+
+            sumatoria = Math.Max(0, sumatoria); // Asegura que el valor mínimo sea 0
+
+            labelTotalCC.Text = sumatoria.ToString();
+          //  Console.WriteLine($"Sumatoria final: {sumatoria}");
+        }
+
 
 
 
