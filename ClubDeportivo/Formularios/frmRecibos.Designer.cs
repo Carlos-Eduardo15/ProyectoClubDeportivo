@@ -55,19 +55,19 @@
             this.labelCorreo = new System.Windows.Forms.Label();
             this.labelCurp = new System.Windows.Forms.Label();
             this.labelDireccion = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.labelTotalCC = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pestañaSocio = new System.Windows.Forms.TabPage();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.labelDefunsion = new System.Windows.Forms.Label();
+            this.labelMembresia = new System.Windows.Forms.Label();
+            this.labelCopTer = new System.Windows.Forms.Label();
+            this.labelCopSel = new System.Windows.Forms.Label();
+            this.checkedListBoxCC = new System.Windows.Forms.CheckedListBox();
             this.pestañaInvitado = new System.Windows.Forms.TabPage();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxAM = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -230,7 +230,6 @@
             this.label12.Size = new System.Drawing.Size(93, 13);
             this.label12.TabIndex = 15;
             this.label12.Text = "Adeudo casa club";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // labelNum
             // 
@@ -312,15 +311,14 @@
             this.labelDireccion.Size = new System.Drawing.Size(0, 13);
             this.labelDireccion.TabIndex = 26;
             // 
-            // label24
+            // labelTotalCC
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(324, 35);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 13);
-            this.label24.TabIndex = 27;
-            this.label24.Text = "label24";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
+            this.labelTotalCC.AutoSize = true;
+            this.labelTotalCC.Location = new System.Drawing.Point(324, 35);
+            this.labelTotalCC.Name = "labelTotalCC";
+            this.labelTotalCC.Size = new System.Drawing.Size(0, 13);
+            this.labelTotalCC.TabIndex = 27;
+            this.labelTotalCC.Click += new System.EventHandler(this.labelTotalCC_Click);
             // 
             // tabControl1
             // 
@@ -337,13 +335,13 @@
             // pestañaSocio
             // 
             this.pestañaSocio.AccessibleName = "pestañaSocio ";
-            this.pestañaSocio.Controls.Add(this.label29);
-            this.pestañaSocio.Controls.Add(this.label28);
-            this.pestañaSocio.Controls.Add(this.label27);
-            this.pestañaSocio.Controls.Add(this.label26);
-            this.pestañaSocio.Controls.Add(this.checkedListBox1);
+            this.pestañaSocio.Controls.Add(this.labelDefunsion);
+            this.pestañaSocio.Controls.Add(this.labelMembresia);
+            this.pestañaSocio.Controls.Add(this.labelCopTer);
+            this.pestañaSocio.Controls.Add(this.labelCopSel);
+            this.pestañaSocio.Controls.Add(this.checkedListBoxCC);
             this.pestañaSocio.Controls.Add(this.label12);
-            this.pestañaSocio.Controls.Add(this.label24);
+            this.pestañaSocio.Controls.Add(this.labelTotalCC);
             this.pestañaSocio.Controls.Add(this.button2);
             this.pestañaSocio.Location = new System.Drawing.Point(4, 22);
             this.pestañaSocio.Name = "pestañaSocio";
@@ -354,58 +352,54 @@
             this.pestañaSocio.UseVisualStyleBackColor = true;
             this.pestañaSocio.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // label29
+            // labelDefunsion
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(145, 83);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(41, 13);
-            this.label29.TabIndex = 32;
-            this.label29.Text = "label29";
+            this.labelDefunsion.AutoSize = true;
+            this.labelDefunsion.Location = new System.Drawing.Point(145, 83);
+            this.labelDefunsion.Name = "labelDefunsion";
+            this.labelDefunsion.Size = new System.Drawing.Size(40, 13);
+            this.labelDefunsion.TabIndex = 32;
+            this.labelDefunsion.Text = "$ 2000";
             // 
-            // label28
+            // labelMembresia
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(145, 70);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(41, 13);
-            this.label28.TabIndex = 31;
-            this.label28.Text = "label28";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
+            this.labelMembresia.AutoSize = true;
+            this.labelMembresia.Location = new System.Drawing.Point(145, 70);
+            this.labelMembresia.Name = "labelMembresia";
+            this.labelMembresia.Size = new System.Drawing.Size(40, 13);
+            this.labelMembresia.TabIndex = 31;
+            this.labelMembresia.Text = "$ 1700";
             // 
-            // label27
+            // labelCopTer
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(145, 48);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(41, 13);
-            this.label27.TabIndex = 30;
-            this.label27.Text = "label27";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
+            this.labelCopTer.AutoSize = true;
+            this.labelCopTer.Location = new System.Drawing.Point(145, 48);
+            this.labelCopTer.Name = "labelCopTer";
+            this.labelCopTer.Size = new System.Drawing.Size(40, 13);
+            this.labelCopTer.TabIndex = 30;
+            this.labelCopTer.Text = "$ 1500";
             // 
-            // label26
+            // labelCopSel
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(145, 35);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(41, 13);
-            this.label26.TabIndex = 29;
-            this.label26.Text = "label26";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
+            this.labelCopSel.AutoSize = true;
+            this.labelCopSel.Location = new System.Drawing.Point(145, 35);
+            this.labelCopSel.Name = "labelCopSel";
+            this.labelCopSel.Size = new System.Drawing.Size(40, 13);
+            this.labelCopSel.TabIndex = 29;
+            this.labelCopSel.Text = "$ 1600";
             // 
-            // checkedListBox1
+            // checkedListBoxCC
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxCC.FormattingEnabled = true;
+            this.checkedListBoxCC.Items.AddRange(new object[] {
             "Coperación-seleción",
             "Coperación-terrenos",
             "Membresía",
             "Defunción"});
-            this.checkedListBox1.Location = new System.Drawing.Point(19, 35);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 64);
-            this.checkedListBox1.TabIndex = 28;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.checkedListBoxCC.Location = new System.Drawing.Point(19, 35);
+            this.checkedListBoxCC.Name = "checkedListBoxCC";
+            this.checkedListBoxCC.Size = new System.Drawing.Size(120, 64);
+            this.checkedListBoxCC.TabIndex = 28;
             // 
             // pestañaInvitado
             // 
@@ -413,7 +407,7 @@
             this.pestañaInvitado.Controls.Add(this.label31);
             this.pestañaInvitado.Controls.Add(this.label32);
             this.pestañaInvitado.Controls.Add(this.label33);
-            this.pestañaInvitado.Controls.Add(this.checkedListBox2);
+            this.pestañaInvitado.Controls.Add(this.checkedListBoxAM);
             this.pestañaInvitado.Controls.Add(this.label34);
             this.pestañaInvitado.Controls.Add(this.label35);
             this.pestañaInvitado.Controls.Add(this.button3);
@@ -434,7 +428,6 @@
             this.label31.Size = new System.Drawing.Size(41, 13);
             this.label31.TabIndex = 39;
             this.label31.Text = "label31";
-            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // label32
             // 
@@ -444,7 +437,6 @@
             this.label32.Size = new System.Drawing.Size(41, 13);
             this.label32.TabIndex = 38;
             this.label32.Text = "label32";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label33
             // 
@@ -454,20 +446,19 @@
             this.label33.Size = new System.Drawing.Size(41, 13);
             this.label33.TabIndex = 37;
             this.label33.Text = "label33";
-            this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
-            // checkedListBox2
+            // checkedListBoxAM
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.checkedListBoxAM.FormattingEnabled = true;
+            this.checkedListBoxAM.Items.AddRange(new object[] {
             "Coperación-seleción",
             "Coperación-terrenos",
             "Membresía"});
-            this.checkedListBox2.Location = new System.Drawing.Point(19, 32);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(120, 49);
-            this.checkedListBox2.TabIndex = 36;
-            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
+            this.checkedListBoxAM.Location = new System.Drawing.Point(19, 32);
+            this.checkedListBoxAM.Name = "checkedListBoxAM";
+            this.checkedListBoxAM.Size = new System.Drawing.Size(120, 49);
+            this.checkedListBoxAM.TabIndex = 36;
+            this.checkedListBoxAM.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
             // 
             // label34
             // 
@@ -477,7 +468,6 @@
             this.label34.Size = new System.Drawing.Size(93, 13);
             this.label34.TabIndex = 34;
             this.label34.Text = "Adeudo casa club";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // label35
             // 
@@ -595,19 +585,19 @@
         private System.Windows.Forms.Label labelCorreo;
         private System.Windows.Forms.Label labelCurp;
         private System.Windows.Forms.Label labelDireccion;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label labelTotalCC;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage pestañaSocio;
         private System.Windows.Forms.TabPage pestañaInvitado;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCC;
+        private System.Windows.Forms.Label labelDefunsion;
+        private System.Windows.Forms.Label labelMembresia;
+        private System.Windows.Forms.Label labelCopTer;
+        private System.Windows.Forms.Label labelCopSel;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBoxAM;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button3;

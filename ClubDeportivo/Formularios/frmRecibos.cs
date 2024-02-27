@@ -27,6 +27,8 @@ namespace ClubDeportivo.Formularios
         int edad;
         char tipo;
 
+        // Variables para almacenar los valores de las listas de los checkbox
+        int totalCasaClub = 0;
 
         private void ObtenerDatosSocio()
         {
@@ -66,9 +68,10 @@ namespace ClubDeportivo.Formularios
 
         }
 
+        //aqui se realizaran las sumas
         private void frmRecibos_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         //BUSQUEDA DE NUMEROS Y NOMBRE
@@ -119,37 +122,24 @@ namespace ClubDeportivo.Formularios
 
         }
         //lista de checkbox
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void checkedListBoxCC_SelectedIndexChanged(object sender, EventArgs e)
+        { 
 
+            totalCasaClub = checkedListBoxCC.SelectedIndex;
+
+            
+
+
+            // Actualizar la etiqueta del total
+            labelTotalCC.Text = totalCasaClub.ToString();
         }
-        //etiqueta coperacion seleccion
-        private void label26_Click(object sender, EventArgs e)
-        {
 
-        }
-
-
-        //etiqueta coperacion terrenos
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta membresia
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta de casa
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
         //total
-        private void label24_Click(object sender, EventArgs e)
+        private void labelTotalCC_Click(object sender, EventArgs e)
         {
 
         }
+
         //descargar pdf
         private void button2_Click(object sender, EventArgs e)
         {
@@ -161,28 +151,11 @@ namespace ClubDeportivo.Formularios
         {
 
         }
+
+
+
         //lista de checkbox
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta coperacion seleccion
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta coperacion terrenos
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta membresia
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-        //etiqueta de ayuda
-        private void label34_Click(object sender, EventArgs e)
         {
 
         }
