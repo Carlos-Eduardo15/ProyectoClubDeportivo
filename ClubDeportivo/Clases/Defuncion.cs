@@ -58,6 +58,6 @@ namespace ClubDeportivo.Clases
             set { _monto = value; }
         }
 
-        public void 
+
     }
 }

@@ -129,7 +129,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Defuncion.cs" />
+    <Compile Include="Clases\Pago.cs" />
+    <Compile Include="Clases\PDF.cs" />
+    <Compile Include="Clases\Socio.cs" />
     <Compile Include="Clases\SQLSocios.cs" />
+    <Compile Include="Clases\Tarifa.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="ClubDeportivoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,8 +279,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Conectividad\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
