@@ -37,5 +37,10 @@ namespace ClubDeportivo.Formularios
             frmMENU frmMENU = new frmMENU();    
             frmMENU.Show();
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
