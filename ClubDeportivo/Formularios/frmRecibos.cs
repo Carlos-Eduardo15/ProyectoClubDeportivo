@@ -181,6 +181,7 @@ namespace ClubDeportivo.Formularios
                     Console.WriteLine("ERROR EN LA SUMATORIA");
                     break;
             }
+            Console.WriteLine("Chequemos is hace esto");
 
             sumatoria = Math.Max(0, sumatoria); // Asegura que el valor mínimo sea 0
 
@@ -190,17 +191,44 @@ namespace ClubDeportivo.Formularios
 
 
 
-
         //lista de checkbox
-        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-        //total
-        private void label35_Click(object sender, EventArgs e)
-        {
+        private int sumatoria2 = 0;
 
+        private void checkedListBoxAM_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            int indice = e.Index;
+            bool estadoNuevo = e.NewValue == CheckState.Checked;
+
+            switch (indice)
+            {
+                case 0:
+                    // Manejar la lógica para el caso 0 (índice 0)
+                    sumatoria2 += estadoNuevo ? precio1 : -precio1;
+                    break;
+
+                case 1:
+                    // Manejar la lógica para el caso 1 (índice 1)
+                    sumatoria2 += estadoNuevo ? precio2 : -precio2;
+                    break;
+
+                case 2:
+                    // Manejar la lógica para el caso 2 (índice 2)
+                    sumatoria2 += estadoNuevo ? precio3 : -precio3;
+                    break;
+
+                default:
+                    Console.WriteLine("ERROR EN LA SUMATORIA");
+                    break;
+            }
+            Console.WriteLine("Chequemos is hace esto");
+
+            sumatoria2 = Math.Max(0, sumatoria2); // Asegura que el valor mínimo sea 0
+
+            labelTotalAM.Text = sumatoria2.ToString();
         }
+
+
         //descargar pdf
         private void button3_Click(object sender, EventArgs e)
         {
