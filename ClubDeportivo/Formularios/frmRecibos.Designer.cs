@@ -69,7 +69,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.checkedListBoxAM = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.labelTotalAM = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -410,7 +410,7 @@
             this.pestañaInvitado.Controls.Add(this.label33);
             this.pestañaInvitado.Controls.Add(this.checkedListBoxAM);
             this.pestañaInvitado.Controls.Add(this.label34);
-            this.pestañaInvitado.Controls.Add(this.label35);
+            this.pestañaInvitado.Controls.Add(this.labelTotalAM);
             this.pestañaInvitado.Controls.Add(this.button3);
             this.pestañaInvitado.Location = new System.Drawing.Point(4, 22);
             this.pestañaInvitado.Name = "pestañaInvitado";
@@ -426,27 +426,27 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(145, 67);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(41, 13);
+            this.label31.Size = new System.Drawing.Size(31, 13);
             this.label31.TabIndex = 39;
-            this.label31.Text = "label31";
+            this.label31.Text = "1700";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(145, 45);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 13);
+            this.label32.Size = new System.Drawing.Size(31, 13);
             this.label32.TabIndex = 38;
-            this.label32.Text = "label32";
+            this.label32.Text = "1500";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(145, 32);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(41, 13);
+            this.label33.Size = new System.Drawing.Size(31, 13);
             this.label33.TabIndex = 37;
-            this.label33.Text = "label33";
+            this.label33.Text = "1600";
             // 
             // checkedListBoxAM
             // 
@@ -459,7 +459,6 @@
             this.checkedListBoxAM.Name = "checkedListBoxAM";
             this.checkedListBoxAM.Size = new System.Drawing.Size(120, 49);
             this.checkedListBoxAM.TabIndex = 36;
-            this.checkedListBoxAM.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
             // 
             // label34
             // 
@@ -470,15 +469,13 @@
             this.label34.TabIndex = 34;
             this.label34.Text = "Adeudo casa club";
             // 
-            // label35
+            // labelTotalAM
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(313, 32);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(41, 13);
-            this.label35.TabIndex = 35;
-            this.label35.Text = "label35";
-            this.label35.Click += new System.EventHandler(this.label35_Click);
+            this.labelTotalAM.AutoSize = true;
+            this.labelTotalAM.Location = new System.Drawing.Point(313, 32);
+            this.labelTotalAM.Name = "labelTotalAM";
+            this.labelTotalAM.Size = new System.Drawing.Size(0, 13);
+            this.labelTotalAM.TabIndex = 35;
             // 
             // button3
             // 
@@ -600,7 +597,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.CheckedListBox checkedListBoxAM;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label labelTotalAM;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
