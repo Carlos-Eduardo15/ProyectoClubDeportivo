@@ -31,8 +31,6 @@ namespace ClubDeportivo.Formularios
         int precio3 = 1700;
         int precio4 = 2000;
 
-        // Variables para almacenar los valores de las listas de los checkbox
-        int totalCasaClub = 0;
 
         private void ObtenerDatosSocio()
         {
@@ -190,12 +188,13 @@ namespace ClubDeportivo.Formularios
         }
 
 
-
         //lista de checkbox
 
         private int sumatoria2 = 0;
 
-        private void checkedListBoxAM_ItemCheck(object sender, ItemCheckEventArgs e)
+
+
+        private void checkedListBoxAM_ItemCheck_1(object sender, ItemCheckEventArgs e)
         {
             int indice = e.Index;
             bool estadoNuevo = e.NewValue == CheckState.Checked;
@@ -227,6 +226,9 @@ namespace ClubDeportivo.Formularios
 
             labelTotalAM.Text = sumatoria2.ToString();
         }
+
+
+
 
 
         //descargar pdf
