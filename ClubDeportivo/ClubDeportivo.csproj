@@ -148,6 +148,12 @@
       <DependentUpon>ClubDeportivoDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conectividad\MySQL.cs" />
+    <Compile Include="Formularios\frmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmTarifas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     <Compile Include="Funciones\VGlobal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmDefunciones.resx">
       <DependentUpon>frmDefunciones.cs</DependentUpon>
     </EmbeddedResource>

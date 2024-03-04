@@ -86,6 +86,13 @@ namespace ClubDeportivo.Formularios
             frmTarifas frmTarifas = new frmTarifas();
             frmTarifas.Show();
         }
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //Mostrar frmAcercaDe
+            frmAcercaDe frmAcercaDe = new frmAcercaDe();
+            frmAcercaDe.Show();
+        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -105,6 +112,5 @@ namespace ClubDeportivo.Formularios
             //Console.WriteLine(NombreUsuario);
         }
 
-       
     }
 }
