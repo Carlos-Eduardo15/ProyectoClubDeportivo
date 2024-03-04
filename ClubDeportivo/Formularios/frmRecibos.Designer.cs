@@ -459,6 +459,7 @@
             this.checkedListBoxAM.Name = "checkedListBoxAM";
             this.checkedListBoxAM.Size = new System.Drawing.Size(120, 49);
             this.checkedListBoxAM.TabIndex = 36;
+            this.checkedListBoxAM.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxAM_ItemCheck_1);
             // 
             // label34
             // 

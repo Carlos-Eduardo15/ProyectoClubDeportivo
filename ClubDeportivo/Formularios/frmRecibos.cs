@@ -1,4 +1,5 @@
 ﻿using ClubDeportivo.Clases;
+using PdfSharp.Drawing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfSharp.Pdf;
+using PdfSharp.Drawing;
+using System.IO;
+
 
 namespace ClubDeportivo.Formularios
 {
@@ -189,6 +194,11 @@ namespace ClubDeportivo.Formularios
           //  Console.WriteLine($"Sumatoria final: {sumatoria}");
         }
 
+        private void checkedListBoxAM_ItemCheck_1(object sender, ItemCheckEventArgs e)
+        {
+
+        }
+
 
 
         //lista de checkbox
@@ -238,7 +248,36 @@ namespace ClubDeportivo.Formularios
         //boton de guardar
         private void button4_Click(object sender, EventArgs e)
         {
+            // Ruta del archivo PDF de salida
+            // Obtener la ruta del escritorio
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
+            // Concatenar el nombre del archivo al final de la ruta del escritorio
+            string outputPath = Path.Combine(desktopPath, "archivo.pdf");
+
+            // Crear un documento PDF
+            using (var document = new PdfDocument())
+            {
+                // Añadir una página al documento
+                var page = document.AddPage();
+
+                // Obtener un objeto XGraphics para dibujar en la página
+                using (var gfx = XGraphics.FromPdfPage(page))
+                {
+                    // Definir la fuente y el tamaño
+                    var font = new XFont("Arial", 12);
+
+                    // Dibujar un texto en la página
+                    gfx.DrawString("Hola, este es un documento PDF generado con PDFsharp.", font, XBrushes.Black,
+                        new XRect(10, 10, page.Width, page.Height), XStringFormats.TopLeft);
+                }
+
+                // Guardar el documento PDF en el archivo
+                document.Save(outputPath);
+            }
+
+            // Mostrar un mensaje indicando que el PDF se generó con éxito
+            MessageBox.Show("PDF generado con éxito en: " + outputPath, "Generación de PDF");
         }
 
         //boton de salir
