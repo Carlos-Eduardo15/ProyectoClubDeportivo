@@ -123,33 +123,7 @@ namespace ClubDeportivo.Formularios
         }
 
 
-        //CASA CLUB
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-        //lista de checkbox
-       
-
-        //total
-        private void labelTotalCC_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //descargar pdf
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //AYUDA MUTUA
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
+     
 
         private int sumatoria = 0;
 
@@ -192,17 +166,9 @@ namespace ClubDeportivo.Formularios
           //  Console.WriteLine($"Sumatoria final: {sumatoria}");
         }
 
-        private void checkedListBoxAM_ItemCheck_1(object sender, ItemCheckEventArgs e)
-        {
+ 
 
-        }
-
-
-        //lista de checkbox
-
-        private int sumatoria2 = 0;
-
-
+   
 
         private void checkedListBoxAM_ItemCheck_1(object sender, ItemCheckEventArgs e)
         {
@@ -237,6 +203,13 @@ namespace ClubDeportivo.Formularios
             labelTotalAM.Text = sumatoria2.ToString();
         }
 
+        //lista de checkbox
+
+        private int sumatoria2 = 0;
+
+
+
+      
 
 
 

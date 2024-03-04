@@ -220,7 +220,6 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Descargar PDF";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label12
             // 
@@ -318,7 +317,6 @@
             this.labelTotalCC.Name = "labelTotalCC";
             this.labelTotalCC.Size = new System.Drawing.Size(0, 13);
             this.labelTotalCC.TabIndex = 27;
-            this.labelTotalCC.Click += new System.EventHandler(this.labelTotalCC_Click);
             // 
             // tabControl1
             // 
@@ -350,7 +348,6 @@
             this.pestañaSocio.TabIndex = 0;
             this.pestañaSocio.Text = "Casa club";
             this.pestañaSocio.UseVisualStyleBackColor = true;
-            this.pestañaSocio.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // labelDefunsion
             // 
@@ -419,7 +416,6 @@
             this.pestañaInvitado.TabIndex = 1;
             this.pestañaInvitado.Text = "Ayuda mutua";
             this.pestañaInvitado.UseVisualStyleBackColor = true;
-            this.pestañaInvitado.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label31
             // 
