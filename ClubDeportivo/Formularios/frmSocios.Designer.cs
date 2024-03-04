@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSocios));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nuevoIngresoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sociosNuevoIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +37,9 @@
             this.sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarDeCategoríaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarPadrónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -62,6 +65,7 @@
             this.nuevoIngresoToolStripMenuItem1.Name = "nuevoIngresoToolStripMenuItem1";
             this.nuevoIngresoToolStripMenuItem1.Size = new System.Drawing.Size(96, 20);
             this.nuevoIngresoToolStripMenuItem1.Text = "Nuevo Ingreso";
+            this.nuevoIngresoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoIngresoToolStripMenuItem1_Click);
             // 
             // sociosNuevoIngresoToolStripMenuItem
             // 
@@ -106,11 +110,23 @@
             this.consultarPadrónToolStripMenuItem1.Text = "Consultar Padrón";
             this.consultarPadrónToolStripMenuItem1.Click += new System.EventHandler(this.consultarPadrónToolStripMenuItem1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 426);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
@@ -122,6 +138,7 @@
             this.Load += new System.EventHandler(this.frmSocios_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +153,6 @@
         private System.Windows.Forms.ToolStripMenuItem cambiarDeCategoríaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultarPadrónToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -37,6 +37,7 @@ namespace ClubDeportivo.Formularios
         private void sociosNuevoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarFormulariosHijos();
+            pictureBox1.Hide();
 
             // Abre una nueva instancia de SocioNI
             SocioNI frm = new SocioNI();
@@ -49,6 +50,7 @@ namespace ClubDeportivo.Formularios
         private void invitadoNuevoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarFormulariosHijos();
+            pictureBox1.Hide();
 
             InvitadoNI frm = new InvitadoNI();
             frm.MdiParent = this;
@@ -60,7 +62,7 @@ namespace ClubDeportivo.Formularios
         private void sociosDeReIngresoOInvitadosDeReIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarFormulariosHijos();
-
+            pictureBox1.Hide();
             Reingreso frm = new Reingreso();
             frm.MdiParent = this;
             frm.Size = this.ClientSize;
@@ -71,6 +73,7 @@ namespace ClubDeportivo.Formularios
         private void cambiarDeCategoríaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             CerrarFormulariosHijos();
+            pictureBox1.Hide();
 
             CambiarCategoria frm = new CambiarCategoria();
             frm.MdiParent = this;
@@ -82,6 +85,8 @@ namespace ClubDeportivo.Formularios
         private void consultarPadrónToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ConsultaPadron frm = new ConsultaPadron();
+            pictureBox1.Hide();
+
             frm.MdiParent = this;
             frm.Size = this.ClientSize;
             frm.Show();
@@ -107,6 +112,11 @@ namespace ClubDeportivo.Formularios
             // Desactivar las barras de desplazamiento horizontal y vertical en el formulario
             this.HorizontalScroll.Enabled = false;
             this.VerticalScroll.Enabled = false;
+        }
+
+        private void nuevoIngresoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

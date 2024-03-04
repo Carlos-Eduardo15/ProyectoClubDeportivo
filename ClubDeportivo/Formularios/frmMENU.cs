@@ -49,6 +49,14 @@ namespace ClubDeportivo.Formularios
             NombreUsuarioMenu=nombre;
            // Console.WriteLine(NombreUsuarioMenu);
            nombreEstatico=NombreUsuarioMenu;
+            ImageAnimator.Animate(pictureBox1.Image, OnFrameChanged);
+
+        }
+
+        private void OnFrameChanged(object sender, EventArgs e)
+        {
+            // Manejar cambios de cuadro (si es necesario)
+            pictureBox1.Invalidate();
         }
 
         private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
