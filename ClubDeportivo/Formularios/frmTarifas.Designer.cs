@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTarifas));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCasaClub = new System.Windows.Forms.TabPage();
             this.btnActualizarTarifaCC = new System.Windows.Forms.Button();
@@ -143,9 +144,9 @@
             // monto_tarifa
             // 
             this.monto_tarifa.DataPropertyName = "monto";
-            dataGridViewCellStyle8.Format = "C2";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle1;
             this.monto_tarifa.HeaderText = "Monto";
             this.monto_tarifa.Name = "monto_tarifa";
             this.monto_tarifa.ReadOnly = true;
@@ -289,9 +290,9 @@
             // monto_tarifa_am
             // 
             this.monto_tarifa_am.DataPropertyName = "monto";
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle2;
             this.monto_tarifa_am.HeaderText = "Monto";
             this.monto_tarifa_am.Name = "monto_tarifa_am";
             this.monto_tarifa_am.ReadOnly = true;
@@ -404,6 +405,7 @@
             this.ClientSize = new System.Drawing.Size(462, 430);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTarifas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tarifas de Pago";

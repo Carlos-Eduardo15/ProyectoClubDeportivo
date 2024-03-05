@@ -30,6 +30,7 @@ namespace ClubDeportivo.Formularios.SociosForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvitadoNI));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBoxA_Materno = new System.Windows.Forms.TextBox();
             this.textBoxA_Paterno = new System.Windows.Forms.TextBox();
@@ -287,6 +288,7 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "InvitadoNI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

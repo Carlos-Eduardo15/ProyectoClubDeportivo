@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reingreso));
             this.button_Buscar = new System.Windows.Forms.Button();
             this.textBoxIdSocio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -341,6 +342,7 @@
             this.Controls.Add(this.button_Buscar);
             this.Controls.Add(this.textBoxIdSocio);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "Reingreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
