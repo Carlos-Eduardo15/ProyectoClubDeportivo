@@ -65,46 +65,6 @@ namespace ClubDeportivo.Clases
 
         public void consultarSocio(int id_socio, TextBox nombre, TextBox paterno, TextBox materno, TextBox curp, TextBox fecha_nacimiento,TextBox direccion, TextBox correo, TextBox telefono, TextBox fecha_ingreso, TextBox tipo_socio)
         {
-            /*MySQL cxn = new MySQL();
-            
-            string sql = "SELECT id_socio, nombre, ap_paterno, ap_materno,curp,fecha_nacimiento,direccion,correo,telefono, fecha_ingreso,tipo_socio " +
-                "FROM socios WHERE id_socio ='" + id_socio +"';" ;
-            try
-            {
-                OdbcDataReader reader = cxn.objetoDataReader(sql);
-                if (reader.Read())
-                {
-                    nombre.Text = reader["nombre"] is DBNull ? "" : reader["nombre"].ToString();
-                    paterno.Text = reader["ap_paterno"] is DBNull ? "" : reader["ap_paterno"].ToString();
-                    materno.Text = reader["ap_materno"] is DBNull ? "" : reader["ap_materno"].ToString();
-                    curp.Text = reader["curp"] is DBNull ? "" : reader["curp"].ToString();
-                    fecha_nacimiento.Text = calcularEdad(reader["fecha_nacimiento"]);
-                    direccion.Text = reader["direccion"] is DBNull ? "" : reader["direccion"].ToString();
-                    correo.Text = reader["correo"] is DBNull ? "" : reader["correo"].ToString();
-                    telefono.Text = reader["telefono"] is DBNull ? "" : reader["telefono"].ToString();
-                    fecha_ingreso.Text = formatoFechas(reader["fecha_ingreso"]);
-                    tipo_socio.Text = formatoTipoSocio(reader["tipo_socio"]);
-
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró ningún dato asociado al número de socio.");
-                    nombre.Text = "";
-                    paterno.Text = "";
-                    materno.Text = "";
-                    fecha_nacimiento.Text = "";
-                    direccion.Text = "";
-                    correo.Text = "";
-                    telefono.Text = "";
-                    fecha_ingreso.Text = "";
-                    tipo_socio.Text = "";
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Hubo un error en la consulta. \n" + e.Message.ToString());
-            }*/
             string sql = "SELECT id_socio, nombre, ap_paterno, ap_materno, curp, fecha_nacimiento, direccion, correo, telefono, fecha_ingreso, tipo_socio " +
                         "FROM Socios WHERE id_socio = @IdSocio";
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
@@ -159,19 +119,6 @@ namespace ClubDeportivo.Clases
 
         public void registrarDefuncion(int id_socio, string defuncion, string beneficiario, double monto)
         {
-            /*MySQL cxn = new MySQL();
-            string sql = "INSERT INTO defunciones (id_socio,fecha_defuncion,beneficiario,monto)" +
-                         "VALUES ('" + id_socio + "','" + defuncion + "','" + beneficiario + "','" + monto + "');";
-            try
-            {
-                
-                cxn.objetoCommand(sql);
-                MessageBox.Show("Se guardaron los datos");
-            
-            }catch(Exception e)
-            {
-                MessageBox.Show("Hubo un error al registrar la defunción. \n" + e.Message.ToString());
-            }*/
             string sql = "INSERT INTO Defunciones (id_socio, fecha_defuncion, beneficiario, monto) " +
                             "VALUES (@IdSocio, @FechaDefuncion, @Beneficiario, @Monto)";
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
@@ -203,26 +150,6 @@ namespace ClubDeportivo.Clases
 
         public void consultarBeneficiario(int id_socio, TextBox beneficiario, TextBox monto, DateTimePicker fecha_defuncion)
         {
-            /*MySQL cxn = new MySQL();
-            string sql =  "SELECT fecha_defuncion, beneficiario, monto FROM defunciones WHERE id_socio = '" + id_socio + "';";
-
-            try
-            {
-                OdbcDataReader reader =  cxn.objetoDataReader(sql);
-                if (reader.Read() && !reader.IsDBNull(0))
-                {
-                    fecha_defuncion.Value = Convert.ToDateTime(reader["fecha_defuncion"]);
-                    beneficiario.Text = reader["beneficiario"].ToString();
-                    monto.Text = reader["monto"].ToString();
-                }
-                else
-                {
-                    beneficiario.Text = "Nombre completo";
-                }
-            }catch(Exception e)
-            {
-                MessageBox.Show("Error al consultar los datos.\n" + e.Message.ToString());
-            }*/
             string sql = "SELECT fecha_defuncion, beneficiario, monto FROM Defunciones WHERE id_socio = @IdSocio";
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
 
@@ -259,20 +186,6 @@ namespace ClubDeportivo.Clases
 
         public void consultarDefunciones( DataGridView dgv)
         {
-            /*MySQL cxn = new MySQL();
-            DataTable data;
-            string sql = "SELECT socios.id_socio, concat(nombre, ' ', ap_paterno, ' ', ap_materno) as nombre_completo, fecha_nacimiento, fecha_defuncion, beneficiario , monto " +
-                         "FROM socios, defunciones " + 
-                         "WHERE socios.id_socio = defunciones.id_socio;";
-            try
-            {
-                data = cxn.objetoDataAdapter(sql);
-                dgv.DataSource = data;
-            }
-            catch(Exception e) 
-            {
-                MessageBox.Show("Error al cargar los datos.\n\n" + e.Message.ToString());
-            }*/
             string sql = "SELECT s.id_socio, CONCAT(s.nombre, ' ', s.ap_paterno, ' ', s.ap_materno) AS nombre_completo, s.fecha_nacimiento, d.fecha_defuncion, d.beneficiario, d.monto " +
                             "FROM Socios s INNER JOIN Defunciones d ON s.id_socio = d.id_socio";
 

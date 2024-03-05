@@ -58,25 +58,6 @@ namespace ClubDeportivo.Clases
         //Métodos operativos
         public void insertarTarifa(string concepto, double monto, string tipo_tarifa)
         {
-            /* string sql = null;
-             MySQL cxn = new MySQL();
-             sql = "INSERT INTO tarifas (concepto, monto, tipo_tarifa) " +
-                                         "VALUES('" + concepto + "','" + monto + "','" + tipo_tarifa + "')";
-
-             try
-             {
-                cxn.objetoCommand(sql);
-
-                 MessageBox.Show("Se guardaron los datos.");
-
-             }catch(Exception e)
-             {
-                 MessageBox.Show("Hubo un error al registrar la tarifa. \n" + e.Message.ToString());
-             }
-             finally
-             {
-                 cxn = null;
-             }*/
             string sql = null;
             string connectionString = VGlobal.getSetConexion; // Obtiene la cadena de conexión de la clase VGlobal
 
@@ -111,19 +92,6 @@ namespace ClubDeportivo.Clases
 
         public void modificarTarifa(string concepto, double monto, int id_tarifa)
         {
-            /*string sql = null;
-            MySQL cxn = new MySQL();
-
-            try 
-            { 
-                sql = "UPDATE tarifas SET concepto = '" + concepto +"', monto ='" + monto + "' WHERE id_tarifa ="+ id_tarifa +";";
-                cxn.objetoCommand(sql);
-                MessageBox.Show("Se han actualizado los datos.");
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show("No se pudo modificar el dato.\n" + e.Message.ToString());
-            }*/
             string sql = null;
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
 
@@ -158,19 +126,6 @@ namespace ClubDeportivo.Clases
 
         public void consultarTarifas(DataGridView dgv, string tipo_tarifa)
         {
-            /*string sql = "SELECT id_tarifa, concepto, monto  FROM tarifas WHERE tipo_tarifa = '" + tipo_tarifa + "';";
-            DataTable data;
-            MySQL cxn = new MySQL();
-
-            try
-            {
-                data = cxn.objetoDataAdapter(sql);
-                dgv.DataSource = data;
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show("Hubo un error en la consulta. \n" + e.Message.ToString());
-            }*/
             string sql = "SELECT id_tarifa, concepto, monto FROM tarifas WHERE tipo_tarifa = @TipoTarifa";
             DataTable data = new DataTable();
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
@@ -202,26 +157,6 @@ namespace ClubDeportivo.Clases
 
         public void consultarTarifaEspecifica(int id_tarifa, TextBox monto)
         {
-            /*string sql = "SELECT id_tarifa, concepto, monto FROM tarifas WHERE id_tarifa = '" + id_tarifa + "';";
-            MySQL cxn = new MySQL();
-
-            try
-            {
-                OdbcDataReader reader = cxn.objetoDataReader(sql);
-                if (reader.Read())
-                {
-                    monto.Text = reader["monto"].ToString();
-                }
-                else 
-                {
-                    MessageBox.Show("No se encontró el resultado.");
-                }
-                
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Hubo un error en la consulta. \n" + e.Message.ToString());
-            }*/
             string sql = "SELECT id_tarifa, concepto, monto FROM tarifas WHERE id_tarifa = @IdTarifa";
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
 
@@ -254,5 +189,5 @@ namespace ClubDeportivo.Clases
                 MessageBox.Show("Hubo un error en la consulta. \n" + e.Message.ToString());
             }
         }
-        }
+    }   
 }
