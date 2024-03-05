@@ -208,7 +208,7 @@ namespace ClubDeportivo.Clases
                                 cmd.Parameters.AddWithValue("@apellidoMaterno", getApellidoMaterno);
                                 cmd.Parameters.AddWithValue("@curp", getCurp);
                                 cmd.Parameters.AddWithValue("@fechaNacimiento", getFechaNacimiento);
-                                 cmd.Parameters.AddWithValue("@edad", getEdad);
+                                cmd.Parameters.AddWithValue("@edad", getEdad);
                                 cmd.Parameters.AddWithValue("@direccion", getDireccion);
                                 cmd.Parameters.AddWithValue("@correo", getCorreo);
                                 cmd.Parameters.AddWithValue("@telefono", getTelefono);

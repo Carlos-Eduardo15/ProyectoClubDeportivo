@@ -69,7 +69,7 @@ namespace ClubDeportivo.Conectividad
             }
             catch (Exception ex)
             {
-                throw new Exception("MySQL:ObjetoDataReader " + ex.Message);
+                throw new Exception("MySQL:ObjetoDataReader \n" + ex.Message);
             }
         }
 

@@ -28,37 +28,39 @@ namespace ClubDeportivo.Formularios
             InitializeComponent();
             Tarifa _tarifa_cc = new Tarifa();
             _tarifa_cc.consultarTarifas(dgvTarifasCC, "cc");
+            btnActualizarTarifaCC.Enabled = false;
 
             Tarifa _tarifa_am = new Tarifa();
             _tarifa_am.consultarTarifas(dgvTarifasAM, "am");
-            btnActualizarTarifaCC.Enabled = false;
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
+            btnActualizarTarifaAM.Enabled = false;
         }
         private void btnGuardarTarifaCC_Click(object sender, EventArgs e)
         {
-            Tarifa _tarifa = new Tarifa();
-           
-            if (!string.IsNullOrEmpty(txtConceptoCC.Text) && !string.IsNullOrEmpty(txtMontoCC.Text))
+            if(!string.IsNullOrEmpty(txtConceptoCC.Text) || !string.IsNullOrEmpty(txtMontoCC.Text))
             {
-                
+                Tarifa _tarifa = new Tarifa();
+           
                 concepto = txtConceptoCC.Text;
                 monto = Double.Parse(txtMontoCC.Text);
                 tipo_tarifa = "cc";
                 _tarifa.insertarTarifa(concepto, monto, tipo_tarifa);
+                
+                txtConceptoCC.Text = "";
+                txtMontoCC.Text = "";
+
+                _tarifa.consultarTarifas(dgvTarifasCC, "cc");
             }
             else
             {
-                MessageBox.Show("Faltan datos por capturar.", "Atención");
+                if (string.IsNullOrEmpty(txtConceptoCC.Text))
+                {
+                    ttMonto.Show("Campo vacío", txtConceptoCC, 2000);
+                }
+                if (string.IsNullOrEmpty(txtMontoCC.Text))
+                {
+                    ttMonto.Show("Campo vacío", txtMontoCC, 2000);
+                }
             }
-
-            txtConceptoCC.Text = "";
-            txtMontoCC.Text = "";
-
-            _tarifa.consultarTarifas(dgvTarifasCC, "cc");
         }
         private void btnGuardarTarifaAM_Click(object sender, EventArgs e)
         {
@@ -81,21 +83,6 @@ namespace ClubDeportivo.Formularios
             _tarifa.consultarTarifas(dgvTarifasAM, "am");
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmTarifas_FormClosing(object sender, FormClosingEventArgs e)
         {
             /*frmMENU frmMENU = new frmMENU();
@@ -105,16 +92,7 @@ namespace ClubDeportivo.Formularios
         private void frmTarifas_Load(object sender, EventArgs e)
         {
         }
-
-        private void txtConcepto_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tpCasaClub_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
         private void dgvTarifasCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
@@ -153,14 +131,28 @@ namespace ClubDeportivo.Formularios
 
         private void btnActualizarTarifaCC_Click(object sender, EventArgs e)
         {
-            Tarifa tarifa_am = new Tarifa();
+            if(!string.IsNullOrEmpty(txtConceptoCC.Text) || !string.IsNullOrEmpty(txtMontoCC.Text))
+            {
+                Tarifa tarifa_am = new Tarifa();
 
-            string concepto_tarifa_cc = txtConceptoCC.Text;
-            double monto_tarifa_cc = double.Parse(txtMontoCC.Text);
+                string concepto_tarifa_cc = txtConceptoCC.Text;
+                double monto_tarifa_cc = double.Parse(txtMontoCC.Text);
 
-            tarifa_am.modificarTarifa(concepto_tarifa_cc, monto_tarifa_cc, _id_tarifa);
+                tarifa_am.modificarTarifa(concepto_tarifa_cc, monto_tarifa_cc, _id_tarifa);
             
-            tarifa_am.consultarTarifas(dgvTarifasCC, "cc");
+                tarifa_am.consultarTarifas(dgvTarifasCC, "cc");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(txtConceptoCC.Text))
+                {
+                    ttMonto.Show("Campo vacío", txtConceptoCC, 2000);
+                }
+                if (string.IsNullOrEmpty(txtMontoCC.Text))
+                {
+                    ttMonto.Show("Campo vacío", txtMontoCC, 2000);
+                }
+            }
         }
 
         private void txtMontoCC_KeyPress(object sender, KeyPressEventArgs e)
@@ -182,15 +174,33 @@ namespace ClubDeportivo.Formularios
                 ttMonto.Show("Sólo se permiten números.", txtMontoAM, 2000);
             }
         }
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
         private void dgvTarifasAM_MouseLeave(object sender, EventArgs e)
         {
-            btnActualizarTarifaCC.Enabled = false;
-            btnGuardarTarifaCC.Enabled = true;
+           
+        }
+        private void txtConceptoCC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verificar si el caracter ingresado no es una letra o la tecla de retroceso o la tecla 'Espacio'
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != ' ')
+            {
+                // Si no es una letra, se cancela el ingreso del carácter
+                e.Handled = true;
+                ttMonto.Show("Sólo se permiten letras.", txtConceptoCC, 2000);
+            }
+        }
+        private void txtConceptoAM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verificar si el caracter ingresado no es una letra o la tecla de retroceso o la tecla 'Espacio'
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != ' ')
+            {
+                // Si no es una letra, se cancela el ingreso del carácter
+                e.Handled = true;
+                ttMonto.Show("Sólo se permiten letras.", txtConceptoAM, 2000);
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
