@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTarifas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCasaClub = new System.Windows.Forms.TabPage();
             this.btnActualizarTarifaCC = new System.Windows.Forms.Button();
@@ -96,7 +95,6 @@
             this.tpCasaClub.Size = new System.Drawing.Size(457, 401);
             this.tpCasaClub.TabIndex = 0;
             this.tpCasaClub.Text = "Casa Club";
-            this.tpCasaClub.Click += new System.EventHandler(this.tpCasaClub_Click_1);
             // 
             // btnActualizarTarifaCC
             // 
@@ -144,9 +142,9 @@
             // monto_tarifa
             // 
             this.monto_tarifa.DataPropertyName = "monto";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle3;
             this.monto_tarifa.HeaderText = "Monto";
             this.monto_tarifa.Name = "monto_tarifa";
             this.monto_tarifa.ReadOnly = true;
@@ -170,7 +168,7 @@
             this.txtConceptoCC.Name = "txtConceptoCC";
             this.txtConceptoCC.Size = new System.Drawing.Size(311, 24);
             this.txtConceptoCC.TabIndex = 5;
-            this.txtConceptoCC.TextChanged += new System.EventHandler(this.txtConcepto_TextChanged);
+            this.txtConceptoCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConceptoCC_KeyPress);
             // 
             // label3
             // 
@@ -216,6 +214,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Cerrar el formulario";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnGuardarTarifaCC
             // 
@@ -253,7 +252,6 @@
             this.tabPage2.Size = new System.Drawing.Size(457, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ayuda Mutua";
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // dgvTarifasAM
             // 
@@ -290,9 +288,9 @@
             // monto_tarifa_am
             // 
             this.monto_tarifa_am.DataPropertyName = "monto";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle4;
             this.monto_tarifa_am.HeaderText = "Monto";
             this.monto_tarifa_am.Name = "monto_tarifa_am";
             this.monto_tarifa_am.ReadOnly = true;
@@ -315,7 +313,6 @@
             this.txtMontoAM.Name = "txtMontoAM";
             this.txtMontoAM.Size = new System.Drawing.Size(92, 24);
             this.txtMontoAM.TabIndex = 8;
-            this.txtMontoAM.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.txtMontoAM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoAM_KeyPress);
             // 
             // txtConceptoAM
@@ -326,6 +323,7 @@
             this.txtConceptoAM.Name = "txtConceptoAM";
             this.txtConceptoAM.Size = new System.Drawing.Size(312, 24);
             this.txtConceptoAM.TabIndex = 7;
+            this.txtConceptoAM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConceptoAM_KeyPress);
             // 
             // label6
             // 
@@ -336,7 +334,6 @@
             this.label6.Size = new System.Drawing.Size(58, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "Monto: ";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -395,7 +392,6 @@
             // 
             this.ttMonto.Tag = "";
             this.ttMonto.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
-            this.ttMonto.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // frmTarifas
             // 
