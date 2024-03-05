@@ -12,10 +12,10 @@ namespace ClubDeportivo.Clases
 {
     class Tarifa
     {
-        private int _id_tarifa;
-        private string _concepto;
-        private double _monto;
-        private string _tipo_tarifa;
+        public int _id_tarifa;
+        public string _concepto;
+        public double _monto;
+        public char _tipo_tarifa;
 
         //Constructores
         public Tarifa()
@@ -23,10 +23,10 @@ namespace ClubDeportivo.Clases
             _id_tarifa = 0;
             _concepto = null;
             _monto = 0.00;
-            _tipo_tarifa = null;
+            _tipo_tarifa = ' ';
         }
 
-        public Tarifa(int idTarifa, string concepto, double monto, string tipoTarifa)
+        public Tarifa(int idTarifa, string concepto, double monto, char tipoTarifa)
         {
             _id_tarifa = idTarifa;
             _concepto = concepto;
@@ -49,14 +49,14 @@ namespace ClubDeportivo.Clases
             get { return _monto; }
             set { _monto = value; }
         }
-        public string getSetTipoTarifa
+        public char getSetTipoTarifa
         {
             get { return _tipo_tarifa; }
             set { _tipo_tarifa = value; }
         }
 
         //Métodos operativos
-        public void insertarTarifa(string concepto, double monto, string tipo_tarifa)
+        public void insertarTarifa(string concepto, double monto, char tipo_tarifa)
         {
             string sql = null;
             string connectionString = VGlobal.getSetConexion; // Obtiene la cadena de conexión de la clase VGlobal
@@ -124,7 +124,7 @@ namespace ClubDeportivo.Clases
             }
         }
 
-        public void consultarTarifas(DataGridView dgv, string tipo_tarifa)
+        public void consultarTarifas(DataGridView dgv, char tipo_tarifa)
         {
             string sql = "SELECT id_tarifa, concepto, monto FROM tarifas WHERE tipo_tarifa = @TipoTarifa";
             DataTable data = new DataTable();

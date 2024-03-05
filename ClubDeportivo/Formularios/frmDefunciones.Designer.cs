@@ -371,20 +371,20 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Helonia", 10F);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label13.Location = new System.Drawing.Point(286, 53);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 18);
+            this.label13.Size = new System.Drawing.Size(112, 17);
             this.label13.TabIndex = 28;
             this.label13.Text = "Datos generales";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Helonia", 10F);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label14.Location = new System.Drawing.Point(276, 318);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 18);
+            this.label14.Size = new System.Drawing.Size(131, 17);
             this.label14.TabIndex = 29;
             this.label14.Text = "Datos de defunción";
             // 
@@ -424,6 +424,7 @@
             // 
             // txtMonto
             // 
+            this.txtMonto.AllowDrop = true;
             this.txtMonto.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMonto.Cursor = System.Windows.Forms.Cursors.No;

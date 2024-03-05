@@ -10,9 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PdfSharp.Pdf;
-using PdfSharp.Drawing;
 using System.IO;
-
 
 namespace ClubDeportivo.Formularios
 {

@@ -16,21 +16,20 @@ namespace ClubDeportivo.Formularios
     public partial class frmTarifas : Form
     {
        
-        //private MySQL cxn;
 
         public string concepto;
         public double monto;
-        public string tipo_tarifa;
+        public char tipo_tarifa;
         public int _id_tarifa;
         public frmTarifas()
         {
             InitializeComponent();
             Tarifa _tarifa_cc = new Tarifa();
-            _tarifa_cc.consultarTarifas(dgvTarifasCC, "cc");
+            _tarifa_cc.consultarTarifas(dgvTarifasCC, 'c');
             btnActualizarTarifaCC.Enabled = false;
 
             Tarifa _tarifa_am = new Tarifa();
-            _tarifa_am.consultarTarifas(dgvTarifasAM, "am");
+            _tarifa_am.consultarTarifas(dgvTarifasAM, 'a');
             btnActualizarTarifaAM.Enabled = false;
         }
         private void btnGuardarTarifaCC_Click(object sender, EventArgs e)
@@ -41,13 +40,16 @@ namespace ClubDeportivo.Formularios
            
                 concepto = txtConceptoCC.Text;
                 monto = Double.Parse(txtMontoCC.Text);
-                tipo_tarifa = "cc";
+                tipo_tarifa = 'c';
+                Console.WriteLine(monto);
+                Console.WriteLine(concepto);
+                Console.WriteLine(tipo_tarifa);
                 _tarifa.insertarTarifa(concepto, monto, tipo_tarifa);
                 
                 txtConceptoCC.Text = "";
                 txtMontoCC.Text = "";
 
-                _tarifa.consultarTarifas(dgvTarifasCC, "cc");
+                _tarifa.consultarTarifas(dgvTarifasCC, 'c');
             }
             else
             {
@@ -68,7 +70,7 @@ namespace ClubDeportivo.Formularios
             {
                 concepto = txtConceptoAM.Text;
                 monto = Double.Parse(txtMontoAM.Text);
-                tipo_tarifa = "am";
+                tipo_tarifa = 'a';
                 _tarifa.insertarTarifa(concepto, monto, tipo_tarifa);
             }
             else
@@ -79,13 +81,13 @@ namespace ClubDeportivo.Formularios
             txtConceptoAM.Text = "";
             txtMontoAM.Text = "";
 
-            _tarifa.consultarTarifas(dgvTarifasAM, "am");
+            _tarifa.consultarTarifas(dgvTarifasAM, 'a');
         }
 
         private void frmTarifas_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*frmMENU frmMENU = new frmMENU();
-            frmMENU.Show();*/
+            frmMENU frmMENU = new frmMENU();
+            frmMENU.Show();
         }
 
         private void frmTarifas_Load(object sender, EventArgs e)
@@ -125,7 +127,7 @@ namespace ClubDeportivo.Formularios
 
             tarifa_am.modificarTarifa(concepto_tarifa_am, monto_tarifa_am, _id_tarifa);
 
-            tarifa_am.consultarTarifas(dgvTarifasAM,"am");
+            tarifa_am.consultarTarifas(dgvTarifasAM,'a');
         }
 
         private void btnActualizarTarifaCC_Click(object sender, EventArgs e)
@@ -139,7 +141,7 @@ namespace ClubDeportivo.Formularios
 
                 tarifa_am.modificarTarifa(concepto_tarifa_cc, monto_tarifa_cc, _id_tarifa);
             
-                tarifa_am.consultarTarifas(dgvTarifasCC, "cc");
+                tarifa_am.consultarTarifas(dgvTarifasCC, 'c');
             }
             else
             {

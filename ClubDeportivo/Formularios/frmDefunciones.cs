@@ -19,8 +19,8 @@ namespace ClubDeportivo.Formularios
         }
         private void frmDefunciones_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //frmMENU frmMENU = new frmMENU();    
-            //frmMENU.Show();
+            frmMENU frmMENU = new frmMENU();    
+            frmMENU.Show();
         }
 
         private void btnBuscarSocio_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace ClubDeportivo.Formularios
 
                 int id_socio = int.Parse(txtNumeroSocio.Text);
                 defuncion.consultarSocio(id_socio, txtNombre, txtApPaterno, txtApMaterno, txtCurp, txtEdad, txtDireccion, txtCorreo, txtTelefono, txtFechaIngreso, txtTipo);
-                tarifa.consultarTarifaEspecifica(4, txtMonto);
+                tarifa.consultarTarifaEspecifica(9, txtMonto);
                 defuncion.consultarBeneficiario(id_socio, txtBeneficiario, txtMonto, dtDefuncion);
                 
                 dtDefuncion.Enabled = true;
@@ -66,6 +66,7 @@ namespace ClubDeportivo.Formularios
                 string formatoFecha = fecha_defuncion.ToString("yyyy-MM-dd");
 
                 defuncion.registrarDefuncion(id_socio, formatoFecha, beneficiario, monto);
+                defuncion.registrarDefuncionUsuario(id_socio, formatoFecha);
             }
             else
             {
@@ -107,5 +108,7 @@ namespace ClubDeportivo.Formularios
         {
             this.Close();
         }
+
+      
     }
 }

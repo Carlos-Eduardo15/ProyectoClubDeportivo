@@ -121,6 +121,9 @@ namespace ClubDeportivo.Clases
         {
             string sql = "INSERT INTO Defunciones (id_socio, fecha_defuncion, beneficiario, monto) " +
                             "VALUES (@IdSocio, @FechaDefuncion, @Beneficiario, @Monto)";
+
+            string sql2 = "INSERT INTO Socios (fecha_cambio_estatus)+VALUES(@FechaDefuncion) where id_socio=@idSocio";
+
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
 
             try
@@ -140,13 +143,51 @@ namespace ClubDeportivo.Clases
 
                         MessageBox.Show("Se guardaron los datos");
                     }
+                    using (SqlCommand command = new SqlCommand(sql2, connection))
+                    {
+                        command.Parameters.AddWithValue("@FechaDefuncion", defuncion);
+                        command.Parameters.AddWithValue("@idSocio", id_socio);
+                    }
                 }
+               
             }
             catch (Exception e)
             {
                 MessageBox.Show("Hubo un error al registrar la defunción. \n" + e.Message.ToString());
             }
         }
+
+        public void registrarDefuncionUsuario(int id_socio, string defuncion)
+        {
+            
+
+            string sql = "UPDATE Socios SET fecha_cambio_estatus = @FechaDefuncion WHERE id_socio = @idSocio";
+
+            string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+               
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@FechaDefuncion", defuncion);
+                        command.Parameters.AddWithValue("@idSocio", id_socio);
+                        command.ExecuteNonQuery();
+
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Hubo un error al registrar la defunción. \n" + e.Message.ToString());
+            }
+        }
+
 
         public void consultarBeneficiario(int id_socio, TextBox beneficiario, TextBox monto, DateTimePicker fecha_defuncion)
         {
