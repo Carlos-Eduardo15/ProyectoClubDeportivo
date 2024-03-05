@@ -111,8 +111,6 @@
   <ItemGroup>
     <Compile Include="Clases\Defuncion.cs" />
     <Compile Include="Clases\Pago.cs" />
-    <Compile Include="Clases\PDF.cs" />
-    <Compile Include="Clases\Socio.cs" />
     <Compile Include="Clases\SQLSocios.cs" />
     <Compile Include="Clases\Tarifa.cs" />
     <Compile Include="Clases\Usuario.cs" />
