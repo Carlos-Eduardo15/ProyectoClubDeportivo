@@ -73,9 +73,39 @@ namespace ClubDeportivo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_with_blue_gradient_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("background-with-blue-gradient-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_login {
             get {
                 object obj = ResourceManager.GetObject("fondo login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_papel_tapiz_colorido_borroso_vivo {
+            get {
+                object obj = ResourceManager.GetObject("fondo-papel-tapiz-colorido-borroso-vivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guardar {
+            get {
+                object obj = ResourceManager.GetObject("Guardar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

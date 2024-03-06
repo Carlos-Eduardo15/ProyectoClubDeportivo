@@ -30,10 +30,10 @@ namespace ClubDeportivo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSocios));
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTarifas));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCasaClub = new System.Windows.Forms.TabPage();
             this.btnActualizarTarifaCC = new System.Windows.Forms.Button();
@@ -145,9 +145,9 @@ namespace ClubDeportivo.Formularios
             // monto_tarifa
             // 
             this.monto_tarifa.DataPropertyName = "monto";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle1;
             this.monto_tarifa.HeaderText = "Monto";
             this.monto_tarifa.Name = "monto_tarifa";
             this.monto_tarifa.ReadOnly = true;
@@ -291,9 +291,9 @@ namespace ClubDeportivo.Formularios
             // monto_tarifa_am
             // 
             this.monto_tarifa_am.DataPropertyName = "monto";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle2;
             this.monto_tarifa_am.HeaderText = "Monto";
             this.monto_tarifa_am.Name = "monto_tarifa_am";
             this.monto_tarifa_am.ReadOnly = true;
@@ -400,7 +400,7 @@ namespace ClubDeportivo.Formularios
             // 
             this.AccessibleName = "";
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(462, 430);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

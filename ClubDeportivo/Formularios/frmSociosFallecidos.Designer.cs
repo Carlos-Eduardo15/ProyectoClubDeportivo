@@ -29,10 +29,10 @@ namespace ClubDeportivo.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSociosFallecidos));
             this.dgvDefunciones = new System.Windows.Forms.DataGridView();
-            this.btnGenerarPDF = new System.Windows.Forms.Button();
             this.num_socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +40,7 @@ namespace ClubDeportivo.Formularios
             this.fecha_defuncion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pago_defuncion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beneficiario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerarPDF = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDefunciones)).BeginInit();
             this.SuspendLayout();
@@ -62,16 +63,6 @@ namespace ClubDeportivo.Formularios
             this.dgvDefunciones.ReadOnly = true;
             this.dgvDefunciones.Size = new System.Drawing.Size(759, 311);
             this.dgvDefunciones.TabIndex = 0;
-            // 
-            // btnGenerarPDF
-            // 
-            this.btnGenerarPDF.Location = new System.Drawing.Point(669, 389);
-            this.btnGenerarPDF.Name = "btnGenerarPDF";
-            this.btnGenerarPDF.Size = new System.Drawing.Size(101, 23);
-            this.btnGenerarPDF.TabIndex = 1;
-            this.btnGenerarPDF.Text = "Generar PDF";
-            this.btnGenerarPDF.UseVisualStyleBackColor = true;
-            this.btnGenerarPDF.Click += new System.EventHandler(this.btnGenerarPDF_Click);
             // 
             // num_socio
             // 
@@ -100,8 +91,8 @@ namespace ClubDeportivo.Formularios
             // 
             // pagos_historico
             // 
-            dataGridViewCellStyle3.Format = "C2";
-            this.pagos_historico.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            this.pagos_historico.DefaultCellStyle = dataGridViewCellStyle1;
             this.pagos_historico.HeaderText = "Monto acumulado";
             this.pagos_historico.Name = "pagos_historico";
             this.pagos_historico.ReadOnly = true;
@@ -118,8 +109,8 @@ namespace ClubDeportivo.Formularios
             // pago_defuncion
             // 
             this.pago_defuncion.DataPropertyName = "monto";
-            dataGridViewCellStyle4.Format = "C2";
-            this.pago_defuncion.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            this.pago_defuncion.DefaultCellStyle = dataGridViewCellStyle2;
             this.pago_defuncion.HeaderText = "Pago por defunción";
             this.pago_defuncion.Name = "pago_defuncion";
             this.pago_defuncion.ReadOnly = true;
@@ -131,6 +122,16 @@ namespace ClubDeportivo.Formularios
             this.beneficiario.Name = "beneficiario";
             this.beneficiario.ReadOnly = true;
             this.beneficiario.Width = 170;
+            // 
+            // btnGenerarPDF
+            // 
+            this.btnGenerarPDF.Location = new System.Drawing.Point(669, 389);
+            this.btnGenerarPDF.Name = "btnGenerarPDF";
+            this.btnGenerarPDF.Size = new System.Drawing.Size(101, 23);
+            this.btnGenerarPDF.TabIndex = 1;
+            this.btnGenerarPDF.Text = "Generar PDF";
+            this.btnGenerarPDF.UseVisualStyleBackColor = true;
+            this.btnGenerarPDF.Click += new System.EventHandler(this.btnGenerarPDF_Click);
             // 
             // label1
             // 
@@ -150,6 +151,7 @@ namespace ClubDeportivo.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerarPDF);
             this.Controls.Add(this.dgvDefunciones);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSociosFallecidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Socios Fallecidos";

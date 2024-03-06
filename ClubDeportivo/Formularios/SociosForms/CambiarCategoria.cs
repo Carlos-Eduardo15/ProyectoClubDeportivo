@@ -59,6 +59,51 @@ namespace ClubDeportivo.Formularios.SociosForms
             this.Close();
         }
 
+        private void labelA_Paterno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelA_Materno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDireccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCorreo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCurp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFechaNacimiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelEdad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTelefono_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void checkBoxSocio_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBoxSocio.Checked)
