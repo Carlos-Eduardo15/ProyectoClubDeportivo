@@ -473,7 +473,7 @@ namespace ClubDeportivo.Clases
 
             using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
             {
-                string queryGuardar = "UPDATE socios SET pago_mes = 1 WHERE id_socio=@idSocios AND fecha_cambio_estatus = null";
+                string queryGuardar = "UPDATE socios SET pago_mes = 1 WHERE id_socio=@idSocios ";
 
                 try
                 {
