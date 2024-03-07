@@ -158,6 +158,7 @@
   <ItemGroup>
     <Compile Include="Clases\Defuncion.cs" />
     <Compile Include="Clases\Pago.cs" />
+    <Compile Include="Clases\SQLRecibos.cs" />
     <Compile Include="Clases\SQLSocios.cs" />
     <Compile Include="Clases\PDF.cs" />
     <Compile Include="Clases\SQLSocios.cs" />

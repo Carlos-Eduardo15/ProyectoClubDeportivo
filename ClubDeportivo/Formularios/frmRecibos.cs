@@ -23,16 +23,24 @@ namespace ClubDeportivo.Formularios
             pestañaInvitado.Enabled = false; // Deshabilitar pestaña del invitado
 
         }
+        SQLRecibos comandosRecibos = new SQLRecibos();
         SQLSocios comandos = new SQLSocios();
+
         string  nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, telefono;
         DateTime fechaIngreso;
         DateTime fechaNacimiento;
         int edad;
         char tipo;
-        int precio1 = 1600;
-        int precio2 = 1500;
-        int precio3 = 1700;
-        int precio4 = 2000;
+
+        double monto = 0.0;
+        double monto1CC = 0.0;
+        double monto2CC = 0.0;
+        double monto3CC = 0.0;
+        double monto4CC = 0.0;
+
+        double monto1AM = 0.0;
+        double monto2AM = 0.0;
+        double monto3AM = 0.0;
 
 
         private void ObtenerDatosSocio()
@@ -76,7 +84,83 @@ namespace ClubDeportivo.Formularios
         //aqui se realizaran las sumas
         private void frmRecibos_Load(object sender, EventArgs e)
         {
-            
+
+            for(int i = 1; i < 5; i++) 
+            {
+                switch (i) 
+                {
+                    
+                    case 1:
+
+                        comandosRecibos.getConcepto = "Coperación-selección";
+                        comandosRecibos.getTipo_Tarifa = 'c';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto1CC = monto;
+                        labelCopSel.Text = monto1CC.ToString();
+
+                        break;
+
+                        case 2:
+                        comandosRecibos.getConcepto = "Coperación-terrenos";
+                        comandosRecibos.getTipo_Tarifa = 'c';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto2CC = monto;
+                        labelCopTer.Text = monto2CC.ToString();
+                        break; 
+
+                    case 3:
+                        comandosRecibos.getConcepto = "Membresía";
+                        comandosRecibos.getTipo_Tarifa = 'c';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto3CC = monto;
+                        labelMembresia.Text = monto3CC.ToString();
+                        break; 
+
+                    case 4:
+                         comandosRecibos.getConcepto = "Defunción";
+                        comandosRecibos.getTipo_Tarifa = 'c';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto4CC = monto;
+                        labelDefuncion.Text = monto4CC.ToString();
+                        break;
+
+                }
+            }
+
+            for (int i = 1; i < 4; i++)
+            {
+                switch (i)
+                {
+
+                    case 1:
+
+                        comandosRecibos.getConcepto = "Coperación-selección";
+                        comandosRecibos.getTipo_Tarifa = 'a';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto1AM = monto;
+                        labelSecAM.Text = monto1AM.ToString();
+                        break;
+
+                    case 2:
+                        comandosRecibos.getConcepto = "Coperación-terrenos";
+                        comandosRecibos.getTipo_Tarifa = 'a';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto2AM = monto;
+                        labelTEAM.Text = monto2AM.ToString();
+                        break;
+
+                    case 3:
+                        comandosRecibos.getConcepto = "Membresía";
+                        comandosRecibos.getTipo_Tarifa = 'a';
+                        comandosRecibos.consultaMontos(out monto);
+                        monto2AM = monto;
+                        labelAMMem.Text = monto2AM.ToString();
+                        break;
+
+                   
+
+                }
+            }
         }
 
         //BUSQUEDA DE NUMEROS Y NOMBRE
@@ -123,7 +207,7 @@ namespace ClubDeportivo.Formularios
 
      
 
-        private int sumatoria = 0;
+        private double sumatoria = 0;
 
         private void checkedListBoxCC_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -134,22 +218,22 @@ namespace ClubDeportivo.Formularios
             {
                 case 0:
                     // Manejar la lógica para el caso 0 (índice 0)
-                    sumatoria += estadoNuevo ? precio1 : -precio1;
+                    sumatoria += estadoNuevo ? monto1CC : -monto1CC;
                     break;
 
                 case 1:
                     // Manejar la lógica para el caso 1 (índice 1)
-                    sumatoria += estadoNuevo ? precio2 : -precio2;
+                    sumatoria += estadoNuevo ? monto2CC : -monto2CC;
                     break;
 
                 case 2:
                     // Manejar la lógica para el caso 2 (índice 2)
-                    sumatoria += estadoNuevo ? precio3 : -precio3;
+                    sumatoria += estadoNuevo ? monto3CC : -monto3CC;
                     break;
 
                 case 3:
                     // Manejar la lógica para el caso 3 (índice 3)
-                    sumatoria += estadoNuevo ? precio4 : -precio4;
+                    sumatoria += estadoNuevo ? monto4CC : -monto4CC;
                     break;
 
                 default:
@@ -274,6 +358,11 @@ namespace ClubDeportivo.Formularios
 
 
 
+        //lista de checkbox
+
+        private double sumatoria2 = 0;
+
+
         private void checkedListBoxAM_ItemCheck_1(object sender, ItemCheckEventArgs e)
         {
             int indice = e.Index;
@@ -283,17 +372,17 @@ namespace ClubDeportivo.Formularios
             {
                 case 0:
                     // Manejar la lógica para el caso 0 (índice 0)
-                    sumatoria2 += estadoNuevo ? precio1 : -precio1;
+                    sumatoria2 += estadoNuevo ? monto1AM : -monto1AM;
                     break;
 
                 case 1:
                     // Manejar la lógica para el caso 1 (índice 1)
-                    sumatoria2 += estadoNuevo ? precio2 : -precio2;
+                    sumatoria2 += estadoNuevo ? monto2AM : -monto2AM;
                     break;
 
                 case 2:
                     // Manejar la lógica para el caso 2 (índice 2)
-                    sumatoria2 += estadoNuevo ? precio3 : -precio3;
+                    sumatoria2 += estadoNuevo ? monto3AM : -monto3AM;
                     break;
 
                 default:
@@ -308,11 +397,6 @@ namespace ClubDeportivo.Formularios
 
 
  
-
-
-        //lista de checkbox
-
-        private int sumatoria2 = 0;
 
 
 
@@ -431,7 +515,18 @@ namespace ClubDeportivo.Formularios
         //boton de guardar
         private void button4_Click(object sender, EventArgs e)
         {
-         
+           
+                comandos.getID = int.TryParse(textBoxIdSocio.Text.Trim(), out int result) ? result : 0;
+            try
+            {
+                comandos.pagado();
+            } catch 
+            {
+                MessageBox.Show("Error en la actualizacion", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+
         }
 
         //boton de salir

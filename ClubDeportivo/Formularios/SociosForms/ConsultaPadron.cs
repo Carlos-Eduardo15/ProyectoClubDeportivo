@@ -88,7 +88,6 @@ namespace ClubDeportivo.Formularios.SociosForms
                     FROM Socios";
                 default:
                     return "SELECT * FROM Socios";
-                    break;
             }
         }
 

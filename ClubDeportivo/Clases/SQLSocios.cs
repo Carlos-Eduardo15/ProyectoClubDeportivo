@@ -468,5 +468,34 @@ namespace ClubDeportivo.Clases
 
 
 
+        public void pagado()
+        {
+
+            using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
+            {
+                string queryGuardar = "UPDATE socios SET pago_mes = 1 WHERE id_socio=@idSocios AND fecha_cambio_estatus = null";
+
+                try
+                {
+                    conexion.Open();
+
+
+                    using (SqlCommand cmd = new SqlCommand(queryGuardar, conexion))
+                    {
+
+                        cmd.Parameters.AddWithValue("@idSocios", getID);
+                        cmd.ExecuteNonQuery();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar el pago del mes del socio" + ex.Message);
+                }
+            }
+        }
+
+
+
     }
 }

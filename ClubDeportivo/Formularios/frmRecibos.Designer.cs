@@ -59,15 +59,15 @@
             this.labelTotalCC = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pestañaSocio = new System.Windows.Forms.TabPage();
-            this.labelDefunsion = new System.Windows.Forms.Label();
+            this.labelDefuncion = new System.Windows.Forms.Label();
             this.labelMembresia = new System.Windows.Forms.Label();
             this.labelCopTer = new System.Windows.Forms.Label();
             this.labelCopSel = new System.Windows.Forms.Label();
             this.checkedListBoxCC = new System.Windows.Forms.CheckedListBox();
             this.pestañaInvitado = new System.Windows.Forms.TabPage();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.labelAMMem = new System.Windows.Forms.Label();
+            this.labelTEAM = new System.Windows.Forms.Label();
+            this.labelSecAM = new System.Windows.Forms.Label();
             this.checkedListBoxAM = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
             this.labelTotalAM = new System.Windows.Forms.Label();
@@ -335,7 +335,7 @@
             // pestañaSocio
             // 
             this.pestañaSocio.AccessibleName = "pestañaSocio ";
-            this.pestañaSocio.Controls.Add(this.labelDefunsion);
+            this.pestañaSocio.Controls.Add(this.labelDefuncion);
             this.pestañaSocio.Controls.Add(this.labelMembresia);
             this.pestañaSocio.Controls.Add(this.labelCopTer);
             this.pestañaSocio.Controls.Add(this.labelCopSel);
@@ -351,14 +351,14 @@
             this.pestañaSocio.Text = "Casa club";
             this.pestañaSocio.UseVisualStyleBackColor = true;
             // 
-            // labelDefunsion
+            // labelDefuncion
             // 
-            this.labelDefunsion.AutoSize = true;
-            this.labelDefunsion.Location = new System.Drawing.Point(145, 83);
-            this.labelDefunsion.Name = "labelDefunsion";
-            this.labelDefunsion.Size = new System.Drawing.Size(40, 13);
-            this.labelDefunsion.TabIndex = 32;
-            this.labelDefunsion.Text = "$ 2000";
+            this.labelDefuncion.AutoSize = true;
+            this.labelDefuncion.Location = new System.Drawing.Point(145, 83);
+            this.labelDefuncion.Name = "labelDefuncion";
+            this.labelDefuncion.Size = new System.Drawing.Size(40, 13);
+            this.labelDefuncion.TabIndex = 32;
+            this.labelDefuncion.Text = "$ 2000";
             // 
             // labelMembresia
             // 
@@ -404,9 +404,9 @@
             // pestañaInvitado
             // 
             this.pestañaInvitado.AccessibleName = "ayudamutua";
-            this.pestañaInvitado.Controls.Add(this.label31);
-            this.pestañaInvitado.Controls.Add(this.label32);
-            this.pestañaInvitado.Controls.Add(this.label33);
+            this.pestañaInvitado.Controls.Add(this.labelAMMem);
+            this.pestañaInvitado.Controls.Add(this.labelTEAM);
+            this.pestañaInvitado.Controls.Add(this.labelSecAM);
             this.pestañaInvitado.Controls.Add(this.checkedListBoxAM);
             this.pestañaInvitado.Controls.Add(this.label34);
             this.pestañaInvitado.Controls.Add(this.labelTotalAM);
@@ -419,32 +419,32 @@
             this.pestañaInvitado.Text = "Ayuda mutua";
             this.pestañaInvitado.UseVisualStyleBackColor = true;
             // 
-            // label31
+            // labelAMMem
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(145, 67);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(31, 13);
-            this.label31.TabIndex = 39;
-            this.label31.Text = "1700";
+            this.labelAMMem.AutoSize = true;
+            this.labelAMMem.Location = new System.Drawing.Point(145, 67);
+            this.labelAMMem.Name = "labelAMMem";
+            this.labelAMMem.Size = new System.Drawing.Size(31, 13);
+            this.labelAMMem.TabIndex = 39;
+            this.labelAMMem.Text = "1700";
             // 
-            // label32
+            // labelTEAM
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(145, 45);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(31, 13);
-            this.label32.TabIndex = 38;
-            this.label32.Text = "1500";
+            this.labelTEAM.AutoSize = true;
+            this.labelTEAM.Location = new System.Drawing.Point(145, 45);
+            this.labelTEAM.Name = "labelTEAM";
+            this.labelTEAM.Size = new System.Drawing.Size(31, 13);
+            this.labelTEAM.TabIndex = 38;
+            this.labelTEAM.Text = "1500";
             // 
-            // label33
+            // labelSecAM
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(145, 32);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(31, 13);
-            this.label33.TabIndex = 37;
-            this.label33.Text = "1600";
+            this.labelSecAM.AutoSize = true;
+            this.labelSecAM.Location = new System.Drawing.Point(145, 32);
+            this.labelSecAM.Name = "labelSecAM";
+            this.labelSecAM.Size = new System.Drawing.Size(31, 13);
+            this.labelSecAM.TabIndex = 37;
+            this.labelSecAM.Text = "1600";
             // 
             // checkedListBoxAM
             // 
@@ -588,13 +588,13 @@
         private System.Windows.Forms.TabPage pestañaSocio;
         private System.Windows.Forms.TabPage pestañaInvitado;
         private System.Windows.Forms.CheckedListBox checkedListBoxCC;
-        private System.Windows.Forms.Label labelDefunsion;
+        private System.Windows.Forms.Label labelDefuncion;
         private System.Windows.Forms.Label labelMembresia;
         private System.Windows.Forms.Label labelCopTer;
         private System.Windows.Forms.Label labelCopSel;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label labelAMMem;
+        private System.Windows.Forms.Label labelTEAM;
+        private System.Windows.Forms.Label labelSecAM;
         private System.Windows.Forms.CheckedListBox checkedListBoxAM;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label labelTotalAM;
