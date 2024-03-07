@@ -42,7 +42,6 @@ namespace ClubDeportivo.Formularios
             this.concepto_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMontoCC = new System.Windows.Forms.TextBox();
-            this.txtConceptoCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,13 +54,14 @@ namespace ClubDeportivo.Formularios
             this.monto_tarifa_am = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizarTarifaAM = new System.Windows.Forms.Button();
             this.txtMontoAM = new System.Windows.Forms.TextBox();
-            this.txtConceptoAM = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuardarTarifaAM = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.ttMonto = new System.Windows.Forms.ToolTip(this.components);
+            this.comboBoxCC = new System.Windows.Forms.ComboBox();
+            this.comboBoxAM = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tpCasaClub.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifasCC)).BeginInit();
@@ -83,10 +83,10 @@ namespace ClubDeportivo.Formularios
             // tpCasaClub
             // 
             this.tpCasaClub.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpCasaClub.Controls.Add(this.comboBoxCC);
             this.tpCasaClub.Controls.Add(this.btnActualizarTarifaCC);
             this.tpCasaClub.Controls.Add(this.dgvTarifasCC);
             this.tpCasaClub.Controls.Add(this.txtMontoCC);
-            this.tpCasaClub.Controls.Add(this.txtConceptoCC);
             this.tpCasaClub.Controls.Add(this.label3);
             this.tpCasaClub.Controls.Add(this.label2);
             this.tpCasaClub.Controls.Add(this.label1);
@@ -162,17 +162,6 @@ namespace ClubDeportivo.Formularios
             this.txtMontoCC.TabIndex = 6;
             this.txtMontoCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoCC_KeyPress);
             // 
-            // txtConceptoCC
-            // 
-            this.txtConceptoCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtConceptoCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConceptoCC.Font = new System.Drawing.Font("Microsoft YaHei", 9.25F);
-            this.txtConceptoCC.Location = new System.Drawing.Point(119, 64);
-            this.txtConceptoCC.Name = "txtConceptoCC";
-            this.txtConceptoCC.Size = new System.Drawing.Size(311, 24);
-            this.txtConceptoCC.TabIndex = 5;
-            this.txtConceptoCC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConceptoCC_KeyPress);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -240,10 +229,10 @@ namespace ClubDeportivo.Formularios
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.comboBoxAM);
             this.tabPage2.Controls.Add(this.dgvTarifasAM);
             this.tabPage2.Controls.Add(this.btnActualizarTarifaAM);
             this.tabPage2.Controls.Add(this.txtMontoAM);
-            this.tabPage2.Controls.Add(this.txtConceptoAM);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -318,16 +307,6 @@ namespace ClubDeportivo.Formularios
             this.txtMontoAM.TabIndex = 8;
             this.txtMontoAM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoAM_KeyPress);
             // 
-            // txtConceptoAM
-            // 
-            this.txtConceptoAM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtConceptoAM.Font = new System.Drawing.Font("Microsoft YaHei", 9.25F);
-            this.txtConceptoAM.Location = new System.Drawing.Point(120, 65);
-            this.txtConceptoAM.Name = "txtConceptoAM";
-            this.txtConceptoAM.Size = new System.Drawing.Size(312, 24);
-            this.txtConceptoAM.TabIndex = 7;
-            this.txtConceptoAM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConceptoAM_KeyPress);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -396,6 +375,32 @@ namespace ClubDeportivo.Formularios
             this.ttMonto.Tag = "";
             this.ttMonto.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
             // 
+            // comboBoxCC
+            // 
+            this.comboBoxCC.FormattingEnabled = true;
+            this.comboBoxCC.Items.AddRange(new object[] {
+            "Coperación-selección",
+            "Coperación-terrenos",
+            "Membresía",
+            "Defunción"});
+            this.comboBoxCC.Location = new System.Drawing.Point(119, 63);
+            this.comboBoxCC.Name = "comboBoxCC";
+            this.comboBoxCC.Size = new System.Drawing.Size(288, 25);
+            this.comboBoxCC.TabIndex = 9;
+            this.comboBoxCC.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBoxAM
+            // 
+            this.comboBoxAM.FormattingEnabled = true;
+            this.comboBoxAM.Items.AddRange(new object[] {
+            "Coperación-selección",
+            "Coperación-terrenos",
+            "Membresía"});
+            this.comboBoxAM.Location = new System.Drawing.Point(120, 68);
+            this.comboBoxAM.Name = "comboBoxAM";
+            this.comboBoxAM.Size = new System.Drawing.Size(288, 25);
+            this.comboBoxAM.TabIndex = 12;
+            // 
             // frmTarifas
             // 
             this.AccessibleName = "";
@@ -434,9 +439,7 @@ namespace ClubDeportivo.Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMontoCC;
-        private System.Windows.Forms.TextBox txtConceptoCC;
         private System.Windows.Forms.TextBox txtMontoAM;
-        private System.Windows.Forms.TextBox txtConceptoAM;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -451,5 +454,7 @@ namespace ClubDeportivo.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn concepto_tarifa_am;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto_tarifa_am;
         private System.Windows.Forms.ToolTip ttMonto;
+        private System.Windows.Forms.ComboBox comboBoxCC;
+        private System.Windows.Forms.ComboBox comboBoxAM;
     }
 }

@@ -206,9 +206,10 @@
             // dateTimeNacimiento
             // 
             this.dateTimeNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNacimiento.Location = new System.Drawing.Point(407, 174);
             this.dateTimeNacimiento.Name = "dateTimeNacimiento";
-            this.dateTimeNacimiento.Size = new System.Drawing.Size(219, 20);
+            this.dateTimeNacimiento.Size = new System.Drawing.Size(283, 26);
             this.dateTimeNacimiento.TabIndex = 17;
             // 
             // label9

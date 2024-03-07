@@ -34,28 +34,28 @@ namespace ClubDeportivo.Formularios
         }
         private void btnGuardarTarifaCC_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtConceptoCC.Text) || !string.IsNullOrEmpty(txtMontoCC.Text))
+            if(!string.IsNullOrEmpty(comboBoxCC.Text) || !string.IsNullOrEmpty(txtMontoCC.Text))
             {
                 Tarifa _tarifa = new Tarifa();
            
-                concepto = txtConceptoCC.Text;
+                concepto = comboBoxCC.Text;
                 monto = Double.Parse(txtMontoCC.Text);
                 tipo_tarifa = 'c';
                 Console.WriteLine(monto);
                 Console.WriteLine(concepto);
                 Console.WriteLine(tipo_tarifa);
                 _tarifa.insertarTarifa(concepto, monto, tipo_tarifa);
-                
-                txtConceptoCC.Text = "";
+
+                comboBoxCC.Text = "";
                 txtMontoCC.Text = "";
 
                 _tarifa.consultarTarifas(dgvTarifasCC, 'c');
             }
             else
             {
-                if (string.IsNullOrEmpty(txtConceptoCC.Text))
+                if (string.IsNullOrEmpty(comboBoxCC.Text))
                 {
-                    ttMonto.Show("Campo vacío", txtConceptoCC, 2000);
+                    ttMonto.Show("Campo vacío", comboBoxCC, 2000);
                 }
                 if (string.IsNullOrEmpty(txtMontoCC.Text))
                 {
@@ -66,9 +66,9 @@ namespace ClubDeportivo.Formularios
         private void btnGuardarTarifaAM_Click(object sender, EventArgs e)
         {
             Tarifa _tarifa = new Tarifa();
-            if (!string.IsNullOrEmpty(txtConceptoAM.Text) && !string.IsNullOrEmpty(txtMontoAM.Text))
+            if (!string.IsNullOrEmpty(comboBoxAM.Text) && !string.IsNullOrEmpty(txtMontoAM.Text))
             {
-                concepto = txtConceptoAM.Text;
+                concepto = comboBoxAM.Text;
                 monto = Double.Parse(txtMontoAM.Text);
                 tipo_tarifa = 'a';
                 _tarifa.insertarTarifa(concepto, monto, tipo_tarifa);
@@ -77,8 +77,8 @@ namespace ClubDeportivo.Formularios
             {
                 MessageBox.Show("Faltan datos por capturar.", "Atención");
             }
-            
-            txtConceptoAM.Text = "";
+
+            comboBoxAM.Text = "";
             txtMontoAM.Text = "";
 
             _tarifa.consultarTarifas(dgvTarifasAM, 'a');
@@ -99,7 +99,7 @@ namespace ClubDeportivo.Formularios
             if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
             {
                 _id_tarifa = int.Parse(dgvTarifasCC.CurrentRow.Cells[0].Value.ToString());
-                txtConceptoCC.Text = dgvTarifasCC.CurrentRow.Cells[1].Value.ToString();
+                comboBoxCC.Text = dgvTarifasCC.CurrentRow.Cells[1].Value.ToString();
                 txtMontoCC.Text = dgvTarifasCC.CurrentRow.Cells[2].Value.ToString();
                 btnActualizarTarifaCC.Enabled = true;
                 btnGuardarTarifaCC.Enabled = false;
@@ -111,7 +111,7 @@ namespace ClubDeportivo.Formularios
             if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
             {
                 _id_tarifa = int.Parse(dgvTarifasAM.CurrentRow.Cells[1].Value.ToString());
-                txtConceptoAM.Text = dgvTarifasAM.CurrentRow.Cells[2].Value.ToString();
+                comboBoxAM.Text = dgvTarifasAM.CurrentRow.Cells[2].Value.ToString();
                 txtMontoAM.Text = dgvTarifasAM.CurrentRow.Cells[3].Value.ToString();
                 btnActualizarTarifaAM.Enabled = true;
                 btnGuardarTarifaAM.Enabled = false;
@@ -122,7 +122,7 @@ namespace ClubDeportivo.Formularios
         {
             Tarifa tarifa_am = new Tarifa();
 
-            string concepto_tarifa_am = txtConceptoAM.Text;
+            string concepto_tarifa_am = comboBoxAM.Text;
             double monto_tarifa_am = double.Parse(txtMontoAM.Text);
 
             tarifa_am.modificarTarifa(concepto_tarifa_am, monto_tarifa_am, _id_tarifa);
@@ -132,22 +132,29 @@ namespace ClubDeportivo.Formularios
 
         private void btnActualizarTarifaCC_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtConceptoCC.Text) || !string.IsNullOrEmpty(txtMontoCC.Text))
+            if (!string.IsNullOrEmpty(comboBoxCC.Text) || !string.IsNullOrEmpty(txtMontoCC.Text))
             {
                 Tarifa tarifa_am = new Tarifa();
 
-                string concepto_tarifa_cc = txtConceptoCC.Text;
+                string concepto_tarifa_cc = comboBoxCC.Text;
                 double monto_tarifa_cc = double.Parse(txtMontoCC.Text);
 
-                tarifa_am.modificarTarifa(concepto_tarifa_cc, monto_tarifa_cc, _id_tarifa);
-            
-                tarifa_am.consultarTarifas(dgvTarifasCC, 'c');
+                // Verificar si el concepto ha cambiado
+                if (concepto_tarifa_cc != comboBoxCC.Text || !ConceptoExistenteEnDataGridView(concepto_tarifa_cc))
+                {
+                    tarifa_am.modificarTarifa(concepto_tarifa_cc, monto_tarifa_cc, _id_tarifa);
+                    tarifa_am.consultarTarifas(dgvTarifasCC, 'c');
+                }
+                else
+                {
+                    MessageBox.Show("El concepto ya existe. Por favor, elija otro concepto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                if (string.IsNullOrEmpty(txtConceptoCC.Text))
+                if (string.IsNullOrEmpty(comboBoxCC.Text))
                 {
-                    ttMonto.Show("Campo vacío", txtConceptoCC, 2000);
+                    ttMonto.Show("Campo vacío", comboBoxCC, 2000);
                 }
                 if (string.IsNullOrEmpty(txtMontoCC.Text))
                 {
@@ -155,6 +162,20 @@ namespace ClubDeportivo.Formularios
                 }
             }
         }
+
+        private bool ConceptoExistenteEnDataGridView(string concepto)
+        {
+            foreach (DataGridViewRow row in dgvTarifasCC.Rows)
+            {
+                if (row.Cells["concepto_tarifa"].Value != null && row.Cells["concepto_tarifa"].Value.ToString() == concepto)
+                {
+                    return true; // Concepto ya existe en el DataGridView
+                }
+            }
+            return false; // Concepto no encontrado en el DataGridView
+        }
+
+
 
         private void txtMontoCC_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -186,7 +207,7 @@ namespace ClubDeportivo.Formularios
             {
                 // Si no es una letra, se cancela el ingreso del carácter
                 e.Handled = true;
-                ttMonto.Show("Sólo se permiten letras.", txtConceptoCC, 2000);
+                ttMonto.Show("Sólo se permiten letras.", comboBoxCC, 2000);
             }
         }
         private void txtConceptoAM_KeyPress(object sender, KeyPressEventArgs e)
@@ -196,12 +217,17 @@ namespace ClubDeportivo.Formularios
             {
                 // Si no es una letra, se cancela el ingreso del carácter
                 e.Handled = true;
-                ttMonto.Show("Sólo se permiten letras.", txtConceptoAM, 2000);
+                ttMonto.Show("Sólo se permiten letras.", comboBoxAM, 2000);
             }
         }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
