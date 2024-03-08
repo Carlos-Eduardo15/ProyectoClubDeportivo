@@ -495,6 +495,57 @@ namespace ClubDeportivo.Clases
             }
         }
 
+      
+
+
+        public void consultaPagadoMes(out Boolean pagado)
+        {
+
+            using (SqlConnection conexion = new SqlConnection(VGlobal.getSetConexion))
+            {
+                string queryPagado = "SELECT pago_mes FROM socios WHERE id_socio=@idSocios ";
+
+                try
+                {
+                    conexion.Open();
+
+
+                    using (SqlCommand cmd = new SqlCommand(queryPagado, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@idSocios", getID);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Obtén los valores de la consulta y asígnales a las variables
+                                pagado = Convert.ToBoolean(reader["pago_mes"]);
+                                Console.WriteLine("BIT ES "+pagado);
+                            }
+                            else
+                            {
+                                
+                                    MessageBox.Show("FALLO EN LA CONSULTA DE PAGO", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    // Asigna valores por defecto o marca un indicador de que no se encontró el socio
+                                   
+                                pagado = false;
+
+                            }
+                        }
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al consultar" + ex.Message);
+                    pagado = false;
+
+                }
+            }
+        }
+
+
 
 
     }

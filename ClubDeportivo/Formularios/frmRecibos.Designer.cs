@@ -40,7 +40,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxIdSocio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -74,6 +73,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label_Pagado = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.pestañaSocio.SuspendLayout();
             this.pestañaInvitado.SuspendLayout();
@@ -88,116 +88,128 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 65);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(101, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Numero de socio";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(213, 65);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(442, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(418, 65);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(442, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(96, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellido paterno";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(546, 65);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(442, 145);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(100, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Apellido materno";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 169);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(32, 217);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(41, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "CURP";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(43, 121);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 103);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.Size = new System.Drawing.Size(122, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Fecha de nacimiento";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(196, 121);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(29, 162);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.Size = new System.Drawing.Size(72, 15);
             this.label7.TabIndex = 6;
             this.label7.Text = "Edad actual";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(328, 121);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(436, 193);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(55, 15);
             this.label8.TabIndex = 7;
             this.label8.Text = "Teléfono";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(433, 121);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(439, 244);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 13);
+            this.label9.Size = new System.Drawing.Size(107, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "Correo electrónico";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(337, 169);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(23, 261);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.Size = new System.Drawing.Size(59, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "Dirección";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(162, 169);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(135, 13);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.gob.mx/curp/";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(82, 19);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 13);
+            this.label11.Size = new System.Drawing.Size(123, 18);
             this.label11.TabIndex = 11;
             this.label11.Text = "Numero de socio";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // textBoxIdSocio
             // 
-            this.textBoxIdSocio.Location = new System.Drawing.Point(199, 16);
+            this.textBoxIdSocio.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxIdSocio.Location = new System.Drawing.Point(164, 15);
             this.textBoxIdSocio.Name = "textBoxIdSocio";
             this.textBoxIdSocio.Size = new System.Drawing.Size(100, 20);
             this.textBoxIdSocio.TabIndex = 12;
@@ -205,9 +217,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(331, 16);
+            this.button1.Location = new System.Drawing.Point(320, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(109, 26);
             this.button1.TabIndex = 13;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -235,81 +247,111 @@
             // labelNum
             // 
             this.labelNum.AutoSize = true;
-            this.labelNum.Location = new System.Drawing.Point(43, 91);
+            this.labelNum.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNum.Location = new System.Drawing.Point(32, 73);
             this.labelNum.Name = "labelNum";
-            this.labelNum.Size = new System.Drawing.Size(0, 13);
+            this.labelNum.Size = new System.Drawing.Size(2, 17);
             this.labelNum.TabIndex = 17;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(213, 91);
+            this.labelNombre.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Location = new System.Drawing.Point(445, 73);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(0, 13);
+            this.labelNombre.Size = new System.Drawing.Size(2, 17);
             this.labelNombre.TabIndex = 18;
             // 
             // labelA_Paterno
             // 
             this.labelA_Paterno.AutoSize = true;
-            this.labelA_Paterno.Location = new System.Drawing.Point(418, 91);
+            this.labelA_Paterno.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelA_Paterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelA_Paterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA_Paterno.Location = new System.Drawing.Point(445, 126);
             this.labelA_Paterno.Name = "labelA_Paterno";
-            this.labelA_Paterno.Size = new System.Drawing.Size(0, 13);
+            this.labelA_Paterno.Size = new System.Drawing.Size(2, 17);
             this.labelA_Paterno.TabIndex = 19;
             // 
             // labelA_Materno
             // 
             this.labelA_Materno.AutoSize = true;
-            this.labelA_Materno.Location = new System.Drawing.Point(546, 91);
+            this.labelA_Materno.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelA_Materno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelA_Materno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA_Materno.Location = new System.Drawing.Point(445, 176);
             this.labelA_Materno.Name = "labelA_Materno";
-            this.labelA_Materno.Size = new System.Drawing.Size(0, 13);
+            this.labelA_Materno.Size = new System.Drawing.Size(2, 17);
             this.labelA_Materno.TabIndex = 20;
             // 
             // labelFechaNacimiento
             // 
             this.labelFechaNacimiento.AutoSize = true;
-            this.labelFechaNacimiento.Location = new System.Drawing.Point(43, 144);
+            this.labelFechaNacimiento.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFechaNacimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaNacimiento.Location = new System.Drawing.Point(32, 126);
             this.labelFechaNacimiento.Name = "labelFechaNacimiento";
-            this.labelFechaNacimiento.Size = new System.Drawing.Size(0, 13);
+            this.labelFechaNacimiento.Size = new System.Drawing.Size(2, 17);
             this.labelFechaNacimiento.TabIndex = 21;
             // 
             // labelEdad
             // 
             this.labelEdad.AutoSize = true;
-            this.labelEdad.Location = new System.Drawing.Point(196, 144);
+            this.labelEdad.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelEdad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEdad.Location = new System.Drawing.Point(32, 193);
             this.labelEdad.Name = "labelEdad";
-            this.labelEdad.Size = new System.Drawing.Size(0, 13);
+            this.labelEdad.Size = new System.Drawing.Size(2, 17);
             this.labelEdad.TabIndex = 22;
             // 
             // labelTelefono
             // 
             this.labelTelefono.AutoSize = true;
-            this.labelTelefono.Location = new System.Drawing.Point(337, 144);
+            this.labelTelefono.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelefono.Location = new System.Drawing.Point(445, 216);
             this.labelTelefono.Name = "labelTelefono";
-            this.labelTelefono.Size = new System.Drawing.Size(0, 13);
+            this.labelTelefono.Size = new System.Drawing.Size(2, 17);
             this.labelTelefono.TabIndex = 23;
             // 
             // labelCorreo
             // 
             this.labelCorreo.AutoSize = true;
-            this.labelCorreo.Location = new System.Drawing.Point(433, 144);
+            this.labelCorreo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCorreo.Location = new System.Drawing.Point(445, 275);
             this.labelCorreo.Name = "labelCorreo";
-            this.labelCorreo.Size = new System.Drawing.Size(0, 13);
+            this.labelCorreo.Size = new System.Drawing.Size(2, 17);
             this.labelCorreo.TabIndex = 24;
             // 
             // labelCurp
             // 
             this.labelCurp.AutoSize = true;
-            this.labelCurp.Location = new System.Drawing.Point(43, 196);
+            this.labelCurp.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelCurp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCurp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurp.Location = new System.Drawing.Point(32, 244);
             this.labelCurp.Name = "labelCurp";
-            this.labelCurp.Size = new System.Drawing.Size(0, 13);
+            this.labelCurp.Size = new System.Drawing.Size(2, 17);
             this.labelCurp.TabIndex = 25;
             // 
             // labelDireccion
             // 
             this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Location = new System.Drawing.Point(348, 196);
+            this.labelDireccion.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccion.Location = new System.Drawing.Point(32, 290);
             this.labelDireccion.Name = "labelDireccion";
-            this.labelDireccion.Size = new System.Drawing.Size(0, 13);
+            this.labelDireccion.Size = new System.Drawing.Size(2, 17);
             this.labelDireccion.TabIndex = 26;
             // 
             // labelTotalCC
@@ -324,7 +366,7 @@
             // 
             this.tabControl1.Controls.Add(this.pestañaSocio);
             this.tabControl1.Controls.Add(this.pestañaInvitado);
-            this.tabControl1.Location = new System.Drawing.Point(62, 244);
+            this.tabControl1.Location = new System.Drawing.Point(12, 310);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeftLayout = true;
             this.tabControl1.SelectedIndex = 0;
@@ -488,9 +530,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(498, 291);
+            this.button4.Location = new System.Drawing.Point(555, 356);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(102, 32);
             this.button4.TabIndex = 30;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = true;
@@ -498,19 +540,31 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(498, 336);
+            this.button5.Location = new System.Drawing.Point(555, 414);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(102, 32);
             this.button5.TabIndex = 31;
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label_Pagado
+            // 
+            this.label_Pagado.AutoSize = true;
+            this.label_Pagado.Location = new System.Drawing.Point(473, 15);
+            this.label_Pagado.Name = "label_Pagado";
+            this.label_Pagado.Size = new System.Drawing.Size(108, 13);
+            this.label_Pagado.TabIndex = 32;
+            this.label_Pagado.Text = "ESTATUS DE PAGO";
+            // 
             // frmRecibos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 504);
+            this.BackgroundImage = global::ClubDeportivo.Properties.Resources._0_removebg_preview;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(690, 487);
+            this.Controls.Add(this.label_Pagado);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.tabControl1);
@@ -527,7 +581,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxIdSocio);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -538,6 +591,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecibos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -567,7 +621,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxIdSocio;
         private System.Windows.Forms.Button button1;
@@ -601,5 +654,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label_Pagado;
     }
 }

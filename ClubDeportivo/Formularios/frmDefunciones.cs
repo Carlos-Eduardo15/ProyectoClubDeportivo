@@ -32,7 +32,7 @@ namespace ClubDeportivo.Formularios
 
                 int id_socio = int.Parse(txtNumeroSocio.Text);
                 defuncion.consultarSocio(id_socio, txtNombre, txtApPaterno, txtApMaterno, txtCurp, txtEdad, txtDireccion, txtCorreo, txtTelefono, txtFechaIngreso, txtTipo);
-                tarifa.consultarTarifaEspecifica(9, txtMonto);
+                tarifa.consultarTarifaEspecifica("Defunción", txtMonto);
                 defuncion.consultarBeneficiario(id_socio, txtBeneficiario, txtMonto, dtDefuncion);
                 
                 dtDefuncion.Enabled = true;

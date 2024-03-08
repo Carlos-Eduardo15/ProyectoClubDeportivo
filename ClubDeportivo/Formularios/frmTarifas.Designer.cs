@@ -31,16 +31,14 @@ namespace ClubDeportivo.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTarifas));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCasaClub = new System.Windows.Forms.TabPage();
+            this.comboBoxCC = new System.Windows.Forms.ComboBox();
             this.btnActualizarTarifaCC = new System.Windows.Forms.Button();
             this.dgvTarifasCC = new System.Windows.Forms.DataGridView();
-            this.id_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.concepto_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monto_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMontoCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,10 +46,8 @@ namespace ClubDeportivo.Formularios
             this.button2 = new System.Windows.Forms.Button();
             this.btnGuardarTarifaCC = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBoxAM = new System.Windows.Forms.ComboBox();
             this.dgvTarifasAM = new System.Windows.Forms.DataGridView();
-            this.id_tarifa_am = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.concepto_tarifa_am = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monto_tarifa_am = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizarTarifaAM = new System.Windows.Forms.Button();
             this.txtMontoAM = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,8 +56,10 @@ namespace ClubDeportivo.Formularios
             this.btnGuardarTarifaAM = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.ttMonto = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBoxCC = new System.Windows.Forms.ComboBox();
-            this.comboBoxAM = new System.Windows.Forms.ComboBox();
+            this.concepto_tarifa_am = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monto_tarifa_am = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.concepto_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monto_tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tpCasaClub.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifasCC)).BeginInit();
@@ -99,6 +97,20 @@ namespace ClubDeportivo.Formularios
             this.tpCasaClub.TabIndex = 0;
             this.tpCasaClub.Text = "Casa Club";
             // 
+            // comboBoxCC
+            // 
+            this.comboBoxCC.FormattingEnabled = true;
+            this.comboBoxCC.Items.AddRange(new object[] {
+            "Coperación-selección",
+            "Coperación-terrenos",
+            "Membresía",
+            "Defunción"});
+            this.comboBoxCC.Location = new System.Drawing.Point(119, 63);
+            this.comboBoxCC.Name = "comboBoxCC";
+            this.comboBoxCC.Size = new System.Drawing.Size(288, 25);
+            this.comboBoxCC.TabIndex = 9;
+            this.comboBoxCC.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // btnActualizarTarifaCC
             // 
             this.btnActualizarTarifaCC.Location = new System.Drawing.Point(154, 160);
@@ -116,41 +128,14 @@ namespace ClubDeportivo.Formularios
             this.dgvTarifasCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvTarifasCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTarifasCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_tarifa,
             this.concepto_tarifa,
             this.monto_tarifa});
-            this.dgvTarifasCC.Location = new System.Drawing.Point(25, 209);
+            this.dgvTarifasCC.Location = new System.Drawing.Point(44, 200);
             this.dgvTarifasCC.Name = "dgvTarifasCC";
             this.dgvTarifasCC.ReadOnly = true;
-            this.dgvTarifasCC.Size = new System.Drawing.Size(405, 166);
+            this.dgvTarifasCC.Size = new System.Drawing.Size(367, 166);
             this.dgvTarifasCC.TabIndex = 7;
             this.dgvTarifasCC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTarifasCC_CellContentClick);
-            // 
-            // id_tarifa
-            // 
-            this.id_tarifa.DataPropertyName = "id_tarifa";
-            this.id_tarifa.HeaderText = "ID";
-            this.id_tarifa.Name = "id_tarifa";
-            this.id_tarifa.ReadOnly = true;
-            this.id_tarifa.Width = 40;
-            // 
-            // concepto_tarifa
-            // 
-            this.concepto_tarifa.DataPropertyName = "concepto";
-            this.concepto_tarifa.HeaderText = "Concepto";
-            this.concepto_tarifa.Name = "concepto_tarifa";
-            this.concepto_tarifa.ReadOnly = true;
-            this.concepto_tarifa.Width = 220;
-            // 
-            // monto_tarifa
-            // 
-            this.monto_tarifa.DataPropertyName = "monto";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle1;
-            this.monto_tarifa.HeaderText = "Monto";
-            this.monto_tarifa.Name = "monto_tarifa";
-            this.monto_tarifa.ReadOnly = true;
             // 
             // txtMontoCC
             // 
@@ -245,47 +230,32 @@ namespace ClubDeportivo.Formularios
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ayuda Mutua";
             // 
+            // comboBoxAM
+            // 
+            this.comboBoxAM.FormattingEnabled = true;
+            this.comboBoxAM.Items.AddRange(new object[] {
+            "Coperación-selección",
+            "Coperación-terrenos",
+            "Membresía"});
+            this.comboBoxAM.Location = new System.Drawing.Point(120, 68);
+            this.comboBoxAM.Name = "comboBoxAM";
+            this.comboBoxAM.Size = new System.Drawing.Size(288, 25);
+            this.comboBoxAM.TabIndex = 12;
+            // 
             // dgvTarifasAM
             // 
             this.dgvTarifasAM.AllowUserToAddRows = false;
             this.dgvTarifasAM.AllowUserToDeleteRows = false;
             this.dgvTarifasAM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTarifasAM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_tarifa_am,
             this.concepto_tarifa_am,
             this.monto_tarifa_am});
-            this.dgvTarifasAM.Location = new System.Drawing.Point(24, 210);
+            this.dgvTarifasAM.Location = new System.Drawing.Point(45, 201);
             this.dgvTarifasAM.Name = "dgvTarifasAM";
             this.dgvTarifasAM.ReadOnly = true;
-            this.dgvTarifasAM.Size = new System.Drawing.Size(408, 171);
+            this.dgvTarifasAM.Size = new System.Drawing.Size(364, 171);
             this.dgvTarifasAM.TabIndex = 11;
             this.dgvTarifasAM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTarifasAM_CellContentClick);
-            // 
-            // id_tarifa_am
-            // 
-            this.id_tarifa_am.DataPropertyName = "id_tarifa";
-            this.id_tarifa_am.HeaderText = "ID";
-            this.id_tarifa_am.Name = "id_tarifa_am";
-            this.id_tarifa_am.ReadOnly = true;
-            this.id_tarifa_am.Width = 45;
-            // 
-            // concepto_tarifa_am
-            // 
-            this.concepto_tarifa_am.DataPropertyName = "concepto";
-            this.concepto_tarifa_am.HeaderText = "Concepto";
-            this.concepto_tarifa_am.Name = "concepto_tarifa_am";
-            this.concepto_tarifa_am.ReadOnly = true;
-            this.concepto_tarifa_am.Width = 220;
-            // 
-            // monto_tarifa_am
-            // 
-            this.monto_tarifa_am.DataPropertyName = "monto";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle2;
-            this.monto_tarifa_am.HeaderText = "Monto";
-            this.monto_tarifa_am.Name = "monto_tarifa_am";
-            this.monto_tarifa_am.ReadOnly = true;
             // 
             // btnActualizarTarifaAM
             // 
@@ -369,37 +339,48 @@ namespace ClubDeportivo.Formularios
             this.button4.TabIndex = 2;
             this.button4.Text = "Cerrar el formulario";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ttMonto
             // 
             this.ttMonto.Tag = "";
             this.ttMonto.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
             // 
-            // comboBoxCC
+            // concepto_tarifa_am
             // 
-            this.comboBoxCC.FormattingEnabled = true;
-            this.comboBoxCC.Items.AddRange(new object[] {
-            "Coperación-selección",
-            "Coperación-terrenos",
-            "Membresía",
-            "Defunción"});
-            this.comboBoxCC.Location = new System.Drawing.Point(119, 63);
-            this.comboBoxCC.Name = "comboBoxCC";
-            this.comboBoxCC.Size = new System.Drawing.Size(288, 25);
-            this.comboBoxCC.TabIndex = 9;
-            this.comboBoxCC.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.concepto_tarifa_am.DataPropertyName = "concepto";
+            this.concepto_tarifa_am.HeaderText = "Concepto";
+            this.concepto_tarifa_am.Name = "concepto_tarifa_am";
+            this.concepto_tarifa_am.ReadOnly = true;
+            this.concepto_tarifa_am.Width = 220;
             // 
-            // comboBoxAM
+            // monto_tarifa_am
             // 
-            this.comboBoxAM.FormattingEnabled = true;
-            this.comboBoxAM.Items.AddRange(new object[] {
-            "Coperación-selección",
-            "Coperación-terrenos",
-            "Membresía"});
-            this.comboBoxAM.Location = new System.Drawing.Point(120, 68);
-            this.comboBoxAM.Name = "comboBoxAM";
-            this.comboBoxAM.Size = new System.Drawing.Size(288, 25);
-            this.comboBoxAM.TabIndex = 12;
+            this.monto_tarifa_am.DataPropertyName = "monto";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.monto_tarifa_am.DefaultCellStyle = dataGridViewCellStyle2;
+            this.monto_tarifa_am.HeaderText = "Monto";
+            this.monto_tarifa_am.Name = "monto_tarifa_am";
+            this.monto_tarifa_am.ReadOnly = true;
+            // 
+            // concepto_tarifa
+            // 
+            this.concepto_tarifa.DataPropertyName = "concepto";
+            this.concepto_tarifa.HeaderText = "Concepto";
+            this.concepto_tarifa.Name = "concepto_tarifa";
+            this.concepto_tarifa.ReadOnly = true;
+            this.concepto_tarifa.Width = 220;
+            // 
+            // monto_tarifa
+            // 
+            this.monto_tarifa.DataPropertyName = "monto";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.monto_tarifa.DefaultCellStyle = dataGridViewCellStyle1;
+            this.monto_tarifa.HeaderText = "Monto";
+            this.monto_tarifa.Name = "monto_tarifa";
+            this.monto_tarifa.ReadOnly = true;
             // 
             // frmTarifas
             // 
@@ -444,17 +425,15 @@ namespace ClubDeportivo.Formularios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvTarifasCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_tarifa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn concepto_tarifa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monto_tarifa;
         private System.Windows.Forms.Button btnActualizarTarifaCC;
         private System.Windows.Forms.Button btnActualizarTarifaAM;
         private System.Windows.Forms.DataGridView dgvTarifasAM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_tarifa_am;
-        private System.Windows.Forms.DataGridViewTextBoxColumn concepto_tarifa_am;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monto_tarifa_am;
         private System.Windows.Forms.ToolTip ttMonto;
         private System.Windows.Forms.ComboBox comboBoxCC;
         private System.Windows.Forms.ComboBox comboBoxAM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn concepto_tarifa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monto_tarifa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn concepto_tarifa_am;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monto_tarifa_am;
     }
 }

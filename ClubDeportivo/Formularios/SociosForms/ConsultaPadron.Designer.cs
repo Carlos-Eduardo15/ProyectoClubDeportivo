@@ -63,15 +63,15 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 82);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(640, 397);
             this.dataGridView1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(735, 12);
+            this.button1.Location = new System.Drawing.Point(521, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 43);
             this.button1.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ClubDeportivo.Properties.Resources.background_with_blue_gradient_free_vector;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(897, 504);
+            this.ClientSize = new System.Drawing.Size(690, 487);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkedListBox1);

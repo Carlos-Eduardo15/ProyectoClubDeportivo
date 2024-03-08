@@ -98,7 +98,6 @@ namespace ClubDeportivo.Formularios
         {
             if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
             {
-                _id_tarifa = int.Parse(dgvTarifasCC.CurrentRow.Cells[0].Value.ToString());
                 comboBoxCC.Text = dgvTarifasCC.CurrentRow.Cells[1].Value.ToString();
                 txtMontoCC.Text = dgvTarifasCC.CurrentRow.Cells[2].Value.ToString();
                 btnActualizarTarifaCC.Enabled = true;
@@ -110,9 +109,8 @@ namespace ClubDeportivo.Formularios
         {
             if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
             {
-                _id_tarifa = int.Parse(dgvTarifasAM.CurrentRow.Cells[1].Value.ToString());
-                comboBoxAM.Text = dgvTarifasAM.CurrentRow.Cells[2].Value.ToString();
-                txtMontoAM.Text = dgvTarifasAM.CurrentRow.Cells[3].Value.ToString();
+                comboBoxAM.Text = dgvTarifasAM.CurrentRow.Cells[1].Value.ToString();
+                txtMontoAM.Text = dgvTarifasAM.CurrentRow.Cells[2].Value.ToString();
                 btnActualizarTarifaAM.Enabled = true;
                 btnGuardarTarifaAM.Enabled = false;
             }
@@ -124,8 +122,9 @@ namespace ClubDeportivo.Formularios
 
             string concepto_tarifa_am = comboBoxAM.Text;
             double monto_tarifa_am = double.Parse(txtMontoAM.Text);
+            char tarifa_tipo_am = 'a';
 
-            tarifa_am.modificarTarifa(concepto_tarifa_am, monto_tarifa_am, _id_tarifa);
+            tarifa_am.modificarTarifa(concepto_tarifa_am, monto_tarifa_am, tarifa_tipo_am);
 
             tarifa_am.consultarTarifas(dgvTarifasAM,'a');
         }
@@ -138,17 +137,9 @@ namespace ClubDeportivo.Formularios
 
                 string concepto_tarifa_cc = comboBoxCC.Text;
                 double monto_tarifa_cc = double.Parse(txtMontoCC.Text);
+                char tarifa_cc = 'c';
+                tarifa_am.modificarTarifa(concepto_tarifa_cc,monto_tarifa_cc, tarifa_cc);
 
-                // Verificar si el concepto ha cambiado
-                if (concepto_tarifa_cc != comboBoxCC.Text || !ConceptoExistenteEnDataGridView(concepto_tarifa_cc))
-                {
-                    tarifa_am.modificarTarifa(concepto_tarifa_cc, monto_tarifa_cc, _id_tarifa);
-                    tarifa_am.consultarTarifas(dgvTarifasCC, 'c');
-                }
-                else
-                {
-                    MessageBox.Show("El concepto ya existe. Por favor, elija otro concepto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
             else
             {
@@ -163,18 +154,7 @@ namespace ClubDeportivo.Formularios
             }
         }
 
-        private bool ConceptoExistenteEnDataGridView(string concepto)
-        {
-            foreach (DataGridViewRow row in dgvTarifasCC.Rows)
-            {
-                if (row.Cells["concepto_tarifa"].Value != null && row.Cells["concepto_tarifa"].Value.ToString() == concepto)
-                {
-                    return true; // Concepto ya existe en el DataGridView
-                }
-            }
-            return false; // Concepto no encontrado en el DataGridView
-        }
-
+     
 
 
         private void txtMontoCC_KeyPress(object sender, KeyPressEventArgs e)
@@ -227,6 +207,12 @@ namespace ClubDeportivo.Formularios
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }

@@ -68,7 +68,9 @@ namespace ClubDeportivo.Clases
                     connection.Open();
 
                     // Prepara la consulta SQL con parámetros para evitar la inyección de SQL
-                    sql = "INSERT INTO tarifas (concepto, monto, tipo_tarifa) VALUES (@Concepto, @Monto, @TipoTarifa)";
+                    sql = "IF NOT EXISTS (SELECT * FROM tarifas WHERE concepto = @Concepto " +
+                        " AND tipo_tarifa = @TipoTarifa) BEGIN  INSERT INTO tarifas (concepto, monto, tipo_tarifa) " +
+                        "VALUES (@Concepto, @Monto, @TipoTarifa); END";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -90,7 +92,7 @@ namespace ClubDeportivo.Clases
             }
         }
 
-        public void modificarTarifa(string concepto, double monto, int id_tarifa)
+        public void modificarTarifa(string concepto, double monto, char tipo_tarifa)
         {
             string sql = null;
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
@@ -102,14 +104,14 @@ namespace ClubDeportivo.Clases
                     connection.Open();
 
                     // Prepara la consulta SQL con parámetros para evitar la inyección de SQL
-                    sql = "UPDATE tarifas SET concepto = @Concepto, monto = @Monto WHERE id_tarifa = @IdTarifa";
+                    sql = "UPDATE tarifas SET concepto = @Concepto, monto = @Monto WHERE tipo_tarifa = @tipo_tarifa AND concepto = @Concepto";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         // Agrega los parámetros a la consulta SQL
                         command.Parameters.AddWithValue("@Concepto", concepto);
                         command.Parameters.AddWithValue("@Monto", monto);
-                        command.Parameters.AddWithValue("@IdTarifa", id_tarifa);
+                        command.Parameters.AddWithValue("@tipo_tarifa", tipo_tarifa);
 
                         // Ejecuta la consulta SQL
                         command.ExecuteNonQuery();
@@ -155,9 +157,9 @@ namespace ClubDeportivo.Clases
             }
         }
 
-        public void consultarTarifaEspecifica(int id_tarifa, TextBox monto)
+        public void consultarTarifaEspecifica(string concepto, TextBox monto)
         {
-            string sql = "SELECT id_tarifa, concepto, monto FROM tarifas WHERE id_tarifa = @IdTarifa";
+            string sql = "SELECT concepto, monto FROM tarifas WHERE concepto = @Concepto";
             string connectionString = VGlobal.getSetConexion; // Obtener la cadena de conexión de la clase VGlobal
 
             try
@@ -168,7 +170,7 @@ namespace ClubDeportivo.Clases
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@IdTarifa", id_tarifa);
+                        command.Parameters.AddWithValue("@Concepto", concepto);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

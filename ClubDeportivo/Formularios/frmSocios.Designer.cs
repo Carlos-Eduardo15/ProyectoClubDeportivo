@@ -52,7 +52,7 @@
             this.consultarPadrónToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(937, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(730, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -116,7 +116,7 @@
             this.pictureBox1.Image = global::ClubDeportivo.Properties.Resources.logo_design_golden_ratio_infinity;
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(937, 534);
+            this.pictureBox1.Size = new System.Drawing.Size(730, 523);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(937, 558);
+            this.ClientSize = new System.Drawing.Size(730, 547);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;

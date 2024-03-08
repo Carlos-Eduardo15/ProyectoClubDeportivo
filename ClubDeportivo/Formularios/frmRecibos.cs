@@ -31,6 +31,7 @@ namespace ClubDeportivo.Formularios
         DateTime fechaNacimiento;
         int edad;
         char tipo;
+        Boolean pagado = false;
 
         double monto = 0.0;
         double monto1CC = 0.0;
@@ -186,6 +187,17 @@ namespace ClubDeportivo.Formularios
                 {
                     labelNum.Text = idSocio.ToString();
                     ObtenerDatosSocio();
+                    comandos.consultaPagadoMes(out pagado);
+
+                    if (pagado == true) 
+                    {
+                        
+                        label_Pagado.Text = "MES PAGADO";
+                    }
+                    else if (pagado == false)
+                    {
+                        label_Pagado.Text = "MES PENDIENTE DE PAGO ";
+                    }
                 }
 
             }

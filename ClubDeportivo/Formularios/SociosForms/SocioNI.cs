@@ -126,5 +126,45 @@ namespace ClubDeportivo.Formularios.SociosForms
         {
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimeNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
